@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/modern-eros/static/css/main.9d5b29c0.chunk.css",
-    "main.js": "/modern-eros/static/js/main.1fea594c.chunk.js",
-    "main.js.map": "/modern-eros/static/js/main.1fea594c.chunk.js.map",
-    "runtime-main.js": "/modern-eros/static/js/runtime-main.4f5df3c8.js",
-    "runtime-main.js.map": "/modern-eros/static/js/runtime-main.4f5df3c8.js.map",
-    "static/js/2.d0add1d7.chunk.js": "/modern-eros/static/js/2.d0add1d7.chunk.js",
-    "static/js/2.d0add1d7.chunk.js.map": "/modern-eros/static/js/2.d0add1d7.chunk.js.map",
-    "static/js/3.59846a2e.chunk.js": "/modern-eros/static/js/3.59846a2e.chunk.js",
-    "static/js/3.59846a2e.chunk.js.map": "/modern-eros/static/js/3.59846a2e.chunk.js.map",
-    "index.html": "/modern-eros/index.html",
-    "static/css/main.9d5b29c0.chunk.css.map": "/modern-eros/static/css/main.9d5b29c0.chunk.css.map",
-    "static/js/2.d0add1d7.chunk.js.LICENSE.txt": "/modern-eros/static/js/2.d0add1d7.chunk.js.LICENSE.txt"
+    "main.css": "/ReactFolio/static/css/main.f77d7a38.chunk.css",
+    "main.js": "/ReactFolio/static/js/main.692e4464.chunk.js",
+    "main.js.map": "/ReactFolio/static/js/main.692e4464.chunk.js.map",
+    "runtime-main.js": "/ReactFolio/static/js/runtime-main.20217e57.js",
+    "runtime-main.js.map": "/ReactFolio/static/js/runtime-main.20217e57.js.map",
+    "static/js/2.9a2180c5.chunk.js": "/ReactFolio/static/js/2.9a2180c5.chunk.js",
+    "static/js/2.9a2180c5.chunk.js.map": "/ReactFolio/static/js/2.9a2180c5.chunk.js.map",
+    "index.html": "/ReactFolio/index.html",
+    "precache-manifest.8adfb61b3eeb5b274fdf830d886e3576.js": "/ReactFolio/precache-manifest.8adfb61b3eeb5b274fdf830d886e3576.js",
+    "service-worker.js": "/ReactFolio/service-worker.js",
+    "static/css/main.f77d7a38.chunk.css.map": "/ReactFolio/static/css/main.f77d7a38.chunk.css.map",
+    "static/js/2.9a2180c5.chunk.js.LICENSE.txt": "/ReactFolio/static/js/2.9a2180c5.chunk.js.LICENSE.txt",
+    "static/media/sad-icon.png": "/ReactFolio/static/media/sad-icon.b88924d5.png",
+    "static/media/your photo.png": "/ReactFolio/static/media/your photo.b9d7d448.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f5df3c8.js",
-    "static/js/2.d0add1d7.chunk.js",
-    "static/css/main.9d5b29c0.chunk.css",
-    "static/js/main.1fea594c.chunk.js"
+    "static/js/runtime-main.20217e57.js",
+    "static/js/2.9a2180c5.chunk.js",
+    "static/css/main.f77d7a38.chunk.css",
+    "static/js/main.692e4464.chunk.js"
   ]
 }
