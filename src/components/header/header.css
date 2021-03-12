@@ -20,7 +20,6 @@ header .inner {
 	margin: 0 auto;
 }
 header .title-text {
-	font-family: "Source Code Pro", sans-serif;
 	font-size: 20px;
 	float: left;
 	margin-left: 50px;
@@ -34,7 +33,6 @@ header .title-text a {
 	text-decoration: none;
 }
 header .title-date {
-	font-family: "Source Code Pro", sans-serif;
 	font-size: 18px;
 	float: left;
 	margin-left: 10px;
