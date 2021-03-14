@@ -32,5 +32,19 @@ export const liveContent = {
 }
 
 export const teamInfo = {
+    "title": "팀원",
+    "sound": {"name": "김도형", "role": "작곡/연주"},
+    "transmission": {"name": "이승준", "role": "송출/통신"},
+    "design": {"name": "이민경", "role": "웹 디자인/전시그래"},
+    "development": {"name": "정은아", "role": "웹 프로그래밍"},
 
+}
+
+export const notification = {
+  title: "공연 알림 신청",
+  statement: "공연 알림을 위한 휴대전화 수집 및 SMS 수신에 동의합니다."
+}
+
+export const partnerInfo = {
+  "name": "금천문화재단"
 }
