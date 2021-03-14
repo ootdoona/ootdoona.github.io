@@ -1,19 +1,26 @@
 import React from 'react';
 import './header.css';
-import { title, language } from '../../contents';
+import { title, titleEn, language } from '../../contents';
 
-function Header() {
+interface HeaderProps {
+  lang: string;
+}
+
+function Header(props: HeaderProps) {
+	const langToSwitch = props.lang === "ko" ? language.en : language.ko;
+	const pathToRoute = props.lang === "ko" ? "/en" : "/";
+	const content = props.lang === "ko" ? title : titleEn;
 	return (
 		<header className="header header-section">
 			<div className="wrapper clearfix">
 				<div className="title-text">
-					<p>{title.text}</p>
+					<p>{content.text}</p>
 				</div>
 				<div className="title-date">
-					<p>{title.date}</p>
+					<p>{content.date}</p>
 				</div>
 				<div className="language">
-					<p>{language.en}</p>
+					<a href={pathToRoute}>{langToSwitch}</a>
 				</div>
 			</div>
 		</header>

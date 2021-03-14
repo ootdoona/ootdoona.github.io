@@ -1,10 +1,8 @@
 .section-misc {
-  /* position: relative; */
+  position: relative;
   width: 100%;
-  /* padding-top: 20px; */
   margin-top: -20px; /* TODO: debug this */
   padding-bottom: 50px;
-  /* padding-top: 20px; */
   background-color: #242526;
 }
 .section-misc .wrapper {

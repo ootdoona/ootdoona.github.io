@@ -1,9 +1,14 @@
 import React from 'react';
 import './intro.css';
-import { introContent, personalInfo } from '../../contents';
+import { introContent, introContentEn, personalInfo } from '../../contents';
 import poster from "../../assets/poster.png";
 
-function Intro() {
+interface IntroProps {
+  lang: string;
+}
+
+function Intro(props: IntroProps) {
+	const content = props.lang === "ko" ? introContent : introContentEn;
 	return (
 		<section className="section-intro">
 				<div className="wrapper">
@@ -11,15 +16,15 @@ function Intro() {
 						<img src={poster} alt="poster" className="poster-image"/>
 					</div>
 					<div className="title">
-						{introContent.title}
+						{content.title}
 					</div>
 					<div className="line">-</div>
 					<div className="para">
-						{introContent.para1}
+						{content.para1}
 					</div>
 					<div className="line">-</div>
 					<div className="para">
-						{introContent.para2}
+						{content.para2}
 					</div>
 					<div className="line">-</div>
 
@@ -27,7 +32,7 @@ function Intro() {
 						<div className="bold">{personalInfo.nameKo}  {personalInfo.nameEn}</div>
 						<div>{personalInfo.email}</div>
 						<div>{personalInfo.phone}</div>
-						<div>{personalInfo.web}</div>
+						<div><a target="_blank" href={personalInfo.web}>{personalInfo.web}</a></div>
 					</div>
 				</div>
 		</section>

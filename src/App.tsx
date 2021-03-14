@@ -1,9 +1,22 @@
 import React from 'react';
-import Main from './components/main';
+import { MainKo, MainEn } from './components/main';
+
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <Main />
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/en">
+            <MainEn />
+          </Route>
+          <Route path="/">
+            <MainKo />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

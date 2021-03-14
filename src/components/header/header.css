@@ -53,6 +53,12 @@ header .icon {
 	color: #c1c2c3;
 	display: none;
 }
+header .language a {
+	text-decoration: none;
+}
+header .language a, a:visited, a:hover, a:active {
+	color: inherit;
+}
 
 @media screen and (max-width: 1380px) {
 	header {

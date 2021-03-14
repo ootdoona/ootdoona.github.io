@@ -4,16 +4,24 @@ import Intro from './intro/intro';
 import Live from './live/live';
 import Misc from './misc/misc';
 
-import './main.css';
-
-function Main() {
+export function MainKo() {
 	return (
 		<div className="root">
-			<Header />
-			<Intro />
-            <Live />
-            <Misc />
+			<Header lang="ko" />
+			<Intro lang="ko" />
+            <Live lang="ko" />
+            <Misc lang="ko" />
 		</div>
 	);
 }
-export default Main;
+
+export function MainEn() {
+	return (
+		<div className="root">
+			<Header lang="en"/>
+			<Intro lang="en" />
+            <Live lang="en" />
+            <Misc lang="en" />
+		</div>
+	);
+}
