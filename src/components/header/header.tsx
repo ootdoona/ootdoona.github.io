@@ -3,10 +3,9 @@ import './header.css';
 import { title, language } from '../../contents';
 
 function Header() {
-
 	return (
 		<header className="header header-section">
-			<div className="inner clearfix">
+			<div className="wrapper clearfix">
 				<div className="title-text">
 					<p>{title.text}</p>
 				</div>

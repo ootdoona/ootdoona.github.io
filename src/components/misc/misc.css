@@ -1,56 +1,71 @@
 .section-misc {
-	padding-top: 20px;
-    position: relative;
-    margin-top: 50px;
-	background-color: #242526;
+  /* position: relative; */
+  width: 100%;
+  /* padding-top: 20px; */
+  margin-top: -20px; /* TODO: debug this */
+  padding-bottom: 50px;
+  /* padding-top: 20px; */
+  background-color: #242526;
 }
-.section-misc .inner {
+.section-misc .wrapper {
+  position: relative;
+  width: 80vw;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 20px; /* TODO: debug this */
 }
-.section-misc .poster-image {
-	width: 100vw;
+.section-misc .line {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
 }
 .section-misc .notification {
-	height: 50px;
-	display: flex;
-	align-items: center;
-	/* justify-content: center; */
-	font-size: 13px;
-	text-align: left;
-	color: white;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+.section-misc .notification .title {
+  font-size: 15px;
+  font-weight: 500px;
+  padding-bottom: 10px;
+}
+.section-misc .notification .consent {
+  font-size: 12px;
+  font-weight: 300px;
 }
 .section-misc .team-info {
-	font-weight: 300;
-	color: white;
-	margin-top: 50px;
-	font-size: 12px;
-	line-height: 1.5;
-	text-align: left;
+  font-weight: 300;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+}
+.section-misc .team-info .title {
+  font-size: 15px;
+  font-weight: 500px;
+  padding-bottom: 10px;
+}
+.section-misc .team-info .section-team-member {
+  font-size: 12px;
+  font-weight: 300px;
+}
+.section-misc .team-info .team-member {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block; 
 }
 .section-misc .partner-info {
-	font-weight: 300;
-	color: white;
-	margin-top: 50px;
-	font-size: 12px;
-	line-height: 1.5;
-	text-align: left;
+  color: white;
+  text-align: center;
+  padding-bottom: 50px;
 }
-.section-misc .miscstream {
-	width: 80vw;
+.section-misc .partner-info .title {
+  font-weight: 500px;
+  font-size: 15px;
+  padding-bottom: 10px;
 }
-.section-misc .wrapper-links > * {
-	display: inline-block;
-	text-decoration: none;
-	font-size: 22px;
-	color: #c1c2c3;
-	padding: 20px 30px;
-	border: 2px solid #c1c2c3;
-	margin-right: 20px;
-	border-radius: 16px;
-	text-align: center;
-	transition: 0.3s ease-out;
-}
-#resume {
-	margin-right: 0;
+.section-misc .partner-info .name {
+  font-size: 12px;
+  font-weight: 300px;
 }
 
 @keyframes hello {
@@ -80,9 +95,6 @@
 		margin-top: 30px;
 		font-size: 20px;
 	}
-	.section-misc .wrapper-links > * {
-		font-size: 20px;
-	}
 }
 @media screen and (max-width: 980px) {
 	.section-misc {
@@ -106,22 +118,11 @@
 	.section-misc .title {
 		/* margin-top: 30px; */
 	}
-	.section-misc .social-links {
-		width: fit-content;
-		margin: 0 auto;
-	}
-	.section-misc .wrapper-links > * {
-		max-width: 70%;
-		display: block;
-		padding: 20px 0;
-		font-size: 18px;
-		background-color: #242526;
-	}
 	#about {
 		margin: 0 auto;
 	}
 	#resume {
 		margin: 0 auto;
-		margin-top: 10px;
+		/* margin-top: 10px; */
 	}
 }

@@ -1,65 +1,52 @@
 .section-intro {
 	position: relative;
-	/* padding: 5vh 20px; */
 	margin-top: 50px;
-	margin-bottom: 0;
+	margin-bottom: 50px;
+	/* width: 80vw; */
 	text-align: center;
-	/* height: 130vh; */
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.section-intro .inner {
-	/* position: absolute; */
-	/* top: 0; */
-}
 .section-intro .wrapper {
 	color: #f1f2f3;
+	width: 80vw;
 }
 .section-intro .poster-image {
-	width: 100vw;
+	width: 80vw;
 }
 .section-intro .title {
-	margin-top: 70px;
-	font-size: 35px;
-	text-align: left;
-	color: black;
+  font-weight: 500;
+  margin-top: 15px;
+  font-size: 15px;
+  text-align: left;
+  color: black;
 }
 .section-intro .para {
-	font-weight: 300;
-	color: black;
-	margin-top: 50px;
-	font-size: 25px;
-	line-height: 1.5;
-	text-align: left;
+  font-weight: 300;
+  color: black;
+  /* margin-top: 50px; */
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+.section-intro .line { 
+  margin-top: 20px;
+  color: black;
 }
 .section-intro .artist-info {
-	color: black;
-	text-align: left;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.3;
+  color: black;
+  text-align: left;
+}
+.section-intro .artist-info .bold {
+  font-weight: 500;
 }
 .section-intro .social-links {
 	margin-top: 50px;
-}
-.section-intro .wrapper-links {
-	margin-top: 50px;
-}
-.section-intro .wrapper-links > * {
-	display: inline-block;
-	text-decoration: none;
-	font-size: 22px;
-	color: #c1c2c3;
-	padding: 20px 30px;
-	border: 2px solid #c1c2c3;
-	margin-right: 20px;
-	border-radius: 16px;
-	text-align: center;
-	transition: 0.3s ease-out;
-}
-.section-intro .wrapper-links > *:hover {
-	background-color: #ffffff;
-	color: #1f1f1f;
-	border-color: #ffffff;
 }
 #resume {
 	margin-right: 0;
@@ -82,18 +69,12 @@
 	.section-intro .wrapper {
 		min-width: 480px;
 	}
-	.section-intro .text-title {
-		font-size: 55px;
-	}
 	.section-intro .title {
-		font-size: 25px;
+		/* font-size: 25px; */
 	}
 	.section-intro .para {
-		margin-top: 30px;
-		font-size: 20px;
-	}
-	.section-intro .wrapper-links > * {
-		font-size: 20px;
+		/* margin-top: 30px; */
+		/* font-size: 20px; */
 	}
 }
 @media screen and (max-width: 980px) {
@@ -112,22 +93,12 @@
 	.section-intro .wrapper {
 		min-width: auto;
 	}
-	.section-intro .text-title {
-		font-size: 36px;
-	}
 	.section-intro .title {
-		margin-top: 30px;
+		/* margin-top: 30px; */
 	}
 	.section-intro .social-links {
 		width: fit-content;
 		margin: 0 auto;
-	}
-	.section-intro .wrapper-links > * {
-		max-width: 70%;
-		display: block;
-		padding: 20px 0;
-		font-size: 18px;
-		background-color: #242526;
 	}
 	#about {
 		margin: 0 auto;
