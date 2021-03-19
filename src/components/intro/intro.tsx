@@ -1,7 +1,8 @@
 import React from 'react';
 import './intro.css';
 import { introContent, introContentEn, personalInfo } from '../../contents';
-import poster from "../../assets/poster.png";
+import poster from "../../assets/landscape/landscape_loop.gif";
+import posterPortrait from "../../assets/portrait/portrait_loop.gif";
 
 interface IntroProps {
   lang: string;
