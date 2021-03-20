@@ -35,6 +35,39 @@
 .section-live .livestream {
 	width: 80vw;
 }
+.livestream .countdown {
+  width: 80vw;
+  height: 47vw;
+  background-color: black;
+  color: white;
+}
+.livestream .countdown .unit {
+  font-size: 12px;
+  color: #999999;
+  font-weight: 100;
+}
+.livestream .countdown .numbers {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%; 
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 90px;
+  font-weight: 100;
+}
+.facebook-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.facebook-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 .section-live .wrapper-links > * {
 	display: inline-block;
 	text-decoration: none;
