@@ -26,9 +26,8 @@
 .section-intro .para {
   font-weight: 300;
   color: black;
-  /* margin-top: 50px; */
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.7;
   text-align: left;
 }
 .section-intro .line { 
@@ -44,6 +43,10 @@
 }
 .section-intro .artist-info .bold {
   font-weight: 500;
+}
+a, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
 }
 .section-intro .social-links {
 	margin-top: 50px;
@@ -107,4 +110,35 @@
 		margin: 0 auto;
 		margin-top: 10px;
 	}
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .section-intro .wrapper {
+    color: #f1f2f3;
+    width: 95vw;
+  }
+  .section-intro .title {
+    font-size: 17px;
+  }
+  .section-intro .para {
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 1.9;
+  }
+  .section-intro .line { 
+    text-align: left;
+    font-weight: 500;
+    font-size: 27px;
+	margin-top: 10px;
+  }
+  .section-intro .artist-info {
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 1.9;
+  }
+  .section-intro .poster-image {
+  	width: 100vw;
+    margin-left: -2.5vw;
+  }
 }

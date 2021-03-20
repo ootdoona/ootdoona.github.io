@@ -1,14 +1,36 @@
 import React from 'react';
 import './intro.css';
 import { introContent, introContentEn, personalInfo } from '../../contents';
-import poster from "../../assets/landscape/landscape_loop.gif";
+import posterLandscape from "../../assets/landscape/landscape_loop.gif";
 import posterPortrait from "../../assets/portrait/portrait_loop.gif";
 
 interface IntroProps {
   lang: string;
 }
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 function Intro(props: IntroProps) {
+	const poster = isMobile.any() ? posterPortrait : posterLandscape;
 	const content = props.lang === "ko" ? introContent : introContentEn;
 	return (
 		<section className="section-intro">

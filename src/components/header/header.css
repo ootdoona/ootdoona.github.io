@@ -53,10 +53,8 @@ header .icon {
 	color: #c1c2c3;
 	display: none;
 }
-header .language a {
-	text-decoration: none;
-}
 header .language a, a:visited, a:hover, a:active {
+	text-decoration: none;
 	color: inherit;
 }
 
@@ -138,4 +136,11 @@ header .language a, a:visited, a:hover, a:active {
 	header .icon a {
 		padding: 17px 0;
 	}
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  header .wrapper {
+    width: 95vw;
+  }
 }
