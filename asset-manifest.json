@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/ootdoona.github.io/static/css/main.5371c311.chunk.css",
-    "main.js": "/ootdoona.github.io/static/js/main.a3154709.chunk.js",
-    "main.js.map": "/ootdoona.github.io/static/js/main.a3154709.chunk.js.map",
-    "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.5c011e43.js",
-    "runtime-main.js.map": "/ootdoona.github.io/static/js/runtime-main.5c011e43.js.map",
-    "static/js/2.40949e43.chunk.js": "/ootdoona.github.io/static/js/2.40949e43.chunk.js",
-    "static/js/2.40949e43.chunk.js.map": "/ootdoona.github.io/static/js/2.40949e43.chunk.js.map",
-    "static/js/3.e729366d.chunk.js": "/ootdoona.github.io/static/js/3.e729366d.chunk.js",
-    "static/js/3.e729366d.chunk.js.map": "/ootdoona.github.io/static/js/3.e729366d.chunk.js.map",
+    "main.js": "/ootdoona.github.io/static/js/main.c5da0698.chunk.js",
+    "main.js.map": "/ootdoona.github.io/static/js/main.c5da0698.chunk.js.map",
+    "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.d74ad9c6.js",
+    "runtime-main.js.map": "/ootdoona.github.io/static/js/runtime-main.d74ad9c6.js.map",
+    "static/js/2.be943130.chunk.js": "/ootdoona.github.io/static/js/2.be943130.chunk.js",
+    "static/js/2.be943130.chunk.js.map": "/ootdoona.github.io/static/js/2.be943130.chunk.js.map",
+    "static/js/3.cac5f179.chunk.js": "/ootdoona.github.io/static/js/3.cac5f179.chunk.js",
+    "static/js/3.cac5f179.chunk.js.map": "/ootdoona.github.io/static/js/3.cac5f179.chunk.js.map",
     "index.html": "/ootdoona.github.io/index.html",
     "static/css/main.5371c311.chunk.css.map": "/ootdoona.github.io/static/css/main.5371c311.chunk.css.map",
-    "static/js/2.40949e43.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.40949e43.chunk.js.LICENSE.txt",
+    "static/js/2.be943130.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.be943130.chunk.js.LICENSE.txt",
     "static/media/landscape_loop.0f3b5ca6.gif": "/ootdoona.github.io/static/media/landscape_loop.0f3b5ca6.gif",
     "static/media/portrait_loop.47b7c003.gif": "/ootdoona.github.io/static/media/portrait_loop.47b7c003.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.5c011e43.js",
-    "static/js/2.40949e43.chunk.js",
+    "static/js/runtime-main.d74ad9c6.js",
+    "static/js/2.be943130.chunk.js",
     "static/css/main.5371c311.chunk.css",
-    "static/js/main.a3154709.chunk.js"
+    "static/js/main.c5da0698.chunk.js"
   ]
 }
