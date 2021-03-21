@@ -22,7 +22,7 @@ interface LiveState {
 }
 
 const calculateTime = (A: moment.Moment, B: moment.Moment) => {
-  const difference = A.diff(B);
+  const difference = +(new Date(A.format())) - +(new Date(B.format()));
   let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
   if (difference > 0) {
     timeLeft.days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -41,16 +41,16 @@ export default class Live extends Component<LiveProps, LiveState> {
 
   componentDidMount() {
     // set nextShow based on timeline
-    const cur = new Date();
+    const cur = moment().utc();
     let nextShow = timeline.length;
     for (let i = 0; i < timeline.length; i++) {
-      const diff = +new Date(timeline[i]) - +cur;
+      const base = moment.tz(timeline[i], "Asia/Seoul").utc();
+      const diff = +(new Date(base.format())) - +(new Date(cur.format()));
       if (diff > 0) {
         nextShow = i;
         break;
       }
-      const t = moment.tz(timeline[i], "Asia/Seoul");
-      const howlong = moment().diff(t);
+      const howlong = +(new Date(cur.format())) - +(new Date(base.format()));
       let days = Math.floor(howlong / (1000 * 60 * 60 * 24));
       let hours = Math.floor((howlong / (1000 * 60 * 60)) % 24);
       let minutes = Math.floor((howlong / 1000 / 60) % 60);
@@ -60,14 +60,11 @@ export default class Live extends Component<LiveProps, LiveState> {
       }
     }
     console.log(`next show is ${nextShow}`);
-    // const now = moment();
-    // console.log(`time1: ${t}`);
-    // console.log(`time2: ${now} ${now.diff(t)}`);
     this.setState({
     	nextShow
     });
     let myInterval = setInterval(() => {
-      const cur = moment();
+      const cur = moment().utc();
     	this.setState({
     		curTime: cur
     	});
@@ -85,9 +82,9 @@ export default class Live extends Component<LiveProps, LiveState> {
     // else if timeline[next show] <= current time < timeline[next show] + 30m, show live stream,
     // else if current time > timeline[next show] + 30m, next show += 1
     let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
-    const cur = moment();
-    const base = moment.tz(timeline[this.state.nextShow], "Asia/Seoul");
-    const difference = base.diff(cur);
+    const cur = moment().utc();
+    const base = moment.tz(timeline[this.state.nextShow], "Asia/Seoul").utc();
+    const difference = +(new Date(base.format())) - +(new Date(cur.format()));
     let showCountdown = true;
 
     if (this.state.nextShow >= timeline.length) {
@@ -110,7 +107,6 @@ export default class Live extends Component<LiveProps, LiveState> {
         timeLeft = calculateTime(base, cur); // base - cur
       }
     }
-    // showCountdown = true;
 
     if (showCountdown) {
       return (
@@ -125,7 +121,7 @@ export default class Live extends Component<LiveProps, LiveState> {
                   DAYS HOURS MINUTES SECONDS
                 </div>
                 <div className="numbers">
-                  {/* {difference}:{}:{}:{} */}
+                  {/* {difference}: */}
                   {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
                 </div>
               </div>
