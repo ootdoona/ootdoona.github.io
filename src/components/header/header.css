@@ -18,8 +18,7 @@ header .wrapper {
 header .title-text {
 	font-size: 18px;
 	float: left;
-	/* margin-left: 50px; */
-	display: flex;
+  display: flex;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
@@ -31,11 +30,11 @@ header .title-text a {
 header .title-date {
 	font-size: 16px;
 	float: left;
+  display: flex;
 	margin-left: 10px;
-	height: 100%;
-	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
 	color: black;
 }
 header .language {

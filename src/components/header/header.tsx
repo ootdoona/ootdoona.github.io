@@ -14,10 +14,10 @@ function Header(props: HeaderProps) {
 		<header className="header header-section">
 			<div className="wrapper clearfix">
 				<div className="title-text">
-					<p>{content.text}</p>
+					{content.text}
 				</div>
 				<div className="title-date">
-					<p>{content.date}</p>
+					{content.date}
 				</div>
 				<div className="language">
 					<a href={pathToRoute}>{langToSwitch}</a>
