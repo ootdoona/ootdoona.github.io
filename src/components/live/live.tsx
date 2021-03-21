@@ -39,34 +39,33 @@ export default class Live extends Component<LiveProps, LiveState> {
 
   componentDidMount() {
     // set nextShow based on timeline
-	const cur = new Date();
-	let nextShow = timeline.length;
-	for (let i = 0; i < timeline.length; i++) {
-		const diff = +new Date(timeline[i]) - +cur;
-		if (diff > 0) {
-			nextShow = i;
-			break;
-		}
-		const howlong = +cur - +new Date(timeline[i]);
-   	    let days = Math.floor(howlong / (1000 * 60 * 60 * 24));
-   	    let hours = Math.floor((howlong / (1000 * 60 * 60)) % 24);
-   	    let minutes = Math.floor((howlong / 1000 / 60) % 60);
-		if (days === 0 && hours === 0 && minutes < showTime){
-			nextShow = i;
-			break;
-		}
-	}
-	console.log(`next show is ${nextShow}`);
-	this.setState({
-		nextShow
-	});
-
-	let myInterval = setInterval(() => {
-		const timeLeft = calculateTimeAB(new Date(timeline[0]), new Date());
-		this.setState({
-			curTime: new Date()
-		});
-	}, 100);
+    const cur = new Date();
+    let nextShow = timeline.length;
+    for (let i = 0; i < timeline.length; i++) {
+      const diff = +new Date(timeline[i]) - +cur;
+      if (diff > 0) {
+        nextShow = i;
+        break;
+      }
+      const howlong = +cur - +new Date(timeline[i]);
+      let days = Math.floor(howlong / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((howlong / (1000 * 60 * 60)) % 24);
+      let minutes = Math.floor((howlong / 1000 / 60) % 60);
+    	if (days === 0 && hours === 0 && minutes < showTime){
+        nextShow = i;
+        break;
+      }
+    }
+    console.log(`next show is ${nextShow}`);
+    this.setState({
+    	nextShow
+    });
+    let myInterval = setInterval(() => {
+    	const timeLeft = calculateTimeAB(new Date(timeline[0]), new Date());
+    	this.setState({
+    		curTime: new Date()
+    	});
+    }, 100);
   }
 
   componentWillUnmount() {
@@ -79,34 +78,37 @@ export default class Live extends Component<LiveProps, LiveState> {
     // if current time is before timeline[next show], show count down based on timeline[next show]
     // else if timeline[next show] <= current time < timeline[next show] + 30m, show live stream,
     // else if current time > timeline[next show] + 30m, next show += 1
-	let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
-	const cur = new Date();
+    let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
+    const cur = new Date();
     const base = new Date(timeline[this.state.nextShow]);
     const difference = +base - +cur;
-	let showCountdown = true;
+    // const difference = +(new Date("2021-03-21T20:57:00Z")) - +(new Date("2021-03-21T20:45:00Z"));
+    let showCountdown = true;
 
-	if (this.state.nextShow >= timeline.length) {
-		showCountdown = false;
-	} else if (difference > 0) { // we are waiting for the show
-	  showCountdown = true;
+    if (this.state.nextShow >= timeline.length) {
+      showCountdown = false; // all show is over
+    } else if (difference > 0) { // we are waiting for the show
+      showCountdown = true;
       timeLeft = calculateTimeAB(base, cur); // base - cur
-	} else if (difference < 0) { // show has started
-		const timeDiff = calculateTimeAB(cur, base); // how long show is going on
-		// if within 30m
-		if (timeDiff.days === 0 && timeDiff.hours === 0 && timeDiff.minutes < showTime) {
-			showCountdown = false;
-		} else if (this.state.nextShow + 1 >= timeline.length) {
-			showCountdown = false; // all show is over
-		} else {
-		  this.setState({
-		    nextShow: this.state.nextShow + 1
-		  });
-		  showCountdown = true;
-		  timeLeft = calculateTimeAB(base, cur); // base - cur
-		}
-	}
+    } else if (difference < 0) { // show has started
+      const timeDiff = calculateTimeAB(cur, base); // how long show is going on
+      // if within 30m
+      if (timeDiff.days === 0 && timeDiff.hours === 0 && timeDiff.minutes < showTime) {
+        showCountdown = false;
+      } else if (this.state.nextShow + 1 >= timeline.length) {
+        showCountdown = false; // all show is over
+      } else {
+        this.setState({
+          nextShow: this.state.nextShow + 1
+        });
+        showCountdown = true;
+        timeLeft = calculateTimeAB(base, cur); // base - cur
+      }
+    }
+    // showCountdown = true;
+    // console.log(cur.getMinutes())
 
-	if (showCountdown) {
+    if (showCountdown) {
       return (
         <section className="section-live">
           <div className="wrapper">
@@ -119,6 +121,7 @@ export default class Live extends Component<LiveProps, LiveState> {
                   DAYS HOURS MINUTES SECONDS
                 </div>
                 <div className="numbers">
+                  {/* {difference}:{cur.getHours()}:{cur.getMinutes()}:{cur.getSeconds()} */}
                   {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
                 </div>
               </div>
@@ -130,8 +133,8 @@ export default class Live extends Component<LiveProps, LiveState> {
           </div>
         </section>
       );
-	} else {
-	  const videoLink = fblink[this.state.nextShow < timeline.length ? this.state.nextShow : timeline.length - 1];
+    } else {
+      const videoLink = fblink[this.state.nextShow < timeline.length ? this.state.nextShow : timeline.length - 1];
       return (
         <section className="section-live">
           <div className="wrapper">
@@ -150,6 +153,6 @@ export default class Live extends Component<LiveProps, LiveState> {
           </div>
         </section>
       );
-	}
+    }
   }
 }
