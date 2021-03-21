@@ -35,7 +35,7 @@ export const personalInfo = {
 
 export const liveContent = {
     title: "ACT I. 거울앞에서",
-    para1: "개인이 인식하는 자신의 정체성 속에는 맹점이 있다. 그가 보는 다른 사람에는 자신이 누구인지와 어떻게 그 사람으로부터 자신을 구분 짓는지 반영되어 있다. 거울 앞에서, 퍼포머는 관객들이 형성한 사회적 위계, 질서를 노골적인 얼굴과 제스처로 드러낸다."
+    para1: "개인이 인식하는 자신의 정체성 속에는 맹점이 있다. 그가 보는 다른 사람에는 자신이 누구인지, 어떻게 그 사람으로부터 자신을 구분 짓는지 반영되어 있다. 거울 앞에서, 퍼포머는 관객들이 형성한 사회적 위계, 질서를 노골적인 얼굴과 제스처로 드러낸다."
 }
 export const liveContentEn = {
     title: "ACT I. In Front of the Mirror",
