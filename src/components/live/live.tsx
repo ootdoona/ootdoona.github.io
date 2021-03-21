@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Row, Col, Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
 import { liveContent, liveContentEn } from '../../contents';
 import { timeline, showTime, fblink } from '../../config';
@@ -31,6 +33,9 @@ const calculateTime = (A: moment.Moment, B: moment.Moment) => {
     timeLeft.seconds = Math.floor((difference / 1000) % 60);
   }
   return timeLeft;
+}
+const zeropad = (x: number) => {
+  return x < 10 ? `0${x}` : `${x}`;
 }
 
 export default class Live extends Component<LiveProps, LiveState> {
@@ -118,11 +123,13 @@ export default class Live extends Component<LiveProps, LiveState> {
             <div className="livestream facebook-responsive">
               <div className="countdown">
                 <div className="unit">
-                  DAYS HOURS MINUTES SECONDS
+                  <div className="days">DAYS</div>
+                  <div className="hours">HOURS</div>
+                  <div className="minutes">MINUTES</div>
+                  <div className="seconds">SECONDS</div>
                 </div>
                 <div className="numbers">
-                  {/* {difference}: */}
-                  {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
+                  {zeropad(timeLeft.days)}:{zeropad(timeLeft.hours)}:{zeropad(timeLeft.minutes)}:{zeropad(timeLeft.seconds)}
                 </div>
               </div>
             </div>

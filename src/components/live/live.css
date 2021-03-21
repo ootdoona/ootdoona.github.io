@@ -15,7 +15,6 @@
 	font-weight: 500;
 	display: flex;
 	align-items: center;
-	/* justify-content: center; */
 	font-size: 18px;
 	text-align: left;
 	color: white;
@@ -40,58 +39,49 @@
   height: 47vw;
   background-color: black;
   color: white;
+  float: left;
 }
 .livestream .countdown .unit {
-  font-size: 12px;
+  font-size: 1.1vw;
   color: #999999;
   font-weight: 100;
 }
+.livestream .countdown .unit .days{
+  display: inline-block;
+  transform: translateX(+25vw) translateY(+17vw);
+}
+.livestream .countdown .unit .hours{
+  display: inline-block;
+  transform: translateX(+31.5vw) translateY(+17vw);
+}
+.livestream .countdown .unit .minutes{
+  display: inline-block;
+  transform: translateX(+37vw) translateY(+17vw);
+}
+.livestream .countdown .unit .seconds{
+  display: inline-block;
+  transform: translateX(+41vw) translateY(+17vw);
+}
 .livestream .countdown .numbers {
-  position: relative;
-  float: left;
-  top: 50%;
-  left: 50%; 
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 90px;
+  transform: translateX(+22vw) translateY(+16vw);
+  width: auto;
+  display: inline-block;
+  font-size: 7.5vw;
+  color: white;
   font-weight: 100;
 }
 .facebook-responsive {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
 }
 .facebook-responsive iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-.section-live .wrapper-links > * {
-	display: inline-block;
-	text-decoration: none;
-	font-size: 22px;
-	color: #c1c2c3;
-	padding: 20px 30px;
-	border: 2px solid #c1c2c3;
-	margin-right: 20px;
-	border-radius: 16px;
-	text-align: center;
-	transition: 0.3s ease-out;
-}
-#resume {
-	margin-right: 0;
-}
-
-@keyframes hello {
-	0% {transform: rotate(0deg);}
-	10% {transform: rotate(-10deg);}
-	20% {transform: rotate(12deg);}
-	30% {transform: rotate(-10deg);}
-	40% {transform: rotate(9deg);}
-	50% {transform: rotate(0deg);}
-	100% {transform: rotate(0deg);}
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
 }
 
 @media only screen
@@ -123,8 +113,13 @@ and (max-device-width : 480px) {
     width: 100vw;
     height: 56vw;
   }
-  .livestream .countdown .numbers {
-    font-size: 60px;
+  .livestream .countdown .unit {
+    font-size: 2.5vw;
     font-weight: 100;
+  }
+  .livestream .countdown .numbers {
+    font-size: 12vw;
+    font-weight: 100;
+    transform: translateX(+21vw) translateY(+16vw);
   }
 }
