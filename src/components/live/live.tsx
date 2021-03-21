@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './live.css';
 import { liveContent, liveContentEn } from '../../contents';
 import { timeline, showTime, fblink } from '../../config';
+import moment from 'moment';
+import 'moment-timezone';
 
 interface LiveProps {
   lang: string;
@@ -15,12 +17,12 @@ interface Time {
 };
 
 interface LiveState {
-  curTime: Date;
+  curTime: moment.Moment;
   nextShow: number;
 }
 
-const calculateTimeAB = (A: Date, B: Date) => {
-  const difference = +A - +B;
+const calculateTime = (A: moment.Moment, B: moment.Moment) => {
+  const difference = A.diff(B);
   let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
   if (difference > 0) {
     timeLeft.days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -33,8 +35,8 @@ const calculateTimeAB = (A: Date, B: Date) => {
 
 export default class Live extends Component<LiveProps, LiveState> {
   state = {
-	curTime: new Date(),
-	nextShow: 0
+    curTime: moment(),
+    nextShow: 0
   }
 
   componentDidMount() {
@@ -47,7 +49,8 @@ export default class Live extends Component<LiveProps, LiveState> {
         nextShow = i;
         break;
       }
-      const howlong = +cur - +new Date(timeline[i]);
+      const t = moment.tz(timeline[i], "Asia/Seoul");
+      const howlong = moment().diff(t);
       let days = Math.floor(howlong / (1000 * 60 * 60 * 24));
       let hours = Math.floor((howlong / (1000 * 60 * 60)) % 24);
       let minutes = Math.floor((howlong / 1000 / 60) % 60);
@@ -57,13 +60,16 @@ export default class Live extends Component<LiveProps, LiveState> {
       }
     }
     console.log(`next show is ${nextShow}`);
+    // const now = moment();
+    // console.log(`time1: ${t}`);
+    // console.log(`time2: ${now} ${now.diff(t)}`);
     this.setState({
     	nextShow
     });
     let myInterval = setInterval(() => {
-    	const timeLeft = calculateTimeAB(new Date(timeline[0]), new Date());
+      const cur = moment();
     	this.setState({
-    		curTime: new Date()
+    		curTime: cur
     	});
     }, 100);
   }
@@ -79,19 +85,18 @@ export default class Live extends Component<LiveProps, LiveState> {
     // else if timeline[next show] <= current time < timeline[next show] + 30m, show live stream,
     // else if current time > timeline[next show] + 30m, next show += 1
     let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
-    const cur = new Date();
-    const base = new Date(timeline[this.state.nextShow]);
-    const difference = +base - +cur;
-    // const difference = +(new Date("2021-03-21T20:57:00Z")) - +(new Date("2021-03-21T20:45:00Z"));
+    const cur = moment();
+    const base = moment.tz(timeline[this.state.nextShow], "Asia/Seoul");
+    const difference = base.diff(cur);
     let showCountdown = true;
 
     if (this.state.nextShow >= timeline.length) {
       showCountdown = false; // all show is over
     } else if (difference > 0) { // we are waiting for the show
       showCountdown = true;
-      timeLeft = calculateTimeAB(base, cur); // base - cur
+      timeLeft = calculateTime(base, cur);
     } else if (difference < 0) { // show has started
-      const timeDiff = calculateTimeAB(cur, base); // how long show is going on
+      const timeDiff = calculateTime(cur, base); // how long show is going on
       // if within 30m
       if (timeDiff.days === 0 && timeDiff.hours === 0 && timeDiff.minutes < showTime) {
         showCountdown = false;
@@ -102,11 +107,10 @@ export default class Live extends Component<LiveProps, LiveState> {
           nextShow: this.state.nextShow + 1
         });
         showCountdown = true;
-        timeLeft = calculateTimeAB(base, cur); // base - cur
+        timeLeft = calculateTime(base, cur); // base - cur
       }
     }
     // showCountdown = true;
-    // console.log(cur.getMinutes())
 
     if (showCountdown) {
       return (
@@ -121,7 +125,7 @@ export default class Live extends Component<LiveProps, LiveState> {
                   DAYS HOURS MINUTES SECONDS
                 </div>
                 <div className="numbers">
-                  {/* {difference}:{cur.getHours()}:{cur.getMinutes()}:{cur.getSeconds()} */}
+                  {/* {difference}:{}:{}:{} */}
                   {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:{timeLeft.seconds}
                 </div>
               </div>
