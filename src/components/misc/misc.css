@@ -23,27 +23,24 @@
 }
 .section-misc .notification .title {
   font-size: 15px;
-  font-weight: 500px;
+  font-weight: bold;
   padding-bottom: 10px;
 }
 .section-misc .notification .consent {
   font-size: 12px;
-  font-weight: 300px;
 }
 .section-misc .team-info {
-  font-weight: 300;
   color: white;
   line-height: 1.5;
   text-align: center;
 }
 .section-misc .team-info .title {
   font-size: 15px;
-  font-weight: 500px;
+  font-weight: bold;
   padding-bottom: 10px;
 }
 .section-misc .team-info .section-team-member {
   font-size: 12px;
-  font-weight: 300px;
 }
 .section-misc .team-info .team-member {
   padding-left: 10px;
@@ -56,13 +53,12 @@
   padding-bottom: 50px;
 }
 .section-misc .partner-info .title {
-  font-weight: 500px;
+  font-weight: bold;
   font-size: 15px;
   padding-bottom: 10px;
 }
 .section-misc .partner-info .name {
   font-size: 12px;
-  font-weight: 300px;
 }
 
 @keyframes hello {
@@ -141,28 +137,31 @@ and (max-device-width : 480px) {
   }
   .section-misc .team-info .title {
     font-size: 17px;
-    font-weight: 500px;
+    font-weight: bold;
   }
   .section-misc .team-info .section-team-member {
     font-size: 15px;
-    font-weight: 200px;
   }
   .section-misc .partner-info {
     text-align: left;
   }
   .section-misc .partner-info .title {
-    font-weight: 500px;
+    font-weight: bold;
     font-size: 17px;
     padding-bottom: 10px;
   }
   .section-misc .partner-info .name {
     font-size: 15px;
-    font-weight: 200px;
   }
   .section-misc .line { 
     text-align: left;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 27px;
-	margin-top: 10px;
+    margin-top: 10px;
+  }
+  .section-misc .team-info .team-member {
+    padding-left: 0;
+    padding-right: 20px;
+    display: inline-block; 
   }
 }

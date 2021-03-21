@@ -30,6 +30,9 @@ function Misc(props: MiscProps) {
 					  	{teamInfoContent.transmission.role}  {teamInfoContent.transmission.name}
 					  </div>
 					  <div className="team-member">
+					  	{teamInfoContent.directing.role}  {teamInfoContent.directing.name}
+					  </div>
+					  <div className="team-member">
 					  	{teamInfoContent.design.role}  {teamInfoContent.design.name}
 					  </div>
 					  <div className="team-member">

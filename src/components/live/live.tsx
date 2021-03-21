@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Row, Col, Container, Button } from 'react-bootstrap';
+import { Component } from 'react';
+import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
 import { liveContent, liveContentEn, personalInfo } from '../../contents';

@@ -14,7 +14,7 @@
 	display: flex;
   float: left;
 	height: 50px;
-	font-weight: 500;
+  font-weight: bold;
 	align-items: center;
 	font-size: 18px;
 	text-align: left;
@@ -39,7 +39,6 @@
 }
 
 .section-live .para {
-  font-weight: 300;
   color: white;
   font-size: 15px;
   line-height: 1.7;
@@ -63,7 +62,6 @@
 .livestream .countdown .unit {
   font-size: 1.1vw;
   color: #999999;
-  font-weight: 100;
 }
 .livestream .countdown .unit .days{
   display: inline-block;
@@ -85,9 +83,8 @@
   transform: translateX(+22vw) translateY(+16vw);
   width: auto;
   display: inline-block;
-  font-size: 7.5vw;
+  font-size: 6.4vw;
   color: white;
-  font-weight: 100;
 }
 .facebook-responsive {
   overflow:hidden;
@@ -114,13 +111,12 @@ and (max-device-width : 480px) {
     font-size: 17px;
   }
   .section-live .para {
-    font-weight: 200;
     font-size: 17px;
     line-height: 1.9;
   }
   .section-live .line { 
     text-align: left;
-    font-weight: 500;
+    font-weight: bold;
     font-size: 27px;
     margin-top: 10px;
   }
@@ -134,11 +130,9 @@ and (max-device-width : 480px) {
   }
   .livestream .countdown .unit {
     font-size: 2.5vw;
-    font-weight: 100;
   }
   .livestream .countdown .numbers {
-    font-size: 12vw;
-    font-weight: 100;
+    font-size: 10vw;
     transform: translateX(+21vw) translateY(+16vw);
   }
   .btn .btn-insta-image {

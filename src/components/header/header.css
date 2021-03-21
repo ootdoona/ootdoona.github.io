@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800');
+body, table, div, p{ font-family: 'Nanum Gothic'; }
+
 header {
   position: fixed;
   height: 50px;
@@ -21,6 +24,7 @@ header .title-text {
   display: flex;
 	align-items: center;
 	justify-content: center;
+  font-weight: bold;
 	height: 100%;
 	color: black;
 }

@@ -45,12 +45,14 @@ export const liveContentEn = {
 export const teamInfo = {
     "sound": {"name": "김도형", "role": "작곡/연주"},
     "transmission": {"name": "이승준", "role": "송출/통신"},
+    "directing": {"name": "이수진", "role": "연출 협력"},
     "design": {"name": "이민경", "role": "웹 디자인/전시그래픽"},
     "development": {"name": "정은아", "role": "웹 프로그래밍"},
 }
 export const teamInfoEn = {
     "sound": {"name": "en김도형", "role": "eng작곡/연주"},
     "transmission": {"name": "en이승준", "role": "eng송출/통신"},
+    "directing": {"name": "Sujin Lee", "role": "Directing"},
     "design": {"name": "en이민경", "role": "eng웹 디자인/전시그래픽"},
     "development": {"name": "en정은아", "role": "eng웹 프로그래밍"},
 }
