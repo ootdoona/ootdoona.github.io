@@ -8,7 +8,7 @@ interface HeaderProps {
 
 function Header(props: HeaderProps) {
 	const langToSwitch = props.lang === "ko" ? language.en : language.ko;
-	const pathToRoute = props.lang === "ko" ? "/en" : "/";
+	const pathToRoute = props.lang === "ko" ? "/#/en" : "/";
 	const content = props.lang === "ko" ? title : titleEn;
 	return (
 		<header className="header header-section">

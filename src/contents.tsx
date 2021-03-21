@@ -4,7 +4,7 @@ export const title = {
     date: '2021.03.27'
 };
 export const titleEn = {
-	text: 'Eros, as a modern',
+	text: 'Eros, as a Modern Punishment',
     date: '2021.03.27'
 };
 
@@ -50,11 +50,11 @@ export const teamInfo = {
     "development": {"name": "정은아", "role": "웹 프로그래밍"},
 }
 export const teamInfoEn = {
-    "sound": {"name": "en김도형", "role": "eng작곡/연주"},
-    "transmission": {"name": "en이승준", "role": "eng송출/통신"},
+    "sound": {"name": "Dohyeong Kim", "role": "Sound"},
+    "transmission": {"name": "Seungjun Lee", "role": "Transmission"},
     "directing": {"name": "Sujin Lee", "role": "Directing"},
-    "design": {"name": "en이민경", "role": "eng웹 디자인/전시그래픽"},
-    "development": {"name": "en정은아", "role": "eng웹 프로그래밍"},
+    "design": {"name": "Minkyeong Lee", "role": "Web Design/Graphics"},
+    "development": {"name": "Eunah Jung", "role": "Web Development"},
 }
 
 export const notification = {
@@ -63,12 +63,12 @@ export const notification = {
 }
 export const notificationEn = {
   title: "Performance Notification",
-  statement: "consent statement blahblah"
+  statement: "Performance Notification consent statement"
 }
 
 export const partnerInfo = {
   "name": "금천문화재단"
 }
 export const partnerInfoEn = {
-  "name": "culture center"
+  "name": "Geumcheon Foundation for Arts and Culture"
 }
