@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col, Container, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
-import { liveContent, liveContentEn } from '../../contents';
+import { liveContent, liveContentEn, personalInfo } from '../../contents';
 import { timeline, showTime, fblink } from '../../config';
+import MapIcon from "../../assets/icon/map.png";
+import InstaIcon from "../../assets/icon/insta.png";
 import moment from 'moment';
 import 'moment-timezone';
 
@@ -120,6 +122,12 @@ export default class Live extends Component<LiveProps, LiveState> {
             <div className="title">
             	{content.title}
             </div>
+            <Button className="btn">
+		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+            </Button>
+            <Button className="btn">
+		          <img src={MapIcon} className="btn-map-image"/>
+            </Button>
             <div className="livestream facebook-responsive">
               <div className="countdown">
                 <div className="unit">

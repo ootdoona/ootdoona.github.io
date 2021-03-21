@@ -29,7 +29,8 @@ export const personalInfo = {
     nameEn: "Dami Kim",
     email: "dami7060@gmail.com",
     phone: "+82 10 6441 9257",
-    web: "https://damikim.net"
+    web: "https://damikim.net",
+    insta: "https://instagram.com/damikim___?igshid=159l2rpw5ppo8"
 }
 
 export const liveContent = {
