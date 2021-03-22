@@ -19,14 +19,14 @@ header .wrapper {
   transform: translateX(-50%);
 }
 header .title-text {
-	font-size: 18px;
-	float: left;
+  font-size: 18px;
+  float: left;
   display: flex;
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
-	height: 100%;
-	color: black;
+  height: 100%;
+  color: black;
 }
 header .title-text a {
 	text-decoration: none;
@@ -36,6 +36,7 @@ header .title-date {
 	float: left;
   display: flex;
 	margin-left: 10px;
+  margin-top: 1px;
 	align-items: center;
 	justify-content: center;
 	height: 100%;
@@ -145,5 +146,8 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
   header .wrapper {
     width: 95vw;
+  }
+  header .title-date {
+    margin-top: 0;
   }
 }
