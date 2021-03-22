@@ -53,72 +53,14 @@
   padding-bottom: 50px;
 }
 .section-misc .partner-info .title {
-  font-weight: bold;
   font-size: 15px;
+  font-weight: bold;
   padding-bottom: 10px;
 }
 .section-misc .partner-info .name {
   font-size: 12px;
 }
 
-@keyframes hello {
-	0% {transform: rotate(0deg);}
-	10% {transform: rotate(-10deg);}
-	20% {transform: rotate(12deg);}
-	30% {transform: rotate(-10deg);}
-	40% {transform: rotate(9deg);}
-	50% {transform: rotate(0deg);}
-	100% {transform: rotate(0deg);}
-}
-
-@media screen and (max-width:1380px) {
-	.section-misc {
-		/* margin-top: 80px; */
-	}
-	.section-misc .wrapper {
-		min-width: 480px;
-	}
-	.section-misc .text-title {
-		/* font-size: 55px; */
-	}
-	.section-misc .title {
-		/* font-size: 25px; */
-	}
-	.section-misc .para {
-		margin-top: 30px;
-		font-size: 20px;
-	}
-}
-@media screen and (max-width: 980px) {
-	.section-misc {
-		/* margin-top: 60px; */
-	}
-}
-@media screen and (max-width:768px) {
-	.section-misc {
-		/* margin-top: 80px; */
-		/* padding: 5vh 20px; */
-	}
-	.section-misc .inner {
-		display: block;
-	}
-	.section-misc .wrapper {
-		min-width: auto;
-	}
-	.section-misc .text-title {
-		font-size: 36px;
-	}
-	.section-misc .title {
-		/* margin-top: 30px; */
-	}
-	#about {
-		margin: 0 auto;
-	}
-	#resume {
-		margin: 0 auto;
-		/* margin-top: 10px; */
-	}
-}
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -146,17 +88,17 @@ and (max-device-width : 480px) {
     text-align: left;
   }
   .section-misc .partner-info .title {
-    font-weight: bold;
     font-size: 17px;
+    font-weight: bold;
     padding-bottom: 10px;
   }
   .section-misc .partner-info .name {
     font-size: 15px;
   }
   .section-misc .line { 
+    font-size: 27px;
     text-align: left;
     font-weight: bold;
-    font-size: 27px;
     margin-top: 10px;
   }
   .section-misc .team-info .team-member {

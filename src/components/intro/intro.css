@@ -17,15 +17,15 @@
 	width: 80vw;
 }
 .section-intro .title {
+  font-size: 15px;
   font-weight: bold;
   margin-top: 15px;
-  font-size: 15px;
   text-align: left;
   color: black;
 }
 .section-intro .para {
-  color: black;
   font-size: 15px;
+  color: black;
   line-height: 1.7;
   text-align: left;
 }
@@ -124,9 +124,9 @@ and (max-device-width : 480px) {
     line-height: 1.9;
   }
   .section-intro .line { 
+    font-size: 27px;
     text-align: left;
     font-weight: bold;
-    font-size: 27px;
     margin-top: 10px;
   }
   .section-intro .artist-info {

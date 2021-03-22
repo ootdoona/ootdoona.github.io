@@ -14,9 +14,9 @@
 	display: flex;
   float: left;
 	height: 50px;
-  font-weight: bold;
 	align-items: center;
 	font-size: 18px;
+  font-weight: bold;
 	text-align: left;
 	color: white;
 }
@@ -39,8 +39,8 @@
 }
 
 .section-live .para {
-  color: white;
   font-size: 15px;
+  color: white;
   line-height: 1.7;
   text-align: left;
 }
@@ -115,9 +115,9 @@ and (max-device-width : 480px) {
     line-height: 1.9;
   }
   .section-live .line { 
+    font-size: 27px;
     text-align: left;
     font-weight: bold;
-    font-size: 27px;
     margin-top: 10px;
   }
   .section-live .livestream {
