@@ -30,7 +30,8 @@ export const personalInfo = {
     email: "dami7060@gmail.com",
     phone: "+82 10 6441 9257",
     web: "https://damikim.net",
-    insta: "https://instagram.com/damikim___?igshid=159l2rpw5ppo8"
+    insta: "https://instagram.com/damikim___?igshid=159l2rpw5ppo8",
+    location: "https://goo.gl/maps/Et8AkPcd4wUGWJtf8"
 }
 
 export const liveContent = {

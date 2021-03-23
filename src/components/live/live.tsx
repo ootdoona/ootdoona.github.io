@@ -126,7 +126,7 @@ export default class Live extends Component<LiveProps, LiveState> {
 		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
             </Button>
             <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image"/>
+		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
             </Button>
             <div className="livestream facebook-responsive">
               <div className="countdown">
@@ -156,6 +156,12 @@ export default class Live extends Component<LiveProps, LiveState> {
             <div className="title">
             	{content.title}
             </div>
+            <Button className="btn">
+		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+            </Button>
+            <Button className="btn">
+		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
+            </Button>
             <div className="livestream facebook-responsive">
               {/* <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwoojaega%2Fvideos%2F913576439405391%2F&width=1280" width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe> */}
               <iframe src={videoLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
