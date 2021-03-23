@@ -72,13 +72,13 @@ and (max-device-width : 480px) {
     text-align: left;
   }
   .section-misc .notification .title {
-    font-size: 17px;
+    font-size: 16px;
   }
   .section-misc .team-info {
     text-align: left;
   }
   .section-misc .team-info .title {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
   }
   .section-misc .team-info .section-team-member {
@@ -88,7 +88,7 @@ and (max-device-width : 480px) {
     text-align: left;
   }
   .section-misc .partner-info .title {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
     padding-bottom: 10px;
   }
@@ -98,7 +98,6 @@ and (max-device-width : 480px) {
   .section-misc .line { 
     font-size: 27px;
     text-align: left;
-    font-weight: bold;
     margin-top: 10px;
   }
   .section-misc .team-info .team-member {

@@ -108,16 +108,14 @@ and (max-device-width : 480px) {
     width: 95vw;
   }
   .section-live .title {
-    font-size: 17px;
+    font-size: 16px;
   }
   .section-live .para {
-    font-size: 17px;
-    line-height: 1.9;
+    font-size: 16px;
   }
   .section-live .line { 
     font-size: 27px;
     text-align: left;
-    font-weight: bold;
     margin-top: 10px;
   }
   .section-live .livestream {

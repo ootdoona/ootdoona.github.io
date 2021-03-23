@@ -122,25 +122,7 @@ header .language a, a:visited, a:hover, a:active {
 		padding-bottom: 20px;
 	}
 }
-@media screen and (max-width: 300px) {
-	header {
-		/* padding: 0; */
-		/* height: 60px; */
-	}
-	header .title-text {
-		/* margin-left: 10px; */
-		/* font-size: 30px; */
-		/* padding: 15px 0; */
-	}
-	header .icon {
-		margin-right: 10px;
-		font-size: 30px;
-		align-self: center;
-	}
-	header .icon a {
-		padding: 17px 0;
-	}
-}
+
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
@@ -149,5 +131,11 @@ and (max-device-width : 480px) {
   }
   header .title-date {
     margin-top: 0;
+  }
+  header .title-text {
+    font-size: 17px;
+  }
+  header .title-date {
+    /* font-size: 15px; */
   }
 }

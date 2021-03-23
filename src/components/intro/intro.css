@@ -117,21 +117,18 @@ and (max-device-width : 480px) {
     width: 95vw;
   }
   .section-intro .title {
-    font-size: 17px;
+    font-size: 16px;
   }
   .section-intro .para {
-    font-size: 17px;
-    line-height: 1.9;
+    font-size: 16px;
   }
   .section-intro .line { 
     font-size: 27px;
     text-align: left;
-    font-weight: bold;
     margin-top: 10px;
   }
   .section-intro .artist-info {
-    font-size: 17px;
-    line-height: 1.9;
+    font-size: 16px;
   }
   .section-intro .poster-image {
   	width: 100vw;
