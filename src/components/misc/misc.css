@@ -42,11 +42,37 @@
 .section-misc .team-info .section-team-member {
   font-size: 12px;
 }
+.section-misc .team-info .section-team-member b {
+  font-weight: bold;
+}
 .section-misc .team-info .team-member {
   padding-left: 10px;
   padding-right: 10px;
-  display: inline-block; 
+  /* display: inline-block;  */
 }
+/* advice info */
+.section-misc .advice-info {
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+}
+.section-misc .advice-info .title {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.section-misc .advice-info .section-team-member {
+  font-size: 12px;
+}
+.section-misc .advice-info .section-team-member b {
+  font-weight: bold;
+}
+.section-misc .advice-info .team-member {
+  padding-left: 10px;
+  padding-right: 10px;
+  /* display: inline-block;  */
+}
+
 .section-misc .partner-info {
   color: white;
   text-align: center;
@@ -103,6 +129,6 @@ and (max-device-width : 480px) {
   .section-misc .team-info .team-member {
     padding-left: 0;
     padding-right: 20px;
-    display: inline-block; 
+    /* display: inline-block;  */
   }
 }

@@ -24,19 +24,30 @@ function Misc(props: MiscProps) {
 					</div>
 					<div className="section-team-member">
 					  <div className="team-member">
-					  	{teamInfoContent.sound.role}  {teamInfoContent.sound.name}
+					  	<b>{teamInfoContent.sound.role}</b>  {teamInfoContent.sound.name}
 					  </div>
 					  <div className="team-member">
-					  	{teamInfoContent.transmission.role}  {teamInfoContent.transmission.name}
+					  	<b>{teamInfoContent.space.role}</b>  {teamInfoContent.space.name}
 					  </div>
 					  <div className="team-member">
-					  	{teamInfoContent.directing.role}  {teamInfoContent.directing.name}
+					  	<b>{teamInfoContent.design.role}</b>  {teamInfoContent.design.name}
 					  </div>
 					  <div className="team-member">
-					  	{teamInfoContent.design.role}  {teamInfoContent.design.name}
+					  	<b>{teamInfoContent.development.role}</b>  {teamInfoContent.development.name}
+					  </div>
+					</div>
+				</div>
+				<div className="line">-</div>
+				<div className="advice-info">
+					<div className="title">
+					  {props.lang === "ko" ? "자문" : "Advice"}
+					</div>
+					<div className="section-team-member">
+					  <div className="team-member">
+					  	<b>{teamInfoContent.transmission.role}</b>  {teamInfoContent.transmission.name}
 					  </div>
 					  <div className="team-member">
-					  	{teamInfoContent.development.role}  {teamInfoContent.development.name}
+					  	<b>{teamInfoContent.translation.role}</b>  {teamInfoContent.translation.name}
 					  </div>
 					</div>
 				</div>

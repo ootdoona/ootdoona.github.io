@@ -44,18 +44,20 @@ export const liveContentEn = {
 }
 
 export const teamInfo = {
-    "sound": {"name": "김도형", "role": "작곡/연주"},
-    "transmission": {"name": "이승준", "role": "송출/통신"},
-    "directing": {"name": "이수진", "role": "연출 협력"},
-    "design": {"name": "이민경", "role": "웹 디자인/전시그래픽"},
+    "sound": {"name": "김도형", "role": "음악"},
+    "space": {"name": "이수진 오수진 박진희 안예슬", "role": "퍼포먼스 공간 제작"},
+    "design": {"name": "이민경", "role": "웹 디자인 & 전시 그래픽"},
     "development": {"name": "정은아", "role": "웹 프로그래밍"},
+    "transmission": {"name": "이승준", "role": "송출/통신"},
+    "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역"},
 }
 export const teamInfoEn = {
-    "sound": {"name": "Dohyeong Kim", "role": "Sound"},
-    "transmission": {"name": "Seungjun Lee", "role": "Transmission"},
-    "directing": {"name": "Sujin Lee", "role": "Directing"},
-    "design": {"name": "Minkyeong Lee", "role": "Web Design/Graphics"},
-    "development": {"name": "Eunah Jung", "role": "Web Development"},
+    "sound": {"name": "Do Hyung Kim", "role": "Music"},
+    "space": {"name": "Sujin Lee  Sujin Oh  Jinhee Park  Ye-seul Ahn", "role": "Performance Space Production"},
+    "design": {"name": "Min Kyung Lee", "role": "Web Design & Exhibition Graphics"},
+    "development": {"name": "Eunah Jung", "role": "Web Coding"},
+    "transmission": {"name": "Seung Joon Lee", "role": "Transmission"},
+    "translation": {"name": "Kyrie Vermette", "role": "Translation"},
 }
 
 export const notification = {
