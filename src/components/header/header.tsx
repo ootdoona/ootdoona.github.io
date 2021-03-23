@@ -1,6 +1,7 @@
 import React from 'react';
 import './header.css';
 import { title, titleEn, language } from '../../contents';
+import LangIcon from "../../assets/icon/lang.png";
 
 interface HeaderProps {
   lang: string;
@@ -19,9 +20,9 @@ function Header(props: HeaderProps) {
 				<div className="title-date">
 					{content.date}
 				</div>
-				<div className="language">
-					<a href={pathToRoute}>{langToSwitch}</a>
-				</div>
+        <a href={pathToRoute} className="language">
+          <img src={LangIcon} className="btn-lang-image"/>
+        </a>
 			</div>
 		</header>
 	);
