@@ -145,6 +145,9 @@ export default class Live extends Component<LiveProps, LiveState> {
             <div className="para">
               {content.para1}
             </div>
+            <div className="small">
+              {content.para2}
+            </div>
           </div>
         </section>
       );
@@ -170,6 +173,9 @@ export default class Live extends Component<LiveProps, LiveState> {
             <div className="line">-</div>
             <div className="para">
               {content.para1}
+            </div>
+            <div className="small">
+              {content.para2}
             </div>
           </div>
         </section>

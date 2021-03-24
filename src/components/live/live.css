@@ -44,6 +44,12 @@
   line-height: 1.7;
   text-align: left;
 }
+.section-live .small {
+  font-size: 12px;
+  color: white;
+  line-height: 2.5;
+  text-align: left;
+}
 .section-live .line {
   margin-top: 20px;
   color: white;
