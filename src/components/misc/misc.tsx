@@ -15,7 +15,7 @@ function Misc(props: MiscProps) {
 				<div className="line">-</div>
 				<div className="notification">
 					<div className="title">{noti.title}</div>
-					<div className="consent">{noti.statement}</div>
+					<a target="_blank" href={noti.formlink} className="text">{noti.text}</a>
 				</div>
 				<div className="line">-</div>
 				<div className="team-info">

@@ -1,11 +1,11 @@
 
 export const title = {
-	text: '에로스, 발톱을 드러내어',
-    date: '2021.03.27'
+  text: '에로스, 발톱을 드러내어',
+  date: '2021.03.27'
 };
 export const titleEn = {
-	text: 'Eros, as a Modern Punishment',
-    date: '2021.03.27'
+  text: 'Eros, as a Modern Punishment',
+  date: '2021.03.27'
 };
 
 export const language = {
@@ -31,7 +31,7 @@ export const personalInfo = {
     phone: "+82 10 6441 9257",
     web: "https://damikim.net",
     insta: "https://instagram.com/damikim___?igshid=159l2rpw5ppo8",
-    location: "https://goo.gl/maps/Et8AkPcd4wUGWJtf8"
+    location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6"
 }
 
 export const liveContent = {
@@ -63,12 +63,14 @@ export const teamInfoEn = {
 }
 
 export const notification = {
-  title: "공연 알림 신청",
-  statement: "이메일 또는 문자로 알림 받기"
+  title: "다음 퍼포먼스 알림 신청",
+  text: "이메일 또는 문자로 알림 받기",
+  formlink: "https://forms.gle/qAj35Zcu3ke2buQi8"
 }
 export const notificationEn = {
-  title: "Performance Notification",
-  statement: "To get notification via email"
+  title: "Next Performance Notification",
+  text: "To get notification via email",
+  formlink: "https://forms.gle/J3SbzfdmpeuaWtHW9"
 }
 
 export const partnerInfo = {

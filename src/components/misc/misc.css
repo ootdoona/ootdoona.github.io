@@ -26,7 +26,11 @@
   font-weight: bold;
   padding-bottom: 10px;
 }
-.section-misc .notification .consent {
+a, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+.section-misc .notification .text {
   font-size: 12px;
 }
 .section-misc .team-info {
