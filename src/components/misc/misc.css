@@ -104,6 +104,9 @@ and (max-device-width : 480px) {
   .section-misc .notification .title {
     font-size: 16px;
   }
+  .section-misc .notification .text {
+    font-size: 15px;
+  }
   .section-misc .team-info {
     text-align: left;
   }
