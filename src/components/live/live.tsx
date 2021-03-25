@@ -3,9 +3,10 @@ import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
 import { liveContent, liveContentEn, personalInfo } from '../../contents';
-import { timeline, showTime, fblink } from '../../config';
+import { timeline, showTime, livelinkURL } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
 import InstaIcon from "../../assets/icon/insta.png";
+import SpinnerIcon from "../../assets/icon/spinner.gif";
 import moment from 'moment';
 import 'moment-timezone';
 
@@ -21,8 +22,10 @@ interface Time {
 };
 
 interface LiveState {
-  curTime: moment.Moment;
   nextShow: number;
+  showOn: boolean;
+  liveLink: string;
+  timeLeft: Time;
 }
 
 const calculateTime = (A: moment.Moment, B: moment.Moment) => {
@@ -43,13 +46,17 @@ const zeropad = (x: number) => {
 export default class Live extends Component<LiveProps, LiveState> {
   state = {
     curTime: moment(),
-    nextShow: 0
+    nextShow: 0,
+    showOn: false,
+    liveLink: "",
+    timeLeft: {days: 0, hours: 0, minutes: 0, seconds: 0}
   }
 
   componentDidMount() {
     // set nextShow based on timeline
     const cur = moment().utc();
     let nextShow = timeline.length;
+    let showOn = false;
     for (let i = 0; i < timeline.length; i++) {
       const base = moment.tz(timeline[i], "Asia/Seoul").utc();
       const diff = +(new Date(base.format())) - +(new Date(cur.format()));
@@ -57,23 +64,79 @@ export default class Live extends Component<LiveProps, LiveState> {
         nextShow = i;
         break;
       }
-      const howlong = +(new Date(cur.format())) - +(new Date(base.format()));
+      const howlong = -diff; // +(new Date(cur.format())) - +(new Date(base.format()));
       let days = Math.floor(howlong / (1000 * 60 * 60 * 24));
       let hours = Math.floor((howlong / (1000 * 60 * 60)) % 24);
       let minutes = Math.floor((howlong / 1000 / 60) % 60);
     	if (days === 0 && hours === 0 && minutes < showTime){
         nextShow = i;
+        showOn = true;
         break;
       }
     }
     console.log(`next show is ${nextShow}`);
+
+    // if show on, get the showlink
+    if (showOn) {
+      fetch(livelinkURL[this.state.nextShow])
+        .then(res => res.text())
+        .then((res: string) => {
+          this.setState({
+            liveLink: res
+          });
+        });
+    }
+
     this.setState({
-    	nextShow
+    	nextShow,
+      showOn
     });
+
     let myInterval = setInterval(() => {
+      // if next show is 0 
+      // if current time is before timeline[next show], show count down based on timeline[next show]
+      // else if timeline[next show] <= current time < timeline[next show] + 30m, show live stream,
+      // else if current time > timeline[next show] + 30m, next show += 1
+      let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
       const cur = moment().utc();
+      const base = moment.tz(timeline[this.state.nextShow], "Asia/Seoul").utc();
+      const difference = +(new Date(base.format())) - +(new Date(cur.format()));
+      let showOn = false;
+      let nextShow = this.state.nextShow;
+
+      if (this.state.nextShow >= timeline.length) {
+        // all show is over
+        showOn = true;
+      } else if (difference > 0) { // we are waiting for the show
+        timeLeft = calculateTime(base, cur);
+      } else if (difference < 0) { // show has started
+        const timeDiff = calculateTime(cur, base); // how long show is going on
+        // if within 30m
+        if (timeDiff.days === 0 && timeDiff.hours === 0 && timeDiff.minutes < showTime) {
+          showOn = true;
+          // fetch the link and before available, show spinner
+          if (this.state.liveLink === "") {
+            fetch(livelinkURL[this.state.nextShow])
+              .then(res => res.text())
+              .then((res: string) => {
+                this.setState({
+                  liveLink: res
+                });
+              });
+          }
+        } else if (this.state.nextShow + 1 >= timeline.length) { // all show is over
+          showOn = true;
+        } else { // waiting for the next show
+          showOn = false;
+          nextShow = nextShow + 1;
+          timeLeft = calculateTime(base, cur); // base - cur
+        }
+      }
+
     	this.setState({
-    		curTime: cur
+        showOn,
+        nextShow,
+        timeLeft,
     	});
     }, 100);
   }
@@ -84,38 +147,39 @@ export default class Live extends Component<LiveProps, LiveState> {
 
   render() {
     const content = this.props.lang === "ko" ? liveContent : liveContentEn;
-    // if next show is 0 
-    // if current time is before timeline[next show], show count down based on timeline[next show]
-    // else if timeline[next show] <= current time < timeline[next show] + 30m, show live stream,
-    // else if current time > timeline[next show] + 30m, next show += 1
-    let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
-    const cur = moment().utc();
-    const base = moment.tz(timeline[this.state.nextShow], "Asia/Seoul").utc();
-    const difference = +(new Date(base.format())) - +(new Date(cur.format()));
-    let showCountdown = true;
 
-    if (this.state.nextShow >= timeline.length) {
-      showCountdown = false; // all show is over
-    } else if (difference > 0) { // we are waiting for the show
-      showCountdown = true;
-      timeLeft = calculateTime(base, cur);
-    } else if (difference < 0) { // show has started
-      const timeDiff = calculateTime(cur, base); // how long show is going on
-      // if within 30m
-      if (timeDiff.days === 0 && timeDiff.hours === 0 && timeDiff.minutes < showTime) {
-        showCountdown = false;
-      } else if (this.state.nextShow + 1 >= timeline.length) {
-        showCountdown = false; // all show is over
-      } else {
-        this.setState({
-          nextShow: this.state.nextShow + 1
-        });
-        showCountdown = true;
-        timeLeft = calculateTime(base, cur); // base - cur
-      }
+    if (this.state.showOn && this.state.liveLink === "") {
+      return (
+        <section className="section-live">
+          <div className="wrapper">
+            <div className="title">
+            	{content.title}
+            </div>
+            <Button className="btn">
+		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+            </Button>
+            <Button className="btn">
+		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
+            </Button>
+            <div className="livestream facebook-responsive">
+              <div className="spinner-container">
+              <img src={SpinnerIcon} className="spinner" />
+              </div>
+            </div>
+            <div className="line">-</div>
+            <div className="para">
+              {content.para1}
+            </div>
+            <div className="small">
+              {content.para2}
+            </div>
+          </div>
+        </section>
+      );
     }
 
-    if (showCountdown) {
+    let timeLeft = this.state.timeLeft;
+    if (!this.state.showOn) {
       return (
         <section className="section-live">
           <div className="wrapper">
@@ -152,7 +216,6 @@ export default class Live extends Component<LiveProps, LiveState> {
         </section>
       );
     } else {
-      const videoLink = fblink[this.state.nextShow < timeline.length ? this.state.nextShow : timeline.length - 1];
       return (
         <section className="section-live">
           <div className="wrapper">
@@ -166,9 +229,7 @@ export default class Live extends Component<LiveProps, LiveState> {
 		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
             </Button>
             <div className="livestream facebook-responsive">
-              {/* <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwoojaega%2Fvideos%2F913576439405391%2F&width=1280" width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe> */}
-              <iframe src={videoLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
-              {/* <iframe src={`${videoLink}&width=1280`} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe> */}
+              <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
             </div>
             <div className="line">-</div>
             <div className="para">
