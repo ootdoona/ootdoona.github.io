@@ -58,6 +58,15 @@
 .section-live .livestream {
 	width: 80vw;
 }
+.livestream .spinner-container {
+  width: 80vw;
+  height: 47vw;
+  background-color: black;
+  text-align: center;
+}
+.livestream .spinner-container .spinner {
+  transform: translateY(+19vw);
+}
 .livestream .countdown {
   width: 80vw;
   height: 47vw;
@@ -127,6 +136,15 @@ and (max-device-width : 480px) {
   .section-live .livestream {
   	width: 100vw;
     margin-left: -2.5vw;
+  }
+  .livestream .spinner-container {
+    width: 100vw;
+    height: 56vw;
+    background-color: black;
+    text-align: center;
+  }
+  .livestream .spinner-container .spinner {
+    transform: translateY(+18vw);
   }
   .section-live .countdown {
     width: 100vw;
