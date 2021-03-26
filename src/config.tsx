@@ -1,7 +1,6 @@
 import moment from 'moment';
 
 export const timeline = [
-  // "2021-03-26 07:40",
   "2021-03-27 19:00",
   "2021-03-27 21:00"
 ]
