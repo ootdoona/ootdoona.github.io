@@ -130,10 +130,10 @@ export default class LiveTest extends Component<LiveTestProps, LiveTestState> {
           showOn = true;
           // fetch the link and before available, show spinner
           if (this.state.liveLink === "") {
-            fetch(livelinkURL[this.state.nextShow])
+            fetch(livelinkURL[this.state.nextShow], {cache: "no-store"})
               .then(res => {
                 if (!res.ok) {
-                  return "error";
+                  return "";
                 }
                 return res.text();
               })
@@ -149,6 +149,9 @@ export default class LiveTest extends Component<LiveTestProps, LiveTestState> {
           showOn = false;
           nextShow = nextShow + 1;
           timeLeft = calculateTime(base, cur); // base - cur
+          // if (liveLink != "") {
+          //   liveLink = "";
+          // }
         }
       }
 
@@ -236,6 +239,7 @@ export default class LiveTest extends Component<LiveTestProps, LiveTestState> {
         </section>
       );
     } else {
+      console.log(`fetch result: ${this.state.liveLink}`);
       return (
         <section className="section-live">
           <div className="wrapper">
@@ -249,6 +253,7 @@ export default class LiveTest extends Component<LiveTestProps, LiveTestState> {
 		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
             </Button>
             <div className="livestream facebook-responsive">
+              {/* <iframe src={"https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fjinhee.park.0410%2Fvideos%2F3662436637186821%2F&show_text=false"} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe> */}
               <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
             </div>
             <div className="line">-</div>

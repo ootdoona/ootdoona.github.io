@@ -78,7 +78,17 @@ export default class Live extends Component<LiveProps, LiveState> {
 
     // if show on, get the showlink
     if (showOn) {
-      fetch(livelinkURL[this.state.nextShow])
+      fetch(livelinkURL[nextShow], {cache: "no-store"})
+        .then(res => res.text())
+        .then((res: string) => {
+          this.setState({
+            liveLink: res
+          });
+        });
+    }
+    if (nextShow === livelinkURL.length) {
+      showOn = true;
+      fetch(livelinkURL[nextShow - 1], {cache: "no-store"})
         .then(res => res.text())
         .then((res: string) => {
           this.setState({
@@ -103,12 +113,16 @@ export default class Live extends Component<LiveProps, LiveState> {
       const difference = +(new Date(base.format())) - +(new Date(cur.format()));
       let showOn = false;
       let nextShow = this.state.nextShow;
+      let liveLink = this.state.liveLink;
 
       if (this.state.nextShow >= timeline.length) {
         // all show is over
         showOn = true;
       } else if (difference > 0) { // we are waiting for the show
         timeLeft = calculateTime(base, cur);
+        if (liveLink != "") {
+          liveLink = "";
+        }
       } else if (difference < 0) { // show has started
         const timeDiff = calculateTime(cur, base); // how long show is going on
         // if within 30m
@@ -116,9 +130,14 @@ export default class Live extends Component<LiveProps, LiveState> {
           showOn = true;
           // fetch the link and before available, show spinner
           if (this.state.liveLink === "") {
-            fetch(livelinkURL[this.state.nextShow])
-              .then(res => res.text())
-              .then((res: string) => {
+            fetch(livelinkURL[this.state.nextShow], {cache: "no-store"})
+              .then(res => {
+                if (!res.ok) {
+                  return "";
+                }
+                return res.text();
+              })
+              .then((res) => {
                 this.setState({
                   liveLink: res
                 });
@@ -137,8 +156,9 @@ export default class Live extends Component<LiveProps, LiveState> {
         showOn,
         nextShow,
         timeLeft,
+        liveLink
     	});
-    }, 100);
+    }, 1000);
   }
 
   componentWillUnmount() {
