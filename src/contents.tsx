@@ -31,7 +31,8 @@ export const personalInfo = {
     phone: "+82 10 6441 9257",
     web: "https://damikim.net",
     insta: "https://instagram.com/damikim___?igshid=159l2rpw5ppo8",
-    location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6"
+    location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6",
+    fb: "https://fb.me/e/254iUp6qK"
 }
 
 export const liveContent = {

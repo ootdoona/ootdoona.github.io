@@ -32,6 +32,12 @@
   width: 40px;
   height: 40px;
 }
+.btn .btn-fb-image {
+  width: 26px;
+  height: 26px;
+  margin-top: 6px;
+  margin-left: 3px;
+}
 .btn .btn-map-image {
   width: 32px;
   height: 32px;
@@ -157,12 +163,18 @@ and (max-device-width : 480px) {
     font-size: 10vw;
     transform: translateX(+21vw) translateY(+16vw);
   }
-  .btn .btn-insta-image {
+  .btn-insta-image {
     margin-right: -15px;
     width: 40px;
     height: 40px;
   }
-  .btn .btn-map-image {
+  .btn-fb-image {
+    margin-right: -15px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+  }
+  .btn-map-image {
     margin-right: -15px;
     width: 32px;
     height: 32px;

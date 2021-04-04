@@ -6,6 +6,7 @@ import { liveContent, liveContentEn, personalInfo } from '../../contents';
 import { timeline, showTime, livelinkURL } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
 import InstaIcon from "../../assets/icon/insta.png";
+import FbIcon from "../../assets/icon/fb.png";
 import SpinnerIcon from "../../assets/icon/spinner.gif";
 import moment from 'moment';
 import 'moment-timezone';
@@ -179,6 +180,9 @@ export default class Live extends Component<LiveProps, LiveState> {
 		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
             </Button>
             <Button className="btn">
+		          <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
+            </Button>
+            <Button className="btn">
 		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
             </Button>
             <div className="livestream facebook-responsive">
@@ -208,6 +212,9 @@ export default class Live extends Component<LiveProps, LiveState> {
             </div>
             <Button className="btn">
 		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+            </Button>
+            <Button className="btn">
+		          <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
             </Button>
             <Button className="btn">
 		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
@@ -244,6 +251,9 @@ export default class Live extends Component<LiveProps, LiveState> {
             </div>
             <Button className="btn">
 		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+            </Button>
+            <Button className="btn">
+		          <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
             </Button>
             <Button className="btn">
 		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
