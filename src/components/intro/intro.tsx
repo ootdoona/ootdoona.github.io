@@ -55,7 +55,6 @@ function Intro(props: IntroProps) {
 						<div className="bold">{personalInfo.nameKo}  {personalInfo.nameEn}</div>
 						<div>{personalInfo.email}</div>
 						<div>{personalInfo.phone}</div>
-						<div><a target="_blank" href={personalInfo.web}>{personalInfo.web}</a></div>
 					</div>
 				</div>
 		</section>
