@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ootdoona.github.io/static/css/main.6672b88a.chunk.css",
-    "main.js": "/ootdoona.github.io/static/js/main.868aa5ec.chunk.js",
-    "main.js.map": "/ootdoona.github.io/static/js/main.868aa5ec.chunk.js.map",
+    "main.css": "/ootdoona.github.io/static/css/main.ffa13443.chunk.css",
+    "main.js": "/ootdoona.github.io/static/js/main.986eac21.chunk.js",
+    "main.js.map": "/ootdoona.github.io/static/js/main.986eac21.chunk.js.map",
     "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.11d16450.js",
     "runtime-main.js.map": "/ootdoona.github.io/static/js/runtime-main.11d16450.js.map",
     "static/css/2.fabbef47.chunk.css": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css",
@@ -12,8 +12,9 @@
     "static/js/3.0f4ccb2b.chunk.js.map": "/ootdoona.github.io/static/js/3.0f4ccb2b.chunk.js.map",
     "index.html": "/ootdoona.github.io/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.6672b88a.chunk.css.map": "/ootdoona.github.io/static/css/main.6672b88a.chunk.css.map",
+    "static/css/main.ffa13443.chunk.css.map": "/ootdoona.github.io/static/css/main.ffa13443.chunk.css.map",
     "static/js/2.d02798ca.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.d02798ca.chunk.js.LICENSE.txt",
+    "static/media/fb.f8a1cf0a.png": "/ootdoona.github.io/static/media/fb.f8a1cf0a.png",
     "static/media/insta.bbf8ee18.png": "/ootdoona.github.io/static/media/insta.bbf8ee18.png",
     "static/media/landscape_final_web.9d31ac30.gif": "/ootdoona.github.io/static/media/landscape_final_web.9d31ac30.gif",
     "static/media/map.caefc4c0.png": "/ootdoona.github.io/static/media/map.caefc4c0.png",
@@ -24,7 +25,7 @@
     "static/js/runtime-main.11d16450.js",
     "static/css/2.fabbef47.chunk.css",
     "static/js/2.d02798ca.chunk.js",
-    "static/css/main.6672b88a.chunk.css",
-    "static/js/main.868aa5ec.chunk.js"
+    "static/css/main.ffa13443.chunk.css",
+    "static/js/main.986eac21.chunk.js"
   ]
 }
