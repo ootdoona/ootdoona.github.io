@@ -1,0 +1,154 @@
+.section-archive {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+}
+.section-archive .wrapper {
+  position: relative;
+  width: 80vw;
+  left: 50%;
+  transform: translateX(-50%);
+	color: #f1f2f3;
+}
+.section-archive .poster-image {
+	width: 80vw;
+}
+.section-archive .title {
+	display: flex;
+  float: left;
+	height: 50px;
+	align-items: center;
+	font-size: 18px;
+  font-weight: bold;
+	text-align: left;
+  color: black;
+}
+.section-archive .info {
+	display: flex;
+  float: left;
+	height: 50px;
+	align-items: center;
+	font-size: 16px;
+	text-align: left;
+	margin-left: 10px;
+  margin-top: 1px;
+  color: black;
+}
+.section-archive .para {
+  font-size: 15px;
+  color: black;
+  line-height: 1.7;
+  text-align: left;
+}
+.section-archive .line { 
+  margin-top: 20px;
+  color: black;
+}
+.section-archive .artist-info {
+  font-size: 15px;
+  line-height: 1.5;
+  color: black;
+  text-align: left;
+}
+.section-archive .artist-info .bold {
+  font-weight: bold;
+}
+a, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+.section-archive .social-links {
+	margin-top: 50px;
+}
+#resume {
+	margin-right: 0;
+}
+
+@keyframes hello {
+	0% {transform: rotate(0deg);}
+	10% {transform: rotate(-10deg);}
+	20% {transform: rotate(12deg);}
+	30% {transform: rotate(-10deg);}
+	40% {transform: rotate(9deg);}
+	50% {transform: rotate(0deg);}
+	100% {transform: rotate(0deg);}
+}
+
+@media screen and (max-width:1380px) {
+	.section-archive {
+		/* margin-top: 80px; */
+	}
+	.section-archive .wrapper {
+		min-width: 480px;
+	}
+	.section-archive .title {
+		/* font-size: 25px; */
+	}
+	.section-archive .para {
+		/* margin-top: 30px; */
+		/* font-size: 20px; */
+	}
+}
+@media screen and (max-width: 980px) {
+	.section-archive {
+		/* margin-top: 60px; */
+	}
+}
+@media screen and (max-width:768px) {
+	.section-archive {
+		/* margin-top: 80px; */
+		/* padding: 5vh 20px; */
+	}
+	.section-archive .inner {
+		display: block;
+	}
+	.section-archive .wrapper {
+		min-width: auto;
+	}
+	.section-archive .title {
+		/* margin-top: 30px; */
+	}
+	.section-archive .social-links {
+		width: fit-content;
+		margin: 0 auto;
+	}
+	#about {
+		margin: 0 auto;
+	}
+	#resume {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .section-archive .wrapper {
+    color: #f1f2f3;
+    width: 95vw;
+  }
+  .section-archive .title {
+    font-size: 16px;
+  }
+  .section-archive .para {
+    font-size: 16px;
+  }
+  .section-archive .line { 
+    font-size: 27px;
+    text-align: left;
+    margin-top: 10px;
+  }
+  .section-archive .artist-info {
+    font-size: 16px;
+  }
+  .section-archive .poster-image {
+  	width: 100vw;
+    margin-left: -2.5vw;
+  }
+}
+
+.sliderimg{
+  width: 100%;
+  height: 500px;
+  object-fit: cover
+}

@@ -42,6 +42,17 @@ header .title-date {
 	height: 100%;
 	color: black;
 }
+header .nav-button {
+	font-size: 16px;
+	float: left;
+  display: flex;
+	margin-left: 10px;
+  margin-top: 2px;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	color: black;
+}
 header .language {
 	font-size: 18px;
 	float: right;
