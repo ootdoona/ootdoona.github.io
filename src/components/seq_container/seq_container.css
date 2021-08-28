@@ -1,0 +1,36 @@
+.seq-wrapper {
+  width: 80vw;
+  clear: both;
+}
+.img-wrapper {
+  position: relative;
+}
+.sliderimg {
+	width: 80vw;
+  cursor: none;
+}
+.img-overlay {
+  width: 100%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  color: white;
+}
+.img-overlay-button {
+  float: left;
+  padding-right: 5px;
+}
+.selected {
+  font-weight: 600;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .img-wrapper {
+    width: 95vw;
+  }
+  .sliderimg {
+  	width: 100vw;
+    margin-left: -2.4vw;
+  }
+}

@@ -4,6 +4,7 @@ import { archiveContent, archiveContentEn } from '../../contents';
 
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
+import SeqContainer from '../seq_container/seq_container';
 
 interface ArchiveProps {
   lang: string;
@@ -20,6 +21,7 @@ function Archive(props: ArchiveProps) {
   for (let i = 1; i < 25; i++) {
     imagePaths.push(`second/${i}.jpg`);
   }
+
   return (
     <section className="section-archive">
       <div className="wrapper">
@@ -29,13 +31,11 @@ function Archive(props: ArchiveProps) {
         <div className="info">
           {content.info}
         </div>
-        <AliceCarousel disableButtonsControls autoPlay animationType={"fadeout"}>
-          {
-            imagePaths.map((path: any) => (
-              <img src={require(`../../assets/archive/${path}`).default} className="sliderimg"/>
-            ))
-          }
-        </AliceCarousel>
+        <SeqContainer imagePaths={imagePaths} />
+        <div className="line">-</div>
+        <div className="para">
+          {content.para1}
+        </div>
       </div>
     </section>
   );

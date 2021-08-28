@@ -146,9 +146,3 @@ and (max-device-width : 480px) {
     margin-left: -2.5vw;
   }
 }
-
-.sliderimg{
-  width: 100%;
-  height: 500px;
-  object-fit: cover
-}
