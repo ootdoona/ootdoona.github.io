@@ -27,11 +27,11 @@ function Header(props: HeaderProps) {
 				<div className="title-text">
 					{content.text}
 				</div>
-        <div className="nav-button" onClick={() => executeScroll("section-live")}>
+        <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-live")}>
           {content.live}
         </div>
         <div className="nav-button">/</div>
-        <div className="nav-button" onClick={() => executeScroll("section-archive")}>
+        <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-archive")}>
           {content.archive}
         </div>
         <a href={pathToRoute} className="language">
