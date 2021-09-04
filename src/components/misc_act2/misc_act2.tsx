@@ -1,16 +1,16 @@
 import React from 'react';
-import './misc.css';
+import './misc_act2.css';
 import { notification, notificationEn, teamInfo, teamInfoEn, partnerInfo, partnerInfoEn } from '../../contents';
 
-interface MiscProps {
+interface MiscAct2Props {
   lang: string;
 }
 
-function Misc(props: MiscProps) {
+function MiscAct2(props: MiscAct2Props) {
 	const noti = props.lang === "ko" ? notification : notificationEn;
 	const teamInfoContent = props.lang === "ko" ? teamInfo : teamInfoEn;
 	return (
-		<section className="section-misc">
+		<section className="section-misc-act2">
 			<div className="wrapper">
 				<div className="line">-</div>
 				<div className="team-info">
@@ -47,17 +47,21 @@ function Misc(props: MiscProps) {
 					</div>
 				</div>
 				<div className="line">-</div>
-				<div className="partner-info">
+				<div className="notification">
+					<div className="title">{noti.title}</div>
+					<a target="_blank" href={noti.formlink} className="text">{noti.text}</a>
+				</div>
+				<div className="line">-</div>
+				{/* <div className="partner-info">
 					<div className="title">
 					  {props.lang === "ko" ? "파트너" : "Partner"}
 					</div>
 					<div className="name">
 					  {props.lang === "ko" ? partnerInfo.name : partnerInfoEn.name}
 					</div>
-					
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);
 }
-export default Misc;
+export default MiscAct2;

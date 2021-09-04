@@ -1,8 +1,11 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import './seq_container.css';
 
 import Dots from '../dots/dots';
 import LangIcon from "../../assets/icon/lang.png";
+import LeftIcon from "../../assets/icon/left.png";
+import RightIcon from "../../assets/icon/right.png";
 
 interface SeqContainerProps {
   imagePaths: string[];
@@ -37,7 +40,6 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
           <img ref={this.setImg} src={img} 
               className="sliderimg"
               onClick={this.onClickImage}
-              onMouseMove={this.onOver}
               />
           <div className='img-overlay'>
             <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
@@ -49,6 +51,8 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
             <div className={"img-overlay-button " + (currentStage == 2 ? " selected" : "")}
                  style={{cursor: 'pointer'}} onClick={() => this.changeStage(2, 25)}>2회차</div>
           </div>
+          <img src={LeftIcon} className="btn-left" onClick={this.goPrevious}/>
+          <img src={RightIcon} className="btn-right" onClick={this.goNext}/>
         </div>
         <Dots curIndex={this.state.index} imagePaths={this.props.imagePaths} img={img} onClickDot={this.moveTo} />
       </div>
@@ -69,27 +73,32 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
 
   }
 
-  private onOver = (evt: React.MouseEvent<HTMLElement>) => {
-    console.log(`over ${evt.nativeEvent.offsetX} ${evt.nativeEvent.offsetY}`);
-  }
-
-  private onClickImage = (evt: React.MouseEvent<HTMLElement>) => {
-    const bbox = this.img!.getBoundingClientRect();
-    // console.log(evt.clientX - bbox.left, evt.clientY - bbox.top, bbox.width, bbox.height);
-    if (evt.clientX - bbox.left < bbox.width * 0.5) {
+  private goPrevious = () => {
       if (this.state.index === 0) {
         return;
       }
       this.setState({
         index: this.state.index - 1
       });
-    } else {
+
+  }
+  private goNext = () => {
       if (this.state.index === this.props.imagePaths.length - 1) {
         return;
       }
       this.setState({
         index: this.state.index + 1
       });
+
+  }
+
+  private onClickImage = (evt: React.MouseEvent<HTMLElement>) => {
+    const bbox = this.img!.getBoundingClientRect();
+    // console.log(evt.clientX - bbox.left, evt.clientY - bbox.top, bbox.width, bbox.height);
+    if (evt.clientX - bbox.left < bbox.width * 0.5) {
+      this.goPrevious();
+    } else {
+      this.goNext();
     }
   }
 

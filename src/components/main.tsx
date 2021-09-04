@@ -4,7 +4,7 @@ import Intro from './intro/intro';
 import Archive from './archive/archive';
 import Live from './live/live';
 import Misc from './misc/misc';
-import Miscnew from './miscnew/miscnew';
+import MiscAct2 from './misc_act2/misc_act2';
 
 import LiveTest from './livetest/livetest';
 
@@ -14,7 +14,7 @@ export function MainKo() {
       <Header lang="ko" />
       <Intro lang="ko" />
       <Live lang="ko" />
-      <Miscnew lang="ko" />
+      <MiscAct2 lang="ko" />
       <Archive lang="ko" />
       <Misc lang="ko" />
 		</div>
@@ -27,7 +27,7 @@ export function MainEn() {
       <Header lang="en"/>
       <Intro lang="en" />
       <Live lang="en" />
-      <Miscnew lang="en" />
+      <MiscAct2 lang="en" />
       <Archive lang="en" />
       <Misc lang="en" />
 		</div>

@@ -41,10 +41,9 @@ export class Dots extends React.Component<DotsProps, DotsState> {
   public render() {
     const thumbnailSize = 6;
     const buttonWidth = ((100 - thumbnailSize) / (this.props.imagePaths.length - 1));
-    const buttonHeight = 40;
-    console.log(`rendering`);
+    const buttonHeight = isMobile.any() ? 30 : 40;
     return (
-      <div style={{height: buttonHeight}}>
+      <div className='dots' style={{height: buttonHeight}}>
         {
           this.props.imagePaths.map((path, index) => {
             if (index == this.props.curIndex) {
@@ -63,8 +62,7 @@ export class Dots extends React.Component<DotsProps, DotsState> {
                             width: `${buttonWidth}%`, height: `${buttonHeight}px`}} >
                   <div className='dot-button-overlay' 
                       style={{backgroundColor: '#555555',
-                              width: `${buttonWidth}%`, height: `${buttonHeight}px`}}
-                      >
+                              width: `${buttonWidth}%`, height: `${buttonHeight}px`}}>
                   </div>
                   <img src={require(`../../assets/archive/${path}`).default}
                       width={`100%`}

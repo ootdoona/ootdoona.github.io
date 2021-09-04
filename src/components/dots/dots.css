@@ -7,11 +7,29 @@
 .dot-button-img {
   width: 150%;
   margin-left: -25%;
+  height: 100%;
 }
-
 .dot-button-overlay {
   position: absolute;
   height: 100%;
   width: 100%;
   border-right: 1px solid #ffffff;
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  .dots {
+    width: 95vw;
+  }
+  .dot-button-img {
+    width: 200%;
+    margin-left: -50%;
+    height: 100%;
+  }
+  .dot-button-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid #ffffff;
+  }
 }

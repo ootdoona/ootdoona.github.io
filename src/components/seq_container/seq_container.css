@@ -1,13 +1,13 @@
 .seq-wrapper {
   width: 80vw;
   clear: both;
+  background-color: #dddddd;
 }
 .img-wrapper {
   position: relative;
 }
 .sliderimg {
 	width: 80vw;
-  cursor: none;
 }
 .img-overlay {
   width: 100%;
@@ -22,6 +22,28 @@
 }
 .selected {
   font-weight: 600;
+}
+.btn-left {
+  position: absolute;
+  top: 48%;
+  left: 20px;
+  width: 2%;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+.btn-right {
+  position: absolute;
+  top: 48%;
+  right: 20px;
+  width: 2%;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+  cursor: pointer;
 }
 @media only screen
 and (min-device-width : 320px)

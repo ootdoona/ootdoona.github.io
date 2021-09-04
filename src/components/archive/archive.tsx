@@ -1,9 +1,6 @@
 import React from 'react';
 import './archive.css';
 import { archiveContent, archiveContentEn } from '../../contents';
-
-import AliceCarousel from 'react-alice-carousel';
-import "react-alice-carousel/lib/alice-carousel.css";
 import SeqContainer from '../seq_container/seq_container';
 
 interface ArchiveProps {
