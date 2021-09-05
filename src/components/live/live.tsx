@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
-import { liveContent, liveContentEn, personalInfo } from '../../contents';
+import { liveContent, liveContentEn, liveV2Content, liveV2ContentEn } from '../../contents';
 import { timeline, showTime, livelinkURL } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
 import FbIcon from "../../assets/icon/fb.png";
@@ -12,6 +12,7 @@ import 'moment-timezone';
 
 interface LiveProps {
   lang: string;
+  version: number;
 }
 
 interface Time {
@@ -166,56 +167,30 @@ export default class Live extends Component<LiveProps, LiveState> {
   }
 
   render() {
-    const content = this.props.lang === "ko" ? liveContent : liveContentEn;
-
-    if (this.state.showOn && this.state.liveLink === "") {
-      return (
-        <section className="section-live">
-          <div className="wrapper">
-            <div className="title">
-            	{content.title}
-            </div>
-            <Button className="btn">
-		          <img src={FbIcon} className="btn-fb-image"/>
-		          {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
-            </Button>
-            <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image"/>
-		          {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
-            </Button>
-            <div className="livestream facebook-responsive">
-              <div className="spinner-container">
-              <img src={SpinnerIcon} className="spinner" />
-              </div>
-            </div>
-            <div className="line">-</div>
-            <div className="para">
-              {content.para1}
-            </div>
-            <div className="small">
-              {content.para2}
+    let content;
+    let title;
+    let smallPara;
+    let liveStream;
+    let timeLeft = this.state.timeLeft;
+    if (this.props.version === 0) {
+      content = this.props.lang === "ko" ? liveContent : liveContentEn;
+      title =
+        <div className="title">
+        	{content.title}
+        </div>
+      smallPara = 
+        <div className="small">
+          {content.para2}
+        </div>
+      if (this.state.showOn && this.state.liveLink === "") {
+        liveStream = 
+          <div className="livestream facebook-responsive">
+            <div className="spinner-container">
+            <img src={SpinnerIcon} className="spinner" />
             </div>
           </div>
-        </section>
-      );
-    }
-
-    let timeLeft = this.state.timeLeft;
-    if (!this.state.showOn) {
-      return (
-        <section className="section-live">
-          <div className="wrapper">
-            <div className="title">
-            	{content.title}
-            </div>
-            <Button className="btn">
-		          <img src={FbIcon} className="btn-fb-image"/>
-		          {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
-            </Button>
-            <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image"/>
-		          {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
-            </Button>
+      } else if (!this.state.showOn) {
+        liveStream = 
             <div className="livestream facebook-responsive">
               <div className="countdown">
                 <div className="unit">
@@ -229,44 +204,56 @@ export default class Live extends Component<LiveProps, LiveState> {
                 </div>
               </div>
             </div>
-            <div className="line">-</div>
-            <div className="para">
-              {content.para1}
-            </div>
-            <div className="small">
-              {content.para2}
+      } else {
+        liveStream =
+          <div className="livestream facebook-responsive">
+            <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+          </div>
+      }
+    } else { // v2
+      content = this.props.lang === "ko" ? liveV2Content : liveV2ContentEn;
+      title =
+        <div>
+          <div className="title">{content.title}</div>
+          <div className="title-date">{"2021. 08. 14"}</div>
+        </div>
+      smallPara = <div></div>;
+      liveStream = 
+          <div className="livestream facebook-responsive">
+            <div className="countdown">
+              <div className="unit">
+                <div className="days">DAYS</div>
+                <div className="hours">HOURS</div>
+                <div className="minutes">MINUTES</div>
+                <div className="seconds">SECONDS</div>
+              </div>
+              <div className="numbers">
+                {zeropad(0)}:{zeropad(0)}:{zeropad(0)}:{zeropad(0)}
+              </div>
             </div>
           </div>
-        </section>
-      );
-    } else {
-      return (
-        <section className="section-live">
-          <div className="wrapper">
-            <div className="title">
-            	{content.title}
-            </div>
-            <Button className="btn">
-		          <img src={FbIcon} className="btn-fb-image"/>
-		          {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
-            </Button>
-            <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image"/>
-		          {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
-            </Button>
-            <div className="livestream facebook-responsive">
-              <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
-            </div>
-            <div className="line">-</div>
-            <div className="para">
-              {content.para1}
-            </div>
-            <div className="small">
-              {content.para2}
-            </div>
-          </div>
-        </section>
-      );
     }
+
+    return (
+      <section className="section-live">
+        <div className="wrapper">
+          {title}
+          <Button className="btn">
+		        <img src={FbIcon} className="btn-fb-image"/>
+		        {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
+          </Button>
+          <Button className="btn">
+		        <img src={MapIcon} className="btn-map-image"/>
+		        {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
+          </Button>
+          {liveStream}
+          <div className="line">-</div>
+          <div className="para">
+            {content.para1}
+          </div>
+          {smallPara}
+        </div>
+      </section>
+    );
   }
 }

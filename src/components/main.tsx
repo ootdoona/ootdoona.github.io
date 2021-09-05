@@ -9,11 +9,12 @@ import LiveTest from './livetest/livetest';
 
 export function MainKo() {
   const lang = "ko";
+  const version = 0;
 	return (
 		<div className="root">
-      <Header lang={lang} version={0}/>
+      <Header lang={lang} version={version}/>
       <Intro lang={lang} />
-      <Live lang={lang} />
+      <Live lang={lang} version={version}/>
       <Misc lang={lang} act={0} whiteBg={false} />
 		</div>
 	);
@@ -21,11 +22,12 @@ export function MainKo() {
 
 export function MainEn() {
   const lang = "en";
+  const version = 0;
 	return (
 		<div className="root">
-      <Header lang={lang} version={0}/>
+      <Header lang={lang} version={version}/>
       <Intro lang={lang} />
-      <Live lang={lang} />
+      <Live lang={lang} version={version}/>
       <Misc lang={lang} act={0} whiteBg={false}/>
 		</div>
 	);
@@ -33,11 +35,12 @@ export function MainEn() {
 
 export function Test() {
   const lang = "ko";
+  const version = 1;
 	return (
 		<div className="root">
-      <Header lang="ko" version={1}/>
+      <Header lang="ko" version={version}/>
       <Intro lang="ko" />
-      <Live lang="ko" />
+      <Live lang="ko" version={version}/>
       {/* <Misc lang="ko" act={2} whiteBg={false}/> */}
       <Archive lang="ko" />
       <Misc lang="ko" act={1} whiteBg={true}/>
@@ -47,11 +50,12 @@ export function Test() {
 
 export function TestEn() {
   const lang = "en"
+  const version = 1;
 	return (
 		<div className="root">
-      <Header lang="en" version={1}/>
+      <Header lang="en" version={version}/>
       <Intro lang="en" />
-      <Live lang="en" />
+      <Live lang="en" version={version}/>
       {/* <Misc lang="en" act={2} whiteBg={false}/> */}
       <Archive lang="en" />
       <Misc lang="en" act={1} whiteBg={true}/>

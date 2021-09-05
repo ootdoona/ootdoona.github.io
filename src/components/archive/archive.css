@@ -49,6 +49,7 @@
 .section-archive .line { 
   margin-top: 20px;
   color: black;
+  text-align: center;
 }
 .section-archive .artist-info {
   font-size: 15px;

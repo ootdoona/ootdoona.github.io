@@ -12,7 +12,7 @@ function Misc(props: MiscProps) {
 	const noti = props.lang === "ko" ? notification : notificationEn;
 	const teamInfoContent = props.lang === "ko" ? teamInfo : teamInfoEn;
 
-  if (props.act === 1) {
+  if (props.act === 1) { // v2 act 1
     const bgColor = 'white';
     const fontColor = 'black';
     return (
@@ -29,6 +29,9 @@ function Misc(props: MiscProps) {
               </div>
               <div className="team-member">
                 <b>{teamInfoContent.space.role}</b>  {teamInfoContent.space.name}
+              </div>
+              <div className="team-member">
+                <b>{teamInfoContent.direction.role}</b>  {teamInfoContent.direction.name}
               </div>
               <div className="team-member">
                 <b>{teamInfoContent.design.role}</b>  {teamInfoContent.design.name}
@@ -64,7 +67,7 @@ function Misc(props: MiscProps) {
         </div>
       </section>
     );
-  } else if (props.act === 2) { // act 2
+  } else if (props.act === 2) { // v2 act 2
     const bgColor = '#242526';
     const fontColor = 'white';
     return (

@@ -50,11 +50,20 @@ export const liveContentEn = {
     para1: "Individuals often have blindness towards their own identities. What they see in other people is reflected by who they are and how they differentiate themselves from others. In front of the mirror, a performer uses their face and gestures to reveal the social hierarchy and order that audience members make.",
     para2: "25min, transparent panel 2 x 1 ms, lightings"
 }
+export const liveV2Content = {
+    title: "ACT II. 자아",
+    para1: "코로나19로 인해 가을로 연기되었음."
+}
+export const liveV2ContentEn = {
+    title: "ACT II. Self",
+    para1: "It has been postponed until this fall due to COVID-19."
+}
 
 export const teamInfo = {
-    "sound": {"name": "김도형", "role": "음악", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
+    "sound": {"name": "김도형", "role": "작곡/연주", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
     "space": {"name": "이수진 오수진 박진희 안예슬", "role": "퍼포먼스 공간 제작", "instaId": "", "instaLink": ""},
-    "design": {"name": "이민경", "role": "웹 디자인 & 전시 그래픽", "instaId": "", "instaLink": ""},
+    "direction": {"name": "이수진", "role": "연출 협력", "instaId": "", "instaLink": ""},
+    "design": {"name": "이민경", "role": "웹 디자인/ 전시 그래픽", "instaId": "", "instaLink": ""},
     "development": {"name": "정은아", "role": "웹 프로그래밍", "instaId": "", "instaLink": ""},
     "transmission": {"name": "이승준", "role": "송출/통신", "instaId": "", "instaLink": ""},
     "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역", "instaId": "", "instaLink": ""},
@@ -62,6 +71,7 @@ export const teamInfo = {
 export const teamInfoEn = {
     "sound": {"name": "Do Hyung Kim", "role": "Music", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
     "space": {"name": "Sujin Lee  Sujin Oh  Jinhee Park  Ye-seul Ahn", "role": "Performance Space Production", "instaId": "", "instaLink": ""},
+    "direction": {"name": "Sujin Lee", "role": "연출 협력", "instaId": "", "instaLink": ""},
     "design": {"name": "Min Kyung Lee", "role": "Web Design & Exhibition Graphics", "instaId": "", "instaLink": ""},
     "development": {"name": "Eunah Jung", "role": "Web Coding", "instaId": "", "instaLink": ""},
     "transmission": {"name": "Seung Joon Lee", "role": "Transmission", "instaId": "", "instaLink": ""},
@@ -87,14 +97,14 @@ export const partnerInfoEn = {
 }
 
 export const archiveContent = {
-    title: "ACT I. 거울앞에서 (archive)",
+    title: "ACT I. 거울앞에서",
     info: "2021.03.27 금나래아트홀, 서울",
     para1: "개인이 인식하는 자신의 정체성 속에는 맹점이 있다. 그가 보는 다른 사람에는 자신이 누구인지, 어떻게 그 사람으로부터 자신을 구분 짓는지 반영되어 있다. 거울 앞에서, 퍼포머는 관객들이 형성한 사회적 위계, 질서를 노골적인 얼굴과 제스처로 드러낸다.",
     para2: "총 2회 진행. 회당 25분, 투명판 2x1 ms, 조명"
 }
 export const archiveContentEn = {
-    title: "ACT I. In Front of the Mirror (archive)",
-    info: "2021.03.27 금나래아트홀, 서울",
+    title: "ACT I. In Front of the Mirror",
+    info: "2021.03.27 금나래아트홀, Seoul",
     para1: "Individuals often have blindness towards their own identities. What they see in other people is reflected by who they are and how they differentiate themselves from others. In front of the mirror, a performer uses their face and gestures to reveal the social hierarchy and order that audience members make.",
     para2: "2 sessions in total. 25min each, transparent panel 2 x 1 ms, lightings"
 }
