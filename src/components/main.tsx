@@ -38,7 +38,7 @@ export function Test() {
       <Header lang="ko" version={1}/>
       <Intro lang="ko" />
       <Live lang="ko" />
-      <Misc lang="ko" act={2} whiteBg={false}/>
+      {/* <Misc lang="ko" act={2} whiteBg={false}/> */}
       <Archive lang="ko" />
       <Misc lang="ko" act={1} whiteBg={true}/>
 		</div>
@@ -52,7 +52,7 @@ export function TestEn() {
       <Header lang="en" version={1}/>
       <Intro lang="en" />
       <Live lang="en" />
-      <Misc lang="en" act={2} whiteBg={false}/>
+      {/* <Misc lang="en" act={2} whiteBg={false}/> */}
       <Archive lang="en" />
       <Misc lang="en" act={1} whiteBg={true}/>
 		</div>

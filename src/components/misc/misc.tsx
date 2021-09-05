@@ -25,7 +25,7 @@ function Misc(props: MiscProps) {
             </div>
             <div className="section-team-member">
               <div className="team-member">
-                <b>{teamInfoContent.sound.role}</b>  {teamInfoContent.sound.name}
+                <b>{teamInfoContent.sound.role}</b>  {teamInfoContent.sound.name} <a style={{cursor: 'pointer'}} onClick={() => window.open(teamInfoContent.sound.instaLink, "_blank")}>{teamInfoContent.sound.instaId}</a>
               </div>
               <div className="team-member">
                 <b>{teamInfoContent.space.role}</b>  {teamInfoContent.space.name}

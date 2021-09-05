@@ -55,6 +55,7 @@ function Intro(props: IntroProps) {
 						<div className="bold">{personalInfo.nameKo}  {personalInfo.nameEn}</div>
 						<div>{personalInfo.email}</div>
 						<div>{personalInfo.phone}</div>
+						<div onClick={()=> window.open(personalInfo.insta, "_blank")} style={{cursor: 'pointer'}}>{personalInfo.instaId}</div>
 					</div>
 				</div>
 		</section>

@@ -1,10 +1,12 @@
 .seq-wrapper {
   width: 80vw;
   clear: both;
-  background-color: #dddddd;
+  background-color: white;
 }
 .img-wrapper {
   position: relative;
+  cursor: pointer;
+  margin-bottom: 3px;
 }
 .sliderimg {
 	width: 80vw;
@@ -12,9 +14,10 @@
 .img-overlay {
   width: 100%;
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 4%;
+  left: 3%;
   color: white;
+  font-size: 12px;
 }
 .img-overlay-button {
   float: left;

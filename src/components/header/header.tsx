@@ -9,6 +9,27 @@ interface HeaderProps {
   version: number;
 }
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 const executeScroll = (id: string) => {
   scroller.scrollTo(id, {
     offset: -50,
@@ -24,19 +45,32 @@ function Header(props: HeaderProps) {
 	const content = props.lang === "ko" ? title : titleEn;
 
   let subComponent;
+  let langButton;
   if (props.version === 0) {
     subComponent = 
-        <div className="title-date">{content.date}</div>
+      <div className="title-date">{content.date}</div>
+    langButton = 
+      <a href={pathToRoute} className="language">
+        <img src={LangIcon} className="btn-lang-image"/>
+      </a>
   } else {
-    subComponent = 
-      <div className="nav-button">
-        <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-live")}>
-          ACT II
+    if (isMobile.any()) {
+      subComponent = <div></div>;
+    } else {
+      subComponent = 
+        <div className="nav-button">
+          <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-live")}>
+            ACT II
+          </div>
+          <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-archive")}>
+            ACT I
+          </div>
         </div>
-        <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-archive")}>
-          ACT I
-        </div>
-      </div>
+    }
+    langButton = 
+      <a href={pathToRoute} className="language">
+        {langToSwitch}
+      </a>
   }
 	return (
 		<header className="header header-section">
@@ -45,9 +79,7 @@ function Header(props: HeaderProps) {
 					{content.text}
 				</div>
         {subComponent}
-        <a href={pathToRoute} className="language">
-          <img src={LangIcon} className="btn-lang-image"/>
-        </a>
+        {langButton}
 			</div>
 		</header>
 	);

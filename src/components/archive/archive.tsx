@@ -33,6 +33,9 @@ function Archive(props: ArchiveProps) {
         <div className="para">
           {content.para1}
         </div>
+        <div className="small">
+          {content.para2}
+        </div>
       </div>
     </section>
   );
