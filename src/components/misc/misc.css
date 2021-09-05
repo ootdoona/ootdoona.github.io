@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   padding-bottom: 50px;
-  background-color: white;
 }
 .section-misc .wrapper {
   position: relative;
@@ -13,13 +12,11 @@
 }
 .section-misc .line {
   margin-top: 20px;
-  color: black;
   text-align: center;
 }
 .section-misc .notification {
   height: 50px;
   text-align: center;
-  color: black;
 }
 .section-misc .notification .title {
   font-size: 15px;
@@ -34,7 +31,6 @@ a, a:visited, a:hover, a:active {
   font-size: 12px;
 }
 .section-misc .team-info {
-  color: black;
   line-height: 1.5;
   text-align: center;
 }
@@ -56,7 +52,6 @@ a, a:visited, a:hover, a:active {
 }
 /* advice info */
 .section-misc .advice-info {
-  color: black;
   line-height: 1.5;
   text-align: center;
 }
@@ -78,7 +73,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .section-misc .partner-info {
-  color: black;
   text-align: center;
   padding-bottom: 50px;
 }
@@ -95,7 +89,6 @@ a, a:visited, a:hover, a:active {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   .section-misc .wrapper {
-    color: #f1f2f3;
     width: 95vw;
   }
   .section-misc .notification {

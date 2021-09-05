@@ -4,43 +4,57 @@ import Intro from './intro/intro';
 import Archive from './archive/archive';
 import Live from './live/live';
 import Misc from './misc/misc';
-import MiscAct2 from './misc_act2/misc_act2';
 
 import LiveTest from './livetest/livetest';
 
 export function MainKo() {
+  const lang = "ko";
 	return (
 		<div className="root">
-      <Header lang="ko" />
-      <Intro lang="ko" />
-      <Live lang="ko" />
-      <MiscAct2 lang="ko" />
-      <Archive lang="ko" />
-      <Misc lang="ko" />
+      <Header lang={lang} version={0}/>
+      <Intro lang={lang} />
+      <Live lang={lang} />
+      <Misc lang={lang} act={0} whiteBg={false} />
 		</div>
 	);
 }
 
 export function MainEn() {
+  const lang = "en";
 	return (
 		<div className="root">
-      <Header lang="en"/>
-      <Intro lang="en" />
-      <Live lang="en" />
-      <MiscAct2 lang="en" />
-      <Archive lang="en" />
-      <Misc lang="en" />
+      <Header lang={lang} version={0}/>
+      <Intro lang={lang} />
+      <Live lang={lang} />
+      <Misc lang={lang} act={0} whiteBg={false}/>
 		</div>
 	);
 }
 
 export function Test() {
+  const lang = "ko";
 	return (
 		<div className="root">
-      <Header lang="en"/>
+      <Header lang="ko" version={1}/>
+      <Intro lang="ko" />
+      <Live lang="ko" />
+      <Misc lang="ko" act={2} whiteBg={false}/>
+      <Archive lang="ko" />
+      <Misc lang="ko" act={1} whiteBg={true}/>
+		</div>
+	);
+}
+
+export function TestEn() {
+  const lang = "en"
+	return (
+		<div className="root">
+      <Header lang="en" version={1}/>
       <Intro lang="en" />
-      <LiveTest lang="en" />
-      <Misc lang="en" />
+      <Live lang="en" />
+      <Misc lang="en" act={2} whiteBg={false}/>
+      <Archive lang="en" />
+      <Misc lang="en" act={1} whiteBg={true}/>
 		</div>
 	);
 }

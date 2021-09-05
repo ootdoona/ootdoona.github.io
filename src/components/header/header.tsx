@@ -6,6 +6,7 @@ import { scroller } from "react-scroll";
 
 interface HeaderProps {
   lang: string;
+  version: number;
 }
 
 const executeScroll = (id: string) => {
@@ -21,12 +22,14 @@ function Header(props: HeaderProps) {
 	const langToSwitch = props.lang === "ko" ? language.en : language.ko;
 	const pathToRoute = props.lang === "ko" ? "/#/en" : "/";
 	const content = props.lang === "ko" ? title : titleEn;
-	return (
-		<header className="header header-section">
-			<div className="wrapper clearfix">
-				<div className="title-text">
-					{content.text}
-				</div>
+
+  let subComponent;
+  if (props.version === 0) {
+    subComponent = 
+        <div className="title-date">{content.date}</div>
+  } else {
+    subComponent = 
+      <div className="nav-button">
         <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-live")}>
           {content.live}
         </div>
@@ -34,6 +37,15 @@ function Header(props: HeaderProps) {
         <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-archive")}>
           {content.archive}
         </div>
+      </div>
+  }
+	return (
+		<header className="header header-section">
+			<div className="wrapper clearfix">
+				<div className="title-text">
+					{content.text}
+				</div>
+        {subComponent}
         <a href={pathToRoute} className="language">
           <img src={LangIcon} className="btn-lang-image"/>
         </a>
