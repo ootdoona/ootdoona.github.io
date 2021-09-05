@@ -31,11 +31,10 @@ function Header(props: HeaderProps) {
     subComponent = 
       <div className="nav-button">
         <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-live")}>
-          {content.live}
+          ACT II
         </div>
-        <div className="nav-button">/</div>
         <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => executeScroll("section-archive")}>
-          {content.archive}
+          ACT I
         </div>
       </div>
   }

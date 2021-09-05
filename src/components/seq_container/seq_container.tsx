@@ -34,13 +34,26 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
       currentStage = 2;
     }
 
+    let leftButton;
+    if (this.state.index === 0) {
+      leftButton = <div></div>;
+    } else {
+      leftButton = <img src={LeftIcon} className="btn-left" onClick={this.goPrevious}/>
+    }
+
+    let rightButton;
+    if (this.state.index === this.props.imagePaths.length - 1) {
+      rightButton = <div></div>;
+    } else {
+      rightButton = <img src={RightIcon} className="btn-right" onClick={this.goNext}/>;
+    }
+
     return (
       <div className='seq-wrapper'>
         <div className='img-wrapper'>
           <img ref={this.setImg} src={img} 
               className="sliderimg"
-              onClick={this.onClickImage}
-              />
+              onClick={this.onClickImage}/>
           <div className='img-overlay'>
             <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
                  style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>공간</div>
@@ -51,8 +64,8 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
             <div className={"img-overlay-button " + (currentStage == 2 ? " selected" : "")}
                  style={{cursor: 'pointer'}} onClick={() => this.changeStage(2, 25)}>2회차</div>
           </div>
-          <img src={LeftIcon} className="btn-left" onClick={this.goPrevious}/>
-          <img src={RightIcon} className="btn-right" onClick={this.goNext}/>
+          {leftButton}
+          {rightButton}
         </div>
         <Dots curIndex={this.state.index} imagePaths={this.props.imagePaths} img={img} onClickDot={this.moveTo} />
       </div>

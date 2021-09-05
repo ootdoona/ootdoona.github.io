@@ -58,10 +58,9 @@ export class Dots extends React.Component<DotsProps, DotsState> {
             } else {
               return (
                 <div className='dot-button' onClick={()=>this.onClickDot(index)}
-                    style={{backgroundColor: '#555555',
-                            width: `${buttonWidth}%`, height: `${buttonHeight}px`}} >
+                    style={{width: `${buttonWidth}%`, height: `${buttonHeight}px`}} >
                   <div className='dot-button-overlay' 
-                      style={{backgroundColor: '#555555',
+                      style={{backgroundColor: '#4e4e4e',
                               width: `${buttonWidth}%`, height: `${buttonHeight}px`}}>
                   </div>
                   <img src={require(`../../assets/archive/${path}`).default}

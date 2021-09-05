@@ -5,7 +5,6 @@ import './live.css';
 import { liveContent, liveContentEn, personalInfo } from '../../contents';
 import { timeline, showTime, livelinkURL } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
-import InstaIcon from "../../assets/icon/insta.png";
 import FbIcon from "../../assets/icon/fb.png";
 import SpinnerIcon from "../../assets/icon/spinner.gif";
 import moment from 'moment';
@@ -177,13 +176,12 @@ export default class Live extends Component<LiveProps, LiveState> {
             	{content.title}
             </div>
             <Button className="btn">
-		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+		          <img src={FbIcon} className="btn-fb-image"/>
+		          {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
             </Button>
             <Button className="btn">
-		          <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
-            </Button>
-            <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
+		          <img src={MapIcon} className="btn-map-image"/>
+		          {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
             </Button>
             <div className="livestream facebook-responsive">
               <div className="spinner-container">
@@ -211,13 +209,12 @@ export default class Live extends Component<LiveProps, LiveState> {
             	{content.title}
             </div>
             <Button className="btn">
-		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+		          <img src={FbIcon} className="btn-fb-image"/>
+		          {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
             </Button>
             <Button className="btn">
-		          <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
-            </Button>
-            <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
+		          <img src={MapIcon} className="btn-map-image"/>
+		          {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
             </Button>
             <div className="livestream facebook-responsive">
               <div className="countdown">
@@ -250,13 +247,12 @@ export default class Live extends Component<LiveProps, LiveState> {
             	{content.title}
             </div>
             <Button className="btn">
-		          <img src={InstaIcon} className="btn-insta-image" onClick={()=> window.open(personalInfo.insta, "_blank")}/>
+		          <img src={FbIcon} className="btn-fb-image"/>
+		          {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
             </Button>
             <Button className="btn">
-		          <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
-            </Button>
-            <Button className="btn">
-		          <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
+		          <img src={MapIcon} className="btn-map-image"/>
+		          {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
             </Button>
             <div className="livestream facebook-responsive">
               <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
