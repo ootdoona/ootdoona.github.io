@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ootdoona.github.io/static/css/main.59851e45.chunk.css",
-    "main.js": "/ootdoona.github.io/static/js/main.b1753690.chunk.js",
-    "main.js.map": "/ootdoona.github.io/static/js/main.b1753690.chunk.js.map",
+    "main.css": "/ootdoona.github.io/static/css/main.e570fe74.chunk.css",
+    "main.js": "/ootdoona.github.io/static/js/main.6e57ef3f.chunk.js",
+    "main.js.map": "/ootdoona.github.io/static/js/main.6e57ef3f.chunk.js.map",
     "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.897db5f3.js",
     "runtime-main.js.map": "/ootdoona.github.io/static/js/runtime-main.897db5f3.js.map",
     "static/css/2.fabbef47.chunk.css": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css",
-    "static/js/2.399e9f38.chunk.js": "/ootdoona.github.io/static/js/2.399e9f38.chunk.js",
-    "static/js/2.399e9f38.chunk.js.map": "/ootdoona.github.io/static/js/2.399e9f38.chunk.js.map",
+    "static/js/2.8f8ea5fb.chunk.js": "/ootdoona.github.io/static/js/2.8f8ea5fb.chunk.js",
+    "static/js/2.8f8ea5fb.chunk.js.map": "/ootdoona.github.io/static/js/2.8f8ea5fb.chunk.js.map",
     "static/js/3.70b38270.chunk.js": "/ootdoona.github.io/static/js/3.70b38270.chunk.js",
     "static/js/3.70b38270.chunk.js.map": "/ootdoona.github.io/static/js/3.70b38270.chunk.js.map",
     "index.html": "/ootdoona.github.io/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.59851e45.chunk.css.map": "/ootdoona.github.io/static/css/main.59851e45.chunk.css.map",
-    "static/js/2.399e9f38.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.399e9f38.chunk.js.LICENSE.txt",
+    "static/css/main.e570fe74.chunk.css.map": "/ootdoona.github.io/static/css/main.e570fe74.chunk.css.map",
+    "static/js/2.8f8ea5fb.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.8f8ea5fb.chunk.js.LICENSE.txt",
     "static/media/1.jpg": "/ootdoona.github.io/static/media/1.f8a3d88d.jpg",
     "static/media/10.jpg": "/ootdoona.github.io/static/media/10.9bac4494.jpg",
     "static/media/11.jpg": "/ootdoona.github.io/static/media/11.c07d45e8.jpg",
@@ -39,16 +39,18 @@
     "static/media/8.jpg": "/ootdoona.github.io/static/media/8.d781e4b9.jpg",
     "static/media/9.jpg": "/ootdoona.github.io/static/media/9.f81109c3.jpg",
     "static/media/landscape_final_web.9d31ac30.gif": "/ootdoona.github.io/static/media/landscape_final_web.9d31ac30.gif",
+    "static/media/left.cea2240e.png": "/ootdoona.github.io/static/media/left.cea2240e.png",
     "static/media/map.caefc4c0.png": "/ootdoona.github.io/static/media/map.caefc4c0.png",
     "static/media/perform_space.jpg": "/ootdoona.github.io/static/media/perform_space.ebb444a7.jpg",
     "static/media/poster_portrait_loop.19d50eeb.gif": "/ootdoona.github.io/static/media/poster_portrait_loop.19d50eeb.gif",
+    "static/media/right.ecefd95e.png": "/ootdoona.github.io/static/media/right.ecefd95e.png",
     "static/media/spinner.281f312f.gif": "/ootdoona.github.io/static/media/spinner.281f312f.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.897db5f3.js",
     "static/css/2.fabbef47.chunk.css",
-    "static/js/2.399e9f38.chunk.js",
-    "static/css/main.59851e45.chunk.css",
-    "static/js/main.b1753690.chunk.js"
+    "static/js/2.8f8ea5fb.chunk.js",
+    "static/css/main.e570fe74.chunk.css",
+    "static/js/main.6e57ef3f.chunk.js"
   ]
 }
