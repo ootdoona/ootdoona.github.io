@@ -139,8 +139,14 @@ class Menu extends React.Component<MenuProps, MenuState> {
   public render() {
     console.log(this.props.visibility);
     const content = this.props.lang === "ko" ? overview : overviewEn;
+    let bg;
+    if (this.props.visibility) {
+      bg = 
+        <div id="bg"></div>
+    }
 
     return (
+      <div>
         <div id="flyoutMenu"
             className={this.props.visibility ? "show" : "hide"}>
           <div className='menu-list-button'>
@@ -162,6 +168,8 @@ class Menu extends React.Component<MenuProps, MenuState> {
             <div className='menu-list-date'>{content.date3}</div>
           </div>
         </div>
+        {bg}
+      </div>
     );
   }
 

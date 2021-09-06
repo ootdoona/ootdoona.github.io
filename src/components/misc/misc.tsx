@@ -31,9 +31,6 @@ function Misc(props: MiscProps) {
                 <b>{teamInfoContent.space.role}</b>  {teamInfoContent.space.name}
               </div>
               <div className="team-member">
-                <b>{teamInfoContent.direction.role}</b>  {teamInfoContent.direction.name}
-              </div>
-              <div className="team-member">
                 <b>{teamInfoContent.design.role}</b>  {teamInfoContent.design.name}
               </div>
               <div className="team-member">

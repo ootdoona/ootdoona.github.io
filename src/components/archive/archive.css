@@ -152,4 +152,17 @@ and (max-device-width : 480px) {
   	width: 100vw;
     margin-left: -2.5vw;
   }
+  .section-archive .title-en-mobile {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    height: 35px;
+  }
+  .section-archive .info-en-mobile {
+    height: 35px;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+  }
 }

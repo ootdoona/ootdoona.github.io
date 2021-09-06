@@ -7,6 +7,27 @@ interface ArchiveProps {
   lang: string;
 }
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 function Archive(props: ArchiveProps) {
   const content = props.lang === "ko" ? archiveContent : archiveContentEn;
   const imagePaths = [
@@ -19,15 +40,33 @@ function Archive(props: ArchiveProps) {
     imagePaths.push(`second/${i}.jpg`);
   }
 
-  return (
-    <section className="section-archive">
-      <div className="wrapper">
+  let title;
+  if (props.lang === "en" && isMobile.any()) {
+    title =
+      <div>
+        <div className="title-en-mobile">
+          {content.title}
+        </div>
+        <div className="info-en-mobile">
+          {content.info}
+        </div>
+      </div>
+  } else {
+    title =
+      <div>
         <div className="title">
           {content.title}
         </div>
         <div className="info">
           {content.info}
         </div>
+      </div>
+  }
+
+  return (
+    <section className="section-archive">
+      <div className="wrapper">
+        {title}
         <SeqContainer imagePaths={imagePaths} />
         <div className="line">-</div>
         <div className="para">

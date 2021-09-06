@@ -76,10 +76,9 @@ export const overviewEn = {
 }
 
 export const teamInfo = {
-    "sound": {"name": "김도형", "role": "작곡/연주", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
+    "sound": {"name": "김도형", "role": "음악", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
     "space": {"name": "이수진 오수진 박진희 안예슬", "role": "퍼포먼스 공간 제작", "instaId": "", "instaLink": ""},
-    "direction": {"name": "이수진", "role": "연출 협력", "instaId": "", "instaLink": ""},
-    "design": {"name": "이민경", "role": "웹 디자인/ 전시 그래픽", "instaId": "", "instaLink": ""},
+    "design": {"name": "이민경", "role": "웹 디자인 & 전시 그래픽", "instaId": "", "instaLink": ""},
     "development": {"name": "정은아", "role": "웹 프로그래밍", "instaId": "", "instaLink": ""},
     "transmission": {"name": "이승준", "role": "송출/통신", "instaId": "", "instaLink": ""},
     "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역", "instaId": "", "instaLink": ""},
@@ -87,7 +86,6 @@ export const teamInfo = {
 export const teamInfoEn = {
     "sound": {"name": "Do Hyung Kim", "role": "Music", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
     "space": {"name": "Sujin Lee  Sujin Oh  Jinhee Park  Ye-seul Ahn", "role": "Performance Space Production", "instaId": "", "instaLink": ""},
-    "direction": {"name": "Sujin Lee", "role": "연출 협력", "instaId": "", "instaLink": ""},
     "design": {"name": "Min Kyung Lee", "role": "Web Design & Exhibition Graphics", "instaId": "", "instaLink": ""},
     "development": {"name": "Eunah Jung", "role": "Web Coding", "instaId": "", "instaLink": ""},
     "transmission": {"name": "Seung Joon Lee", "role": "Transmission", "instaId": "", "instaLink": ""},
@@ -120,7 +118,7 @@ export const archiveContent = {
 }
 export const archiveContentEn = {
     title: "ACT I. In Front of the Mirror",
-    info: "2021.03.27 금나래아트홀, Seoul",
+    info: "2021.03.27 Geumnarae Art Hall, Seoul",
     para1: "Individuals often have blindness towards their own identities. What they see in other people is reflected by who they are and how they differentiate themselves from others. In front of the mirror, a performer uses their face and gestures to reveal the social hierarchy and order that audience members make.",
     para2: "2 sessions in total. 25min each, transparent panel 2 x 1 ms, lightings"
 }
