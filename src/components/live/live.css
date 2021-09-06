@@ -32,7 +32,7 @@
   margin-top: 1px;
   color: white;
 }
-.btn {
+.section-live .btn {
 	float: right;
   display: flex;
   background-color: transparent !important;

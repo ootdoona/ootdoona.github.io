@@ -138,6 +138,14 @@ header .language a, a:visited, a:hover, a:active {
 	header .nav-menu.responsive li:last-child {
 		padding-bottom: 20px;
 	}
+  header .menu-btn .btn-menu-image {
+    float: left;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media only screen
@@ -151,11 +159,83 @@ and (max-device-width : 480px) {
   }
   header .title-text {
     font-size: 17px;
-  }
-  header .title-date {
-    /* font-size: 15px; */
+    float: left;
   }
   .btn-lang-image {
     margin-right: 5px;
+    float: right;
+  }
+  header .language {
+    font-size: 18px;
+    float: right;
+    height: 100%;
+    display: flex;
+  }
+  .menu-button {
+    float:left;
+    margin-top: 11px;
+    margin-right: 15px;
+  }
+  .btn-menu-image {
+    width: 22px;
+    height: 20px;
+  }
+
+  /* menu */
+  #flyoutMenu {
+    width: 65vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: transform .3s
+                cubic-bezier(0, .52, 0, 1);
+    overflow: scroll;
+    z-index: 1000;
+  }
+  
+  #flyoutMenu.hide {
+    transform: translate3d(-67.63vw, 0, 0);
+  }
+  
+  #flyoutMenu.show {
+    transform: translate3d(-2.63vw, 0, 0);
+    overflow: hidden;
+  }
+  
+  #flyoutMenu h2 a {
+    color: #333;
+    margin-left: 15px;
+    text-decoration: none;
+  }
+
+  #flyoutMenu h2 a:hover {
+    text-decoration: underline;
+  }
+
+  .menu-list-button {
+    width: 65vw;
+    height: 51px;
+    padding-left: 10px;
+    padding-top: 12px;
+    border-bottom: 1px solid black;
+    font-size: 16px;
+  }
+  .btn-close-image {
+    float: right;
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+  }
+  .menu-list-title {
+    float: left;
+  }
+  .menu-list-date {
+    float: right;
+    margin-right: 10px
+  }
+  .bold {
+    font-weight: bold;
   }
 }

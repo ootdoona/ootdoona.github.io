@@ -58,6 +58,22 @@ export const liveV2ContentEn = {
     title: "ACT II. Self",
     para1: "It has been postponed until this fall due to COVID-19."
 }
+export const overview = {
+  title1: liveContent.title,
+  date1: '2021.03.27',
+  title2: liveV2Content.title,
+  date2: '2021.08.14',
+  title3: 'ACT III. 선 1',
+  date3: '2021.11'
+}
+export const overviewEn = {
+  title1: liveContentEn.title,
+  date1: '2021.03.27',
+  title2: liveV2ContentEn.title,
+  date2: '2021.08.14',
+  title3: 'ACT III. Line 1',
+  date3: '2021.11'
+}
 
 export const teamInfo = {
     "sound": {"name": "김도형", "role": "작곡/연주", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
