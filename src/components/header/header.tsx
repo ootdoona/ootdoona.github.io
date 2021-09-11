@@ -153,19 +153,19 @@ class Menu extends React.Component<MenuProps, MenuState> {
             <img src={CloseIcon} className="btn-close-image" onClick={this.props.close}/>
           </div>
           <div className='menu-list-button bold' onClick={() => this.props.scrollTo("section-intro")}>
-            Eros, As a modern punishment
+            Eros, as a Modern Punishment
           </div>
           <div className='menu-list-button' onClick={() => this.props.scrollTo("section-archive")}>
             <div className='menu-list-title bold'>{content.title1}</div>
-            <div className='menu-list-date'>{content.date1}</div>
+            {/* <div className='menu-list-date'>{content.date1}</div> */}
           </div>
           <div className='menu-list-button' onClick={() => this.props.scrollTo("section-live")}>
             <div className='menu-list-title bold'>{content.title2}</div>
-            <div className='menu-list-date'>{content.date2}</div>
+            {/* <div className='menu-list-date'>{content.date2}</div> */}
           </div>
           <div className='menu-list-button'>
             <div className='menu-list-title'>{content.title3}</div>
-            <div className='menu-list-date'>{content.date3}</div>
+            {/* <div className='menu-list-date'>{content.date3}</div> */}
           </div>
         </div>
         {bg}

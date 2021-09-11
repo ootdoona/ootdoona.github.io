@@ -1,5 +1,5 @@
 import moment from 'moment';
-
+// act 1 
 export const timeline = [
   "2021-03-27 19:00",
   "2021-03-27 21:20"
@@ -12,5 +12,17 @@ export const livelinkURL = [
   "https://dami-livestream.s3.ap-northeast-2.amazonaws.com/livelink_1.txt",
   "https://dami-livestream.s3.ap-northeast-2.amazonaws.com/livelink_2.txt"
 ]
-
 export const showTime = 30;
+
+// act 2
+export const Act2Timeline = [
+  "2021-09-17 20:30",
+  // "2021-09-11 19:34",
+]
+export const Act2TimelineTest = [
+  "2021-09-17 20:30",
+]
+export const Act2LivelinkURL = [
+  "https://dami-livestream.s3.ap-northeast-2.amazonaws.com/livelink_act2_1.txt",
+]
+export const Act2ShowTime = 30;

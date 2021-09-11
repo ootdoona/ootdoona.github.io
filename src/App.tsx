@@ -1,4 +1,4 @@
-import { MainKo, MainEn, Test, TestEn } from './components/main';
+import { MainKo, MainEn, Testtest } from './components/main';
 
 import { Route, Switch } from 'react-router-dom';
 
@@ -7,8 +7,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={MainKo} />
         <Route path="/en" component={MainEn} />
-        <Route path="/testtest" component={Test} />
-        <Route path="/testtesten" component={TestEn} />
+        <Route path="/testtest" component={Testtest} />
       </Switch>
   );
 }

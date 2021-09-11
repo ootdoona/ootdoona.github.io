@@ -9,6 +9,7 @@ import RightIcon from "../../assets/icon/right.png";
 
 interface SeqContainerProps {
   imagePaths: string[];
+  lang: string;
 }
 
 interface SeqContainerState {
@@ -56,13 +57,13 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
               onClick={this.onClickImage}/>
           <div className='img-overlay'>
             <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>공간</div>
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>{this.props.lang === "en" ? "space" : "공간"}</div>
             <div className='img-overlay-button'>/</div>
             <div className={"img-overlay-button " + (currentStage == 1 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(1, 1)}>1회차</div>
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(1, 1)}>{this.props.lang === "en" ? "1st" : "1회차"}</div>
             <div className='img-overlay-button'>/</div>
             <div className={"img-overlay-button " + (currentStage == 2 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(2, 25)}>2회차</div>
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(2, 25)}>{this.props.lang === "en" ? "2nd" : "2회차"}</div>
           </div>
           {leftButton}
           {rightButton}

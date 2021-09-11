@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
 import { liveContent, liveContentEn, liveV2Content, liveV2ContentEn } from '../../contents';
 import { timeline, showTime, livelinkURL } from '../../config';
+import { Act2Timeline, Act2ShowTime, Act2LivelinkURL, Act2TimelineTest } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
 import FbIcon from "../../assets/icon/fb.png";
 import SpinnerIcon from "../../assets/icon/spinner.gif";
@@ -56,10 +57,19 @@ export default class Live extends Component<LiveProps, LiveState> {
   componentDidMount() {
     // set nextShow based on timeline
     const cur = moment().utc();
-    let nextShow = timeline.length;
+    let curTimeline: string[];
+    let curLivelinkURL: string[];
+    if (this.props.version === -1) {
+      curTimeline = Act2Timeline;
+      curLivelinkURL = Act2LivelinkURL;
+    } else {
+      curTimeline = timeline;
+      curLivelinkURL = livelinkURL;
+    }
+    let nextShow = curTimeline.length;
     let showOn = false;
-    for (let i = 0; i < timeline.length; i++) {
-      const base = moment.tz(timeline[i], "Asia/Seoul").utc();
+    for (let i = 0; i < curTimeline.length; i++) {
+      const base = moment.tz(curTimeline[i], "Asia/Seoul").utc();
       const diff = +(new Date(base.format())) - +(new Date(cur.format()));
       if (diff > 0) {
         nextShow = i;
@@ -79,7 +89,7 @@ export default class Live extends Component<LiveProps, LiveState> {
 
     // if show on, get the showlink
     if (showOn) {
-      fetch(livelinkURL[nextShow], {cache: "no-store"})
+      fetch(curLivelinkURL[nextShow], {cache: "no-store"})
         .then(res => res.text())
         .then((res: string) => {
           this.setState({
@@ -87,9 +97,9 @@ export default class Live extends Component<LiveProps, LiveState> {
           });
         });
     }
-    if (nextShow === livelinkURL.length) {
+    if (nextShow === curLivelinkURL.length) {
       showOn = true;
-      fetch(livelinkURL[nextShow - 1], {cache: "no-store"})
+      fetch(curLivelinkURL[nextShow - 1], {cache: "no-store"})
         .then(res => res.text())
         .then((res: string) => {
           this.setState({
@@ -110,13 +120,13 @@ export default class Live extends Component<LiveProps, LiveState> {
       // else if current time > timeline[next show] + 30m, next show += 1
       let timeLeft: Time = {days: 0, hours: 0, minutes: 0, seconds: 0};
       const cur = moment().utc();
-      const base = moment.tz(timeline[this.state.nextShow], "Asia/Seoul").utc();
+      const base = moment.tz(curTimeline[this.state.nextShow], "Asia/Seoul").utc();
       const difference = +(new Date(base.format())) - +(new Date(cur.format()));
       let showOn = false;
       let nextShow = this.state.nextShow;
       let liveLink = this.state.liveLink;
 
-      if (this.state.nextShow >= timeline.length) {
+      if (this.state.nextShow >= curTimeline.length) {
         // all show is over
         showOn = true;
       } else if (difference > 0) { // we are waiting for the show
@@ -144,7 +154,7 @@ export default class Live extends Component<LiveProps, LiveState> {
                 });
               });
           }
-        } else if (this.state.nextShow + 1 >= timeline.length) { // all show is over
+        } else if (this.state.nextShow + 1 >= curTimeline.length) { // all show is over
           showOn = true;
         } else { // waiting for the next show
           showOn = false;
@@ -172,7 +182,43 @@ export default class Live extends Component<LiveProps, LiveState> {
     let smallPara;
     let liveStream;
     let timeLeft = this.state.timeLeft;
-    if (this.props.version === 0) {
+    if (this.props.version === -1) { // demo version
+      content = this.props.lang === "ko" ? liveV2Content : liveV2ContentEn;
+      title =
+        <div>
+          <div className="title">{content.title}</div>
+          <div className="title-date">{"2021. 08. 14"}</div>
+        </div>
+      smallPara = <div></div>;
+      if (this.state.showOn && this.state.liveLink === "") {
+        liveStream = 
+          <div className="livestream facebook-responsive">
+            <div className="spinner-container">
+            <img src={SpinnerIcon} className="spinner" />
+            </div>
+          </div>
+      } else if (!this.state.showOn) {
+        liveStream = 
+            <div className="livestream facebook-responsive">
+              <div className="countdown">
+                <div className="unit">
+                  <div className="days">DAYS</div>
+                  <div className="hours">HOURS</div>
+                  <div className="minutes">MINUTES</div>
+                  <div className="seconds">SECONDS</div>
+                </div>
+                <div className="numbers">
+                  {zeropad(timeLeft.days)}:{zeropad(timeLeft.hours)}:{zeropad(timeLeft.minutes)}:{zeropad(timeLeft.seconds)}
+                </div>
+              </div>
+            </div>
+      } else {
+        liveStream =
+          <div className="livestream facebook-responsive">
+            <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+          </div>
+      }
+    } else if (this.props.version === 0) { // act 1
       content = this.props.lang === "ko" ? liveContent : liveContentEn;
       title =
         <div className="title">

@@ -67,7 +67,7 @@ function Archive(props: ArchiveProps) {
     <section className="section-archive">
       <div className="wrapper">
         {title}
-        <SeqContainer imagePaths={imagePaths} />
+        <SeqContainer imagePaths={imagePaths} lang={props.lang}/>
         <div className="line">-</div>
         <div className="para">
           {content.para1}
