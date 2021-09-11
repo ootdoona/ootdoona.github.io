@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ootdoona.github.io/static/css/main.e570fe74.chunk.css",
-    "main.js": "/ootdoona.github.io/static/js/main.6e57ef3f.chunk.js",
-    "main.js.map": "/ootdoona.github.io/static/js/main.6e57ef3f.chunk.js.map",
+    "main.js": "/ootdoona.github.io/static/js/main.f142671f.chunk.js",
+    "main.js.map": "/ootdoona.github.io/static/js/main.f142671f.chunk.js.map",
     "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.897db5f3.js",
     "runtime-main.js.map": "/ootdoona.github.io/static/js/runtime-main.897db5f3.js.map",
     "static/css/2.fabbef47.chunk.css": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css",
@@ -51,6 +51,6 @@
     "static/css/2.fabbef47.chunk.css",
     "static/js/2.8f8ea5fb.chunk.js",
     "static/css/main.e570fe74.chunk.css",
-    "static/js/main.6e57ef3f.chunk.js"
+    "static/js/main.f142671f.chunk.js"
   ]
 }
