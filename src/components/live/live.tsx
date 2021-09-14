@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
-import { liveContent, liveContentEn, liveV2Content, liveV2ContentEn } from '../../contents';
+import { personalInfo, liveContent, liveContentEn, liveV2Content, liveV2ContentEn } from '../../contents';
 import { timeline, showTime, livelinkURL } from '../../config';
 import { Act2Timeline, Act2ShowTime, Act2LivelinkURL, Act2TimelineTest } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
@@ -60,6 +60,9 @@ export default class Live extends Component<LiveProps, LiveState> {
     let curTimeline: string[];
     let curLivelinkURL: string[];
     if (this.props.version === -1) {
+      curTimeline = Act2TimelineTest;
+      curLivelinkURL = Act2LivelinkURL;
+    } else if (this.props.version === 2) {
       curTimeline = Act2Timeline;
       curLivelinkURL = Act2LivelinkURL;
     } else {
@@ -141,7 +144,7 @@ export default class Live extends Component<LiveProps, LiveState> {
           showOn = true;
           // fetch the link and before available, show spinner
           if (this.state.liveLink === "") {
-            fetch(livelinkURL[this.state.nextShow], {cache: "no-store"})
+            fetch(curLivelinkURL[this.state.nextShow], {cache: "no-store"})
               .then(res => {
                 if (!res.ok) {
                   return "";
@@ -189,7 +192,10 @@ export default class Live extends Component<LiveProps, LiveState> {
           <div className="title">{content.title}</div>
           <div className="title-date">{"2021. 08. 14"}</div>
         </div>
-      smallPara = <div></div>;
+      smallPara = 
+        <div className="small">
+          {content.para2}
+        </div>
       if (this.state.showOn && this.state.liveLink === "") {
         liveStream = 
           <div className="livestream facebook-responsive">
@@ -261,23 +267,45 @@ export default class Live extends Component<LiveProps, LiveState> {
       title =
         <div>
           <div className="title">{content.title}</div>
-          <div className="title-date">{"2021. 08. 14"}</div>
+          <div className="title-date">{"2021. 09. 17"}</div>
         </div>
-      smallPara = <div></div>;
-      liveStream = 
+      smallPara = 
+        <div>
+          <div className="small">
+            {content.para2}
+          </div>
+          <div className="small">
+            {content.para3}
+          </div>
+        </div>
+      if (this.state.showOn && this.state.liveLink === "") {
+        liveStream = 
           <div className="livestream facebook-responsive">
-            <div className="countdown">
-              <div className="unit">
-                <div className="days">DAYS</div>
-                <div className="hours">HOURS</div>
-                <div className="minutes">MINUTES</div>
-                <div className="seconds">SECONDS</div>
-              </div>
-              <div className="numbers">
-                {zeropad(0)}:{zeropad(0)}:{zeropad(0)}:{zeropad(0)}
-              </div>
+            <div className="spinner-container">
+            <img src={SpinnerIcon} className="spinner" />
             </div>
           </div>
+      } else if (!this.state.showOn) {
+        liveStream = 
+            <div className="livestream facebook-responsive">
+              <div className="countdown">
+                <div className="unit">
+                  <div className="days">DAYS</div>
+                  <div className="hours">HOURS</div>
+                  <div className="minutes">MINUTES</div>
+                  <div className="seconds">SECONDS</div>
+                </div>
+                <div className="numbers">
+                  {zeropad(timeLeft.days)}:{zeropad(timeLeft.hours)}:{zeropad(timeLeft.minutes)}:{zeropad(timeLeft.seconds)}
+                </div>
+              </div>
+            </div>
+      } else {
+        liveStream =
+          <div className="livestream facebook-responsive">
+            <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+          </div>
+      }
     }
 
     return (
@@ -285,12 +313,12 @@ export default class Live extends Component<LiveProps, LiveState> {
         <div className="wrapper">
           {title}
           <Button className="btn">
-		        <img src={FbIcon} className="btn-fb-image"/>
-		        {/* <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/> */}
+		        {/* <img src={FbIcon} className="btn-fb-image"/> */}
+		        <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
           </Button>
           <Button className="btn">
-		        <img src={MapIcon} className="btn-map-image"/>
-		        {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
+		        {/* <img src={MapIcon} className="btn-map-image"/> */}
+		        <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
           </Button>
           {liveStream}
           <div className="line">-</div>

@@ -35,8 +35,10 @@ export const personalInfo = {
     phone: "+82 10 6441 9257",
     web: "https://damikim.net",
     insta: "https://www.instagram.com/__kimdami/",
-    location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6",
-    fb: "https://fb.me/e/254iUp6qK",
+    // location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6",
+    // fb: "https://fb.me/e/254iUp6qK",
+    location: "https://www.google.com/maps/place/35%C2%B006'11.9%22N+129%C2%B001'37.8%22E/@35.1042786,129.020233,15.02z/data=!4m5!3m4!1s0x0:0x0!8m2!3d35.1033153!4d129.0271621",
+    fb: "https://fb.me/e/1jd789JNX",
     instaId: "@__kimdami"
 }
 
@@ -52,11 +54,15 @@ export const liveContentEn = {
 }
 export const liveV2Content = {
     title: "ACT II. 자아",
-    para1: "코로나19로 인해 가을로 연기되었음."
+    para1: "퍼포머는 거리의 한 구역을 차지한다. 몸을 가꾸는 움직임을 하면서 그의 사적 자아를 내보인다. 움직임은 특정 누군가를 만나러 가기 전 집에서 그가 가졌던 시간에서 비롯되었다. 행인들은 그를 마주치게 된다.",
+    para2: "20분",
+    para3: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
 }
 export const liveV2ContentEn = {
     title: "ACT II. Self",
-    para1: "It has been postponed until this fall due to COVID-19."
+    para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
+    para2: "20min",
+    para3: "The on-site performance took place on September 9th due to a rain forecast for the 17th."
 }
 export const overview = {
   title1: liveContent.title,
@@ -82,6 +88,7 @@ export const teamInfo = {
     "development": {"name": "정은아", "role": "웹 프로그래밍", "instaId": "", "instaLink": ""},
     "transmission": {"name": "이승준", "role": "송출/통신", "instaId": "", "instaLink": ""},
     "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역", "instaId": "", "instaLink": ""},
+    "costume": {"name": "클로이 딕킨슨 Chloë Dickinson", "role": "의상 제작", "instaId": "", "instaLink": ""},
 }
 export const teamInfoEn = {
     "sound": {"name": "Do Hyung Kim", "role": "Music", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
@@ -90,6 +97,7 @@ export const teamInfoEn = {
     "development": {"name": "Eunah Jung", "role": "Web Coding", "instaId": "", "instaLink": ""},
     "transmission": {"name": "Seung Joon Lee", "role": "Transmission", "instaId": "", "instaLink": ""},
     "translation": {"name": "Kyrie Vermette", "role": "Translation", "instaId": "", "instaLink": ""},
+    "costume": {"name": "Chloë Dickinson", "role": "Costume", "instaId": "", "instaLink": ""},
 }
 
 export const notification = {

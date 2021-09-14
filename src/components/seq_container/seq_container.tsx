@@ -57,7 +57,7 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
               onClick={this.onClickImage}/>
           <div className='img-overlay'>
             <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>{this.props.lang === "en" ? "space" : "공간"}</div>
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>{this.props.lang === "en" ? "Space" : "공간"}</div>
             <div className='img-overlay-button'>/</div>
             <div className={"img-overlay-button " + (currentStage == 1 ? " selected" : "")}
                  style={{cursor: 'pointer'}} onClick={() => this.changeStage(1, 1)}>{this.props.lang === "en" ? "1st" : "1회차"}</div>

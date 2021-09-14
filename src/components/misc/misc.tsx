@@ -77,10 +77,7 @@ function Misc(props: MiscProps) {
             </div>
             <div className="section-team-member">
               <div className="team-member">
-                <b>{teamInfoContent.sound.role}</b>  {teamInfoContent.sound.name}
-              </div>
-              <div className="team-member">
-                <b>{teamInfoContent.space.role}</b>  {teamInfoContent.space.name}
+                <b>{teamInfoContent.costume.role}</b>  {teamInfoContent.costume.name}
               </div>
               <div className="team-member">
                 <b>{teamInfoContent.design.role}</b>  {teamInfoContent.design.name}
@@ -107,6 +104,7 @@ function Misc(props: MiscProps) {
 				  <div className="line">-</div>
 				  <div className="notification">
 				  	<div className="title">{noti.title}</div>
+				  	<div className="title-extra">{props.lang === "ko" ? "2021년 11월 광주" : "November 2021, Gwangju"}</div>
 				  	<a target="_blank" href={noti.formlink} className="text">{noti.text}</a>
 				  </div>
         </div>

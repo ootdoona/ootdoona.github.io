@@ -3,6 +3,7 @@ import './intro.css';
 import { introContent, introContentEn, personalInfo } from '../../contents';
 import posterLandscape from "../../assets/landscape/landscape_final_web.gif";
 import posterPortrait from "../../assets/portrait/poster_portrait_loop.gif";
+import posterLandscapeV2 from "../../assets/landscape/landscape_act2.gif";
 
 interface IntroProps {
   lang: string;
@@ -30,7 +31,8 @@ var isMobile = {
 };
 
 function Intro(props: IntroProps) {
-	const poster = isMobile.any() ? posterPortrait : posterLandscape;
+	// const poster = isMobile.any() ? posterPortrait : posterLandscape;
+	const poster = isMobile.any() ? posterPortrait : posterLandscapeV2;
 	const content = props.lang === "ko" ? introContent : introContentEn;
 	return (
 		<section className="section-intro">

@@ -35,13 +35,13 @@ import LiveTest from './livetest/livetest';
 
 export function MainKo() {
   const lang = "ko";
-  const version = 1;
+  const version = 2;
 	return (
 		<div className="root">
       <Header lang="ko" version={version}/>
       <Intro lang="ko" />
       <Live lang="ko" version={version}/>
-      {/* <Misc lang="ko" act={2} whiteBg={false}/> */}
+      <Misc lang="ko" act={2} whiteBg={false}/>
       <Archive lang="ko" />
       <Misc lang="ko" act={1} whiteBg={true}/>
 		</div>
@@ -50,13 +50,13 @@ export function MainKo() {
 
 export function MainEn() {
   const lang = "en"
-  const version = 1;
+  const version = 2;
 	return (
 		<div className="root">
       <Header lang="en" version={version}/>
       <Intro lang="en" />
       <Live lang="en" version={version}/>
-      {/* <Misc lang="en" act={2} whiteBg={false}/> */}
+      <Misc lang="en" act={2} whiteBg={false}/>
       <Archive lang="en" />
       <Misc lang="en" act={1} whiteBg={true}/>
 		</div>
@@ -65,7 +65,6 @@ export function MainEn() {
 
 export function Testtest() {
   const lang = "en"
-  // const version = 1;
   const version = -1;
 	return (
 		<div className="root">
