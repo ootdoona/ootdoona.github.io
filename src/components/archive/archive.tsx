@@ -31,13 +31,13 @@ var isMobile = {
 function Archive(props: ArchiveProps) {
   const content = props.lang === "ko" ? archiveContent : archiveContentEn;
   const imagePaths = [
-    "perform_space.jpg",
+    "act1/perform_space.jpg",
   ];
   for (let i = 1; i < 25; i++) {
-    imagePaths.push(`first/${i}.jpg`);
+    imagePaths.push(`act1/first/${i}.jpg`);
   }
   for (let i = 1; i < 25; i++) {
-    imagePaths.push(`second/${i}.jpg`);
+    imagePaths.push(`act1/second/${i}.jpg`);
   }
 
   let title;
