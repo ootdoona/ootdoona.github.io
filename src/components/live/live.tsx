@@ -2,9 +2,10 @@ import { Component } from 'react';
 import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './live.css';
-import { personalInfo, liveContent, liveContentEn, liveV2Content, liveV2ContentEn } from '../../contents';
+import { personalInfo, liveContent, liveContentEn, liveV2Content, liveV2ContentEn, liveV3Content, liveV3ContentEn } from '../../contents';
 import { timeline, showTime, livelinkURL } from '../../config';
 import { Act2Timeline, Act2ShowTime, Act2LivelinkURL, Act2TimelineTest } from '../../config';
+import { Act3Timeline, Act3ShowTime, Act3LivelinkURL, Act3TimelineTest } from '../../config';
 import MapIcon from "../../assets/icon/map.png";
 import FbIcon from "../../assets/icon/fb.png";
 import SpinnerIcon from "../../assets/icon/spinner.gif";
@@ -60,8 +61,8 @@ export default class Live extends Component<LiveProps, LiveState> {
     let curTimeline: string[];
     let curLivelinkURL: string[];
     if (this.props.version === -1) {
-      curTimeline = Act2TimelineTest;
-      curLivelinkURL = Act2LivelinkURL;
+      curTimeline = Act3TimelineTest;
+      curLivelinkURL = Act3LivelinkURL;
     } else if (this.props.version === 2) {
       curTimeline = Act2Timeline;
       curLivelinkURL = Act2LivelinkURL;
@@ -186,11 +187,11 @@ export default class Live extends Component<LiveProps, LiveState> {
     let liveStream;
     let timeLeft = this.state.timeLeft;
     if (this.props.version === -1) { // demo version
-      content = this.props.lang === "ko" ? liveV2Content : liveV2ContentEn;
+      content = this.props.lang === "ko" ? liveV3Content : liveV3ContentEn;
       title =
         <div>
+          <div className="before-title">Now / </div>
           <div className="title">{content.title}</div>
-          <div className="title-date">{"2021. 08. 14"}</div>
         </div>
       smallPara = 
         <div className="small">
@@ -266,6 +267,7 @@ export default class Live extends Component<LiveProps, LiveState> {
       content = this.props.lang === "ko" ? liveV2Content : liveV2ContentEn;
       title =
         <div>
+          <div className="before-title">Now / </div>
           <div className="title">{content.title}</div>
           <div className="title-date">{"2021. 09. 17"}</div>
         </div>
@@ -312,13 +314,12 @@ export default class Live extends Component<LiveProps, LiveState> {
       <section className="section-live">
         <div className="wrapper">
           {title}
-          <Button className="btn">
-		        {/* <img src={FbIcon} className="btn-fb-image"/> */}
+          {/* <Button className="btn">
 		        <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
-          </Button>
+          </Button> */}
           <Button className="btn">
-		        {/* <img src={MapIcon} className="btn-map-image"/> */}
-		        <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/>
+		        <img src={MapIcon} className="btn-map-image"/>
+		        {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
           </Button>
           {liveStream}
           <div className="line">-</div>

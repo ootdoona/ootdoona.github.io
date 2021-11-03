@@ -91,21 +91,44 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
           </div>;
         menu = 
         <Menu visibility={this.state.showMenu} lang={this.props.lang} scrollTo={this.executeScroll} close={() => this.setState({showMenu: false})}/>;
+        langButton = 
+          <a href={pathToRoute} className="language">
+            {langToSwitch}
+          </a>
       } else {
-        subComponent = 
-          <div className="nav-button">
-            <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-live")}>
-              ACT II
+        if (this.props.version === -1) {
+          subComponent = 
+            <div className="nav-button">
+              <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-live")}>
+                Now
+              </div>
+              <div>/</div>
+              <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-archive")}>
+                Previous
+              </div>
             </div>
-            <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-archive")}>
-              ACT I
+          langButton = 
+            <div className="language">
+              <a href={pathToRoute} className={"language " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+              <a href={pathToRoute} className="language">/</a>
+              <a href={pathToRoute} className={"language " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
             </div>
-          </div>
+        } else {
+          subComponent = 
+            <div className="nav-button">
+              <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-live")}>
+                ACT II
+              </div>
+              <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-archive")}>
+                ACT I
+              </div>
+            </div>
+          langButton = 
+            <a href={pathToRoute} className="language">
+              {langToSwitch}
+            </a>
+        }
       }
-      langButton = 
-        <a href={pathToRoute} className="language">
-          {langToSwitch}
-        </a>
     }
     return (
       <header className="header header-section">

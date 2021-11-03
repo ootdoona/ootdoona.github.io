@@ -59,7 +59,19 @@ export const liveV2Content = {
     para3: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
 }
 export const liveV2ContentEn = {
-    title: "ACT II. Self",
+    title: "ACT II. Line 1",
+    para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
+    para2: "20min",
+    para3: "The on-site performance took place on September 9th due to a rain forecast for the 17th."
+}
+export const liveV3Content = {
+    title: "ACT III. 선 1",
+    para1: "퍼포머는 거리의 한 구역을 차지한다. 몸을 가꾸는 움직임을 하면서 그의 사적 자아를 내보인다. 움직임은 특정 누군가를 만나러 가기 전 집에서 그가 가졌던 시간에서 비롯되었다. 행인들은 그를 마주치게 된다.",
+    para2: "20분",
+    para3: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
+}
+export const liveV3ContentEn = {
+    title: "ACT III. Self",
     para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
     para2: "20min",
     para3: "The on-site performance took place on September 9th due to a rain forecast for the 17th."
@@ -89,6 +101,7 @@ export const teamInfo = {
     "transmission": {"name": "이승준", "role": "송출/통신", "instaId": "", "instaLink": ""},
     "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역", "instaId": "", "instaLink": ""},
     "costume": {"name": "클로이 딕킨슨 Chloë Dickinson", "role": "의상 제작", "instaId": "", "instaLink": ""},
+    "video": {"name": "안예슬", "role": "영상", "instaId": "", "instaLink": ""},
 }
 export const teamInfoEn = {
     "sound": {"name": "Do Hyung Kim", "role": "Music", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
@@ -98,6 +111,7 @@ export const teamInfoEn = {
     "transmission": {"name": "Seung Joon Lee", "role": "Transmission", "instaId": "", "instaLink": ""},
     "translation": {"name": "Kyrie Vermette", "role": "Translation", "instaId": "", "instaLink": ""},
     "costume": {"name": "Chloë Dickinson", "role": "Costume", "instaId": "", "instaLink": ""},
+    "video": {"name": "Ye-seul Ahn", "role": "Video", "instaId": "", "instaLink": ""},
 }
 
 export const notification = {
@@ -129,4 +143,16 @@ export const archiveContentEn = {
     info: "2021.03.27 Geumnarae Art Hall, Seoul",
     para1: "Individuals often have blindness towards their own identities. What they see in other people is reflected by who they are and how they differentiate themselves from others. In front of the mirror, a performer uses their face and gestures to reveal the social hierarchy and order that audience members make.",
     para2: "2 sessions in total. 25min each, transparent panel 2 x 1 ms, lightings"
+}
+export const archive2Content = {
+    title: "ACT II. 자아",
+    info: "2021.09.17 보수동 거리, 부산",
+    para1: "퍼포머는 거리의 한 구역을 차지한다. 몸을 가꾸는 움직임을 하면서 그의 사적 자아를 내보인다. 움직임은 특정 누군가를 만나러 가기 전 집에서 그가 가졌던 시간에서 비롯되었다. 행인들은 그를 마주치게 된다.",
+    para2: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
+}
+export const archive2ContentEn = {
+    title: "ACT II. Self",
+    info: "2021.09.17 보수동 거리, Busan",
+    para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
+    para2: "The on-site performance took place on September 9th due to a rain forecast for the 17th."
 }

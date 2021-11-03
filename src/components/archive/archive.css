@@ -2,13 +2,14 @@
   position: relative;
   width: 100%;
   padding-top: 20px;
+	color: #242526;
 }
 .section-archive .wrapper {
   position: relative;
   width: 80vw;
   left: 50%;
   transform: translateX(-50%);
-	color: #f1f2f3;
+	color: #242526;
 }
 .section-archive .poster-image {
 	width: 80vw;
@@ -21,41 +22,65 @@
 	font-size: 18px;
   font-weight: bold;
 	text-align: left;
-  color: black;
+  color: white;
+}
+.section-archive .left-line {
+  /* float: left; */
+  background-color: white;
+  transform: translate3d(-10vw, 26px, 0);
+  width: 9vw;
+  height: 2px;
+}
+.section-archive .right-line {
+  /* float: left; */
+  background-color: white;
+  /* transform: translate3d(410px, 26px, 0); */
+  width: 60vw;
+  height: 2px;
+}
+.section-archive .before-title {
+	display: flex;
+  float: left;
+	height: 50px;
+	align-items: center;
+	font-size: 18px;
+  margin-right: 3px;
+	text-align: left;
+  color: white;
 }
 .section-archive .info {
 	display: flex;
   float: left;
 	height: 50px;
 	align-items: center;
-	font-size: 16px;
+	font-size: 12px;
 	text-align: left;
 	margin-left: 10px;
   margin-top: 1px;
-  color: black;
+  color: white;
 }
 .section-archive .para {
   font-size: 15px;
-  color: black;
+  color: white;
   line-height: 1.7;
   text-align: left;
 }
 .section-archive .small {
   font-size: 12px;
-  color: black;
+  color: white;
   margin-top: 15px;
   line-height: 1.7;
   text-align: left;
 }
 .section-archive .line { 
   margin-top: 20px;
-  color: black;
+  color: white;
   text-align: center;
 }
 .section-archive .artist-info {
   font-size: 15px;
   line-height: 1.5;
-  color: black;
+  color: white;
   text-align: left;
 }
 .section-archive .artist-info .bold {
@@ -132,7 +157,7 @@ a, a:visited, a:hover, a:active {
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   .section-archive .wrapper {
-    color: #f1f2f3;
+    color: #242526;
     width: 95vw;
   }
   .section-archive .title {
@@ -154,16 +179,24 @@ and (max-device-width : 480px) {
     margin-left: -2.5vw;
   }
   .section-archive .title-en-mobile {
-    color: black;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     text-align: left;
     height: 35px;
   }
+  .section-archive .before-title-en-mobile {
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    margin-right: 3px;
+    height: 35px;
+  }
   .section-archive .info-en-mobile {
     height: 35px;
-    color: black;
-    font-size: 16px;
+    color: white;
+    /* font-size: 16px; */
+    font-size: 10px;
     text-align: left;
   }
 }

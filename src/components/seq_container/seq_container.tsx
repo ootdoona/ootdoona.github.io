@@ -10,6 +10,7 @@ import RightIcon from "../../assets/icon/right.png";
 interface SeqContainerProps {
   imagePaths: string[];
   lang: string;
+  act: number;
 }
 
 interface SeqContainerState {
@@ -27,12 +28,40 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
     let img: string = require(`../../assets/archive/${this.props.imagePaths[this.state.index]}`).default;
 
     let currentStage = this.state.currentStage;
-    if (this.state.index == 0) {
-      currentStage = 0;
-    } else if (this.state.index < 25) {
-      currentStage = 1;
-    } else {
-      currentStage = 2;
+    let seqNav;
+    if (this.props.act === 1) {
+      if (this.state.index == 0) {
+        currentStage = 0;
+      } else if (this.state.index < 25) {
+        currentStage = 1;
+      } else {
+        currentStage = 2;
+      }
+      seqNav =
+          <div className='img-overlay'>
+            <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>{this.props.lang === "en" ? "Space" : "공간"}</div>
+            <div className='img-overlay-button'>/</div>
+            <div className={"img-overlay-button " + (currentStage == 1 ? " selected" : "")}
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(1, 1)}>{this.props.lang === "en" ? "1st" : "1회차"}</div>
+            <div className='img-overlay-button'>/</div>
+            <div className={"img-overlay-button " + (currentStage == 2 ? " selected" : "")}
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(2, 25)}>{this.props.lang === "en" ? "2nd" : "2회차"}</div>
+          </div>
+    } else { // 2
+      if (this.state.index == 0) {
+        currentStage = 0;
+      } else {
+        currentStage = 1;
+      }
+      seqNav =
+          <div className='img-overlay'>
+            <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>{this.props.lang === "en" ? "Space" : "공간"}</div>
+            <div className='img-overlay-button'>/</div>
+            <div className={"img-overlay-button " + (currentStage == 1 ? " selected" : "")}
+                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(1, 1)}>{this.props.lang === "en" ? "Performance" : "퍼포먼스"}</div>
+          </div>
     }
 
     let leftButton;
@@ -55,16 +84,7 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
           <img ref={this.setImg} src={img} 
               className="sliderimg"
               onClick={this.onClickImage}/>
-          <div className='img-overlay'>
-            <div className={"img-overlay-button " + (currentStage == 0 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(0, 0)}>{this.props.lang === "en" ? "Space" : "공간"}</div>
-            <div className='img-overlay-button'>/</div>
-            <div className={"img-overlay-button " + (currentStage == 1 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(1, 1)}>{this.props.lang === "en" ? "1st" : "1회차"}</div>
-            <div className='img-overlay-button'>/</div>
-            <div className={"img-overlay-button " + (currentStage == 2 ? " selected" : "")}
-                 style={{cursor: 'pointer'}} onClick={() => this.changeStage(2, 25)}>{this.props.lang === "en" ? "2nd" : "2회차"}</div>
-          </div>
+          {seqNav}
           {leftButton}
           {rightButton}
         </div>

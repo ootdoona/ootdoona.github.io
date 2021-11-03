@@ -1,12 +1,13 @@
 import React from 'react';
 import './intro.css';
-import { introContent, introContentEn, personalInfo } from '../../contents';
+import { introContent, introContentEn, personalInfo, teamInfo, teamInfoEn, } from '../../contents';
 import posterLandscape from "../../assets/landscape/landscape_final_web.gif";
 import posterPortrait from "../../assets/portrait/poster_portrait_loop.gif";
 import posterLandscapeV2 from "../../assets/landscape/landscape_act2.gif";
 
 interface IntroProps {
   lang: string;
+  version: number;
 }
 
 var isMobile = {
@@ -34,6 +35,32 @@ function Intro(props: IntroProps) {
 	// const poster = isMobile.any() ? posterPortrait : posterLandscape;
 	const poster = isMobile.any() ? posterPortrait : posterLandscapeV2;
 	const content = props.lang === "ko" ? introContent : introContentEn;
+
+  let team;
+	const teamInfoContent = props.lang === "ko" ? teamInfo : teamInfoEn;
+  if (props.version === -1) {
+    team = 
+      <div className="advice-info">
+        <div className="line" style={{fontSize: '14px'}}>+</div>
+        <div className="title">
+          {props.lang === "ko" ? "자문" : "Advice"}
+        </div>
+        <div className="section-team-member">
+          <div className="team-member">
+            <b>{teamInfoContent.transmission.role}</b>  {teamInfoContent.transmission.name}
+          </div>
+          <div className="team-member">
+            <b>{teamInfoContent.translation.role}</b>  {teamInfoContent.translation.name}
+          </div>
+          <div className="team-member">
+            <b>{teamInfoContent.design.role}</b>  {teamInfoContent.design.name}
+          </div>
+          <div className="team-member">
+            <b>{teamInfoContent.development.role}</b>  {teamInfoContent.development.name}
+          </div>
+        </div>
+      </div>
+  }
 	return (
 		<section className="section-intro">
 				<div className="wrapper">
@@ -59,6 +86,7 @@ function Intro(props: IntroProps) {
 						<div>{personalInfo.phone}</div>
 						<div onClick={()=> window.open(personalInfo.insta, "_blank")} style={{cursor: 'pointer'}}>{personalInfo.instaId}</div>
 					</div>
+          {team}
 				</div>
 		</section>
 	);

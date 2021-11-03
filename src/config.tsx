@@ -26,3 +26,15 @@ export const Act2LivelinkURL = [
   "https://dami-livestream.s3.ap-northeast-2.amazonaws.com/livelink_3.txt",
 ]
 export const Act2ShowTime = 20;
+
+// act 3
+export const Act3Timeline = [
+  "2021-11-13 20:30",
+]
+export const Act3TimelineTest = [
+  "2021-11-13 20:30",
+]
+export const Act3LivelinkURL = [
+  "https://dami-livestream.s3.ap-northeast-2.amazonaws.com/livelink_3.txt",
+]
+export const Act3ShowTime = 20;

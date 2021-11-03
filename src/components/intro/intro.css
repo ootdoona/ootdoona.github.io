@@ -49,6 +49,19 @@ a, a:visited, a:hover, a:active {
 .section-intro .social-links {
 	margin-top: 50px;
 }
+.section-intro .advice-info {
+  font-size: 12px;
+  line-height: 1.5;
+  color: black;
+  text-align: left;
+}
+.section-intro .advice-info .title {
+  font-size: 12px;
+  font-weight: bold;
+}
+.section-intro .advice-info .section-team-member {
+  font-size: 12px;
+}
 #resume {
 	margin-right: 0;
 }
