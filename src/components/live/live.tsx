@@ -267,7 +267,6 @@ export default class Live extends Component<LiveProps, LiveState> {
       content = this.props.lang === "ko" ? liveV2Content : liveV2ContentEn;
       title =
         <div>
-          <div className="before-title">Now / </div>
           <div className="title">{content.title}</div>
           <div className="title-date">{"2021. 09. 17"}</div>
         </div>

@@ -90,11 +90,13 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
             <img src={MenuIcon} className="btn-menu-image"/>
           </div>;
         menu = 
-        <Menu visibility={this.state.showMenu} lang={this.props.lang} scrollTo={this.executeScroll} close={() => this.setState({showMenu: false})}/>;
-        langButton = 
-          <a href={pathToRoute} className="language">
-            {langToSwitch}
-          </a>
+          <Menu visibility={this.state.showMenu} lang={this.props.lang} scrollTo={this.executeScroll} close={() => this.setState({showMenu: false})} version={this.props.version}/>;
+        if (this.props.version === 2) {
+          langButton = 
+            <a href={pathToRoute} className="language">
+              {langToSwitch}
+            </a>
+        }
       } else {
         if (this.props.version === -1) {
           subComponent = 
@@ -150,6 +152,7 @@ export default Header;
 interface MenuProps {
   visibility: boolean;
   lang: string;
+  version: number;
   scrollTo: (id: string) => void;
   close: () => void;
 }
@@ -168,28 +171,55 @@ class Menu extends React.Component<MenuProps, MenuState> {
         <div id="bg"></div>
     }
 
+    let subMenu;
+    let langButton;
+    if (this.props.version < 3 && this.props.version != -1) { // before act 3
+      subMenu = 
+        <div>
+          <div className='menu-list-button' onClick={() => this.props.scrollTo("section-archive")}>
+            <div className='menu-list-title bold'>{content.title1}</div>
+          </div>
+          <div className='menu-list-button' onClick={() => this.props.scrollTo("section-live")}>
+            <div className='menu-list-title bold'>{content.title2}</div>
+          </div>
+          <div className='menu-list-button'>
+            <div className='menu-list-title'>{content.title3}</div>
+          </div>
+        </div>
+    } else { // act 3 and demo
+      subMenu = 
+        <div>
+          <div className='menu-list-button' onClick={() => this.props.scrollTo("section-live")}>
+            <div className='menu-list-title bold'>Now</div>
+          </div>
+          <div className='menu-list-sub'>- {content.title3}</div>
+          <div className='menu-list-button-top' onClick={() => this.props.scrollTo("section-archive")}>
+            <div className='menu-list-title bold'>Previous</div>
+          </div>
+          <div className='menu-list-sub'>- {content.title1}</div>
+          <div className='menu-list-sub'>- {content.title2}</div>
+        </div>
+        const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
+        langButton = 
+          <div className="language-mobile">
+            <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+            <a href={pathToRoute} className="language-mobile">/</a>
+            <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
+          </div>
+    }
+
     return (
       <div>
         <div id="flyoutMenu"
             className={this.props.visibility ? "show" : "hide"}>
           <div className='menu-list-button'>
+            {langButton}
             <img src={CloseIcon} className="btn-close-image" onClick={this.props.close}/>
           </div>
           <div className='menu-list-button bold' onClick={() => this.props.scrollTo("section-intro")}>
             Eros, as a Modern Punishment
           </div>
-          <div className='menu-list-button' onClick={() => this.props.scrollTo("section-archive")}>
-            <div className='menu-list-title bold'>{content.title1}</div>
-            {/* <div className='menu-list-date'>{content.date1}</div> */}
-          </div>
-          <div className='menu-list-button' onClick={() => this.props.scrollTo("section-live")}>
-            <div className='menu-list-title bold'>{content.title2}</div>
-            {/* <div className='menu-list-date'>{content.date2}</div> */}
-          </div>
-          <div className='menu-list-button'>
-            <div className='menu-list-title'>{content.title3}</div>
-            {/* <div className='menu-list-date'>{content.date3}</div> */}
-          </div>
+          {subMenu}
         </div>
         {bg}
       </div>

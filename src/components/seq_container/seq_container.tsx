@@ -11,6 +11,7 @@ interface SeqContainerProps {
   imagePaths: string[];
   lang: string;
   act: number;
+  whiteBg: boolean;
 }
 
 interface SeqContainerState {
@@ -78,8 +79,9 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
       rightButton = <img src={RightIcon} className="btn-right" onClick={this.goNext}/>;
     }
 
+    const bgColor = this.props.whiteBg ? 'white' : '#242526';
     return (
-      <div className='seq-wrapper'>
+      <div className='seq-wrapper' style={{backgroundColor: bgColor}}>
         <div className='img-wrapper'>
           <img ref={this.setImg} src={img} 
               className="sliderimg"
@@ -88,7 +90,7 @@ export class SeqContainer extends React.Component<SeqContainerProps, SeqContaine
           {leftButton}
           {rightButton}
         </div>
-        <Dots curIndex={this.state.index} imagePaths={this.props.imagePaths} img={img} onClickDot={this.moveTo} />
+        <Dots curIndex={this.state.index} imagePaths={this.props.imagePaths} img={img} onClickDot={this.moveTo} whiteBg={this.props.whiteBg}/>
       </div>
     );
   }

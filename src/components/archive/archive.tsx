@@ -6,6 +6,8 @@ import SeqContainer from '../seq_container/seq_container';
 interface ArchiveProps {
   lang: string;
   act: number;
+  version: number;
+  whiteBg: boolean;
 }
 
 var isMobile = {
@@ -49,47 +51,80 @@ function Archive(props: ArchiveProps) {
   }
 
   let title;
-  if (props.lang === "en" && isMobile.any()) {
-    title =
-      <div>
-        <div className="before-title-en-mobile">
-          Previous / 
+  if (props.version === 2) {
+    if (props.lang === "en" && isMobile.any()) {
+      title =
+        <div>
+          <div className="title-en-mobile">
+            {content.title}
+          </div>
+          <div className="info-en-mobile">
+            {content.info}
+          </div>
         </div>
-        <div className="title-en-mobile">
-          {content.title}
+    } else {
+      title =
+        <div>
+          <div className="title">
+            {content.title}
+          </div>
+          <div className="info">
+            {content.info}
+          </div>
         </div>
-        <div className="info-en-mobile">
-          {content.info}
-        </div>
-      </div>
-  } else {
-    let rightLineTransform;
-    if (props.act === 2) {
-      rightLineTransform = "translate3d(360px, 26px, 0)";
-    } else { // act 1
-      rightLineTransform = "translate3d(410px, 26px, 0)";
     }
-    title =
-      <div>
-        <div className="left-line"></div>
-        <div className="before-title">
-          Previous / 
+  } else { // version 3, demo
+    if (props.lang === "en" && isMobile.any()) {
+      title =
+        <div>
+          <div className="before-title-en-mobile">
+            Previous / 
+          </div>
+          <div className="title-en-mobile">
+            {content.title}
+          </div>
+          <div className="info-en-mobile">
+            {content.info}
+          </div>
         </div>
-        <div className="title">
-          {content.title}
+    } else {
+      let rightLineTransform;
+      if (props.act === 2) {
+        rightLineTransform = props.lang === "ko" ? "translate3d(360px, 26px, 0)" : "translate3d(360px, 26px, 0)";
+      } else { // act 1
+        rightLineTransform = props.lang === "ko" ? "translate3d(410px, 26px, 0)" : "translate3d(550px, 26px, 0)";
+      }
+      title =
+        <div>
+          <div className="left-line"></div>
+          <div className="before-title">
+            Previous / 
+          </div>
+          <div className="title">
+            {content.title}
+          </div>
+          <div className="info">
+            {content.info}
+          </div>
+          <div className="right-line" style={{transform: rightLineTransform}}></div>
         </div>
-        <div className="info">
-          {content.info}
-        </div>
-        <div className="right-line" style={{transform: rightLineTransform}}></div>
-      </div>
+    }
+  }
+  let bgColor;
+  let fontColor;
+  if (props.whiteBg == true) {
+    bgColor = 'white';
+    fontColor = 'black';
+  } else {
+    bgColor = '#242526';
+    fontColor = 'white';
   }
 
   return (
-    <section className="section-archive" style={{backgroundColor: '#242526'}}>
+    <section className="section-archive" style={{backgroundColor: bgColor, color: fontColor}}>
       <div className="wrapper">
         {title}
-        <SeqContainer imagePaths={imagePaths} lang={props.lang} act={props.act}/>
+        <SeqContainer imagePaths={imagePaths} lang={props.lang} act={props.act} whiteBg={props.whiteBg}/>
         <div className="line">-</div>
         <div className="para">
           {content.para1}

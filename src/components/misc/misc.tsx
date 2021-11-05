@@ -120,7 +120,7 @@ function Misc(props: MiscProps) {
     const bgColor = '#242526';
     const fontColor = 'white';
     return (
-      <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>
+      <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor, paddingBottom: '10px'}}>
         <div className="wrapper">
           <div className="line">-</div>
           <div className="team-info">

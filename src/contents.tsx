@@ -34,12 +34,12 @@ export const personalInfo = {
     email: "dami7060@gmail.com",
     phone: "+82 10 6441 9257",
     web: "https://damikim.net",
-    insta: "https://www.instagram.com/__kimdami/",
+    insta: "https://www.instagram.com/damikim___/",
     // location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6",
     // fb: "https://fb.me/e/254iUp6qK",
     location: "https://www.google.com/maps/place/35%C2%B006'11.9%22N+129%C2%B001'37.8%22E/@35.1042786,129.020233,15.02z/data=!4m5!3m4!1s0x0:0x0!8m2!3d35.1033153!4d129.0271621",
     fb: "https://fb.me/e/1jd789JNX",
-    instaId: "@__kimdami"
+    instaId: "@damikim___"
 }
 
 export const liveContent = {
@@ -71,7 +71,7 @@ export const liveV3Content = {
     para3: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
 }
 export const liveV3ContentEn = {
-    title: "ACT III. Self",
+    title: "ACT III. Line 1",
     para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
     para2: "20min",
     para3: "The on-site performance took place on September 9th due to a rain forecast for the 17th."

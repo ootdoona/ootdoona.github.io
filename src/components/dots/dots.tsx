@@ -5,6 +5,7 @@ interface DotsProps {
   imagePaths: string[];
   img: string;
   curIndex: number;
+  whiteBg: boolean;
   onClickDot: (index: number) => void;
 }
 
@@ -41,7 +42,8 @@ export class Dots extends React.Component<DotsProps, DotsState> {
   public render() {
     const thumbnailSize = 6;
     const buttonWidth = ((100 - thumbnailSize) / (this.props.imagePaths.length - 1));
-    const buttonHeight = isMobile.any() ? 30 : 40;
+    const buttonHeight = isMobile.any() ? 30 : 45;
+    const color: string = this.props.whiteBg? 'white' : '#242526';
     return (
       <div className='dots' style={{height: buttonHeight}}>
         {
@@ -50,7 +52,8 @@ export class Dots extends React.Component<DotsProps, DotsState> {
               return (
                 <div className='dot-button' 
                      style={{width: `${thumbnailSize}%`, 
-                             height: `${buttonHeight}px`}}>
+                             height: `${buttonHeight}px`,
+                             borderRight: `1px solid ${color}`}}>
                   <img src={require(`../../assets/archive/${path}`).default}
                       className='dot-button-img'/>
                 </div>
@@ -61,7 +64,8 @@ export class Dots extends React.Component<DotsProps, DotsState> {
                     style={{width: `${buttonWidth}%`, height: `${buttonHeight}px`}} >
                   <div className='dot-button-overlay' 
                       style={{backgroundColor: '#4e4e4e',
-                              width: `${buttonWidth}%`, height: `${buttonHeight}px`}}>
+                              width: `${buttonWidth}%`, height: `${buttonHeight}px`,
+                              borderRight: `1px solid ${color}`}}>
                   </div>
                   <img src={require(`../../assets/archive/${path}`).default}
                       width={`100%`}

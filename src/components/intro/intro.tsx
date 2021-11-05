@@ -43,7 +43,7 @@ function Intro(props: IntroProps) {
       <div className="advice-info">
         <div className="line" style={{fontSize: '14px'}}>+</div>
         <div className="title">
-          {props.lang === "ko" ? "자문" : "Advice"}
+          {props.lang === "ko" ? "도움" : "도움"}
         </div>
         <div className="section-team-member">
           <div className="team-member">

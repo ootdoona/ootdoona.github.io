@@ -239,6 +239,22 @@ and (max-device-width : 480px) {
     border-bottom: 1px solid black;
     font-size: 16px;
   }
+  .menu-list-button-top{
+    width: 65vw;
+    height: 51px;
+    padding-left: 10px;
+    padding-top: 12px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 16px;
+  }
+  .menu-list-sub {
+    width: 65vw;
+    height: 51px;
+    padding-left: 40px;
+    padding-top: 14px;
+    font-size: 16px;
+  }
   .btn-close-image {
     float: right;
     margin-right: 10px;
@@ -254,5 +270,14 @@ and (max-device-width : 480px) {
   }
   .bold {
     font-weight: bold;
+  }
+  .language-mobile {
+  	font-size: 16px;
+  	float: left;
+  	height: 100%;
+  	display: flex;
+  	color: black;
+    margin-top: 1px;
+    margin-right: 2px;
   }
 }
