@@ -11,16 +11,16 @@ interface MiscProps {
 function Misc(props: MiscProps) {
 	const noti = props.lang === "ko" ? notification : notificationEn;
 	const teamInfoContent = props.lang === "ko" ? teamInfo : teamInfoEn;
+  let bgColor, fontColor;
+  if (props.whiteBg) {
+    bgColor = 'white';
+    fontColor = 'black';
+  } else {
+    bgColor = '#242526';
+    fontColor = 'white';
+  }
 
   if (props.act === 1) { // v2 act 1 (archive)
-    let bgColor, fontColor;
-    if (props.whiteBg) {
-      bgColor = 'white';
-      fontColor = 'black';
-    } else {
-      bgColor = '#242526';
-      fontColor = 'white';
-    }
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>
         <div className="wrapper">
@@ -71,8 +71,6 @@ function Misc(props: MiscProps) {
       </section>
     );
   } else if (props.act === 2) { // v2 act 2
-    const bgColor = '#242526';
-    const fontColor = 'white';
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>
         <div className="wrapper">
@@ -117,8 +115,6 @@ function Misc(props: MiscProps) {
       </section>
     );
   } else if (props.act === 3) { // v3 act 1 (archive)
-    const bgColor = '#242526';
-    const fontColor = 'white';
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor, paddingBottom: '10px'}}>
         <div className="wrapper">
@@ -149,8 +145,6 @@ function Misc(props: MiscProps) {
       </section>
     );
   } else if (props.act === 4) { // v3 act 2 (archive)
-    const bgColor = '#242526';
-    const fontColor = 'white';
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>
         <div className="wrapper">
@@ -169,8 +163,6 @@ function Misc(props: MiscProps) {
       </section>
     );
   } else if (props.act === 5) { // v3 act 3
-    const bgColor = '#242526';
-    const fontColor = 'white';
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>
         <div className="wrapper">
@@ -190,8 +182,6 @@ function Misc(props: MiscProps) {
     );
 
   } else { // original act 1 misc
-    const bgColor = '#242526';
-    const fontColor = 'white';
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>
         <div className="wrapper">

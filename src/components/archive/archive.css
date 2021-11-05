@@ -1,7 +1,7 @@
 .section-archive {
   position: relative;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 10px;
   overflow-x: hidden;
 }
 .section-archive .wrapper {
