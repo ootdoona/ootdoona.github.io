@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './header/header';
 import Intro from './intro/intro';
 import Archive from './archive/archive';
 import Live from './live/live';
 import Misc from './misc/misc';
+import { scroller } from "react-scroll";
 
 import LiveTest from './livetest/livetest';
 
@@ -38,7 +39,7 @@ export function MainKo() {
   const version = 2;
 	return (
 		<div className="root">
-      <Header lang="ko" version={version}/>
+      <Header lang="ko" version={version} nav={""}/>
       <Intro lang="ko" version={version}/>
       <Live lang="ko" version={version}/>
       <Misc lang="ko" act={2} whiteBg={false}/>
@@ -53,7 +54,7 @@ export function MainEn() {
   const version = 2;
 	return (
 		<div className="root">
-      <Header lang="en" version={version}/>
+      <Header lang="en" version={version} nav={""}/>
       <Intro lang="en" version={version}/>
       <Live lang="en" version={version}/>
       <Misc lang="en" act={2} whiteBg={false}/>
@@ -66,9 +67,25 @@ export function MainEn() {
 export function Testtest() {
   const lang = "ko"
   const version = -1; // -1 for test; preparing for version 3
+
+  const [navPoint, setNavPoint] = useState("now");
+  const listenScrollEvent = (event: Event) => {
+    const offset = scroller.get("section-archive").offsetTop - 60;
+    if (window.scrollY < offset) {
+      return setNavPoint("now");
+    } else if (window.scrollY > offset) {
+      return setNavPoint("previous");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
+
 	return (
 		<div className="root">
-      <Header lang={lang} version={version}/>
+      <Header lang={lang} version={version} nav={navPoint}/>
       <Intro lang={lang} version={version}/>
       <Live lang={lang} version={version}/>
       <Misc lang={lang} act={5} whiteBg={false}/>
@@ -82,10 +99,23 @@ export function Testtest() {
 export function TesttestEn() {
   const lang = "en"
   const version = -1; // -1 for test; preparing for version 3
+  const [navPoint, setNavPoint] = useState("now");
+  const listenScrollEvent = (event: Event) => {
+    const offset = scroller.get("section-archive").offsetTop - 60;
+    if (window.scrollY < offset) {
+      return setNavPoint("now");
+    } else if (window.scrollY > offset) {
+      return setNavPoint("previous");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+    return () => window.removeEventListener("scroll", listenScrollEvent);
+  }, []);
 	return (
-		// <div className="root" onWheel={(e)=>console.log('WHEEL!!',e)} onScroll={elementScrollData} style={{overflow: 'scroll'}}>
 		<div className="root">
-      <Header lang={lang} version={version}/>
+      <Header lang={lang} version={version} nav={navPoint}/>
       <Intro lang={lang} version={version}/>
       <Live lang={lang} version={version}/>
       <Misc lang={lang} act={5} whiteBg={false}/>

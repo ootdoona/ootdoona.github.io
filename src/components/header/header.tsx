@@ -10,6 +10,7 @@ import { scroller } from "react-scroll";
 interface HeaderProps {
   lang: string;
   version: number;
+  nav: string;
 }
 
 var isMobile = {
@@ -101,11 +102,11 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         if (this.props.version === -1) {
           subComponent = 
             <div className="nav-button">
-              <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-live")}>
+              <div className={this.props.nav === "now" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-live")}>
                 Now
               </div>
               <div>/</div>
-              <div className="nav-button" style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-archive")}>
+              <div className={this.props.nav === "previous" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-archive")}>
                 Previous
               </div>
             </div>
