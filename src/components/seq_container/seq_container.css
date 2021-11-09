@@ -57,4 +57,34 @@ and (max-device-width : 480px) {
   	width: 100vw;
     margin-left: -2.4vw;
   }
+  .btn-left {
+    position: absolute;
+    top: 48%;
+    left: -2px;
+    width: 2%;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+  }
+  .btn-right {
+    position: absolute;
+    top: 48%;
+    right: -2px;
+    width: 2%;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+  }
+  .img-overlay {
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    left: -3px;
+    color: white;
+    font-size: 12px;
+  }
 }

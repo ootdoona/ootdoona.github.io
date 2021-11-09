@@ -136,23 +136,35 @@ export const archiveContent = {
     title: "ACT I. 거울앞에서",
     info: "2021.03.27 금나래아트홀, 서울",
     para1: "개인이 인식하는 자신의 정체성 속에는 맹점이 있다. 그가 보는 다른 사람에는 자신이 누구인지, 어떻게 그 사람으로부터 자신을 구분 짓는지 반영되어 있다. 거울 앞에서, 퍼포머는 관객들이 형성한 사회적 위계, 질서를 노골적인 얼굴과 제스처로 드러낸다.",
-    para2: "총 2회 진행. 회당 25분, 투명판 2x1 ms, 조명"
+    para2: "총 2회 진행. 회당 25분, 투명판 2x1 ms, 조명",
+    mobDate: "2021.03.27",
+    mobInfo: "총 2회 진행.",
+    mobtime: "회당 25분, 투명판 2x1 ms, 조명"
 }
 export const archiveContentEn = {
     title: "ACT I. In Front of the Mirror",
     info: "2021.03.27 Geumnarae Art Hall, Seoul",
     para1: "Individuals often have blindness towards their own identities. What they see in other people is reflected by who they are and how they differentiate themselves from others. In front of the mirror, a performer uses their face and gestures to reveal the social hierarchy and order that audience members make.",
-    para2: "2 sessions in total. 25min each, transparent panel 2 x 1 ms, lightings"
+    para2: "2 sessions in total. 25min each, transparent panel 2 x 1 ms, lightings",
+    mobDate: "2021.03.27",
+    mobInfo: "2 sessions in total.",
+    mobtime: "25min, transparent panel 2 x 1 ms, lightings"
 }
 export const archive2Content = {
     title: "ACT II. 자아",
     info: "2021.09.17 보수동 거리, 부산",
     para1: "퍼포머는 거리의 한 구역을 차지한다. 몸을 가꾸는 움직임을 하면서 그의 사적 자아를 내보인다. 움직임은 특정 누군가를 만나러 가기 전 집에서 그가 가졌던 시간에서 비롯되었다. 행인들은 그를 마주치게 된다.",
-    para2: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
+    para2: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음.",
+    mobDate: "2021.09.17",
+    mobInfo: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음.",
+    mobtime: "20분"
 }
 export const archive2ContentEn = {
     title: "ACT II. Self",
     info: "2021.09.17 보수동 거리, Busan",
     para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
-    para2: "The on-site performance took place on September 9th due to a rain forecast for the 17th."
+    para2: "The on-site performance took place on September 9th due to a rain forecast for the 17th.",
+    mobDate: "2021.09.17",
+    mobInfo: "The on-site performance took place on September 9th due to a rain forecast for the 17th.",
+    mobtime: "20min"
 }

@@ -102,13 +102,13 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         if (this.props.version === -1) {
           subComponent = 
             <div className="nav-button">
-              <div className={this.props.nav === "now" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-live")}>
+              <a className={this.props.nav === "now" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} href={this.props.lang === "ko" ? "/#/devko1" : "/#/deven1"}>
                 Now
-              </div>
+              </a>
               <div>/</div>
-              <div className={this.props.nav === "previous" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} onClick={() => this.executeScroll("section-archive")}>
+              <a className={this.props.nav === "previous" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} href={this.props.lang === "ko" ? "/#/devko2" : "/#/deven2"}>
                 Previous
-              </div>
+              </a>
             </div>
           langButton = 
             <div className="language">
@@ -190,13 +190,17 @@ class Menu extends React.Component<MenuProps, MenuState> {
     } else { // act 3 and demo
       subMenu = 
         <div>
-          <div className='menu-list-button' onClick={() => this.props.scrollTo("section-live")}>
-            <div className='menu-list-title bold'>Now</div>
-          </div>
+          <a href={this.props.lang === "ko" ? "/#/devko1" : "/#/deven1"}>
+            <div className='menu-list-button bold'>
+              Now
+            </div>
+          </a>
           <div className='menu-list-sub'>- {content.title3}</div>
-          <div className='menu-list-button-top' onClick={() => this.props.scrollTo("section-archive")}>
-            <div className='menu-list-title bold'>Previous</div>
-          </div>
+          <a href={this.props.lang === "ko" ? "/#/devko2" : "/#/deven2"}>
+            <div className='menu-list-button-top bold'>
+              Previous
+            </div>
+          </a>
           <div className='menu-list-sub'>- {content.title1}</div>
           <div className='menu-list-sub'>- {content.title2}</div>
         </div>

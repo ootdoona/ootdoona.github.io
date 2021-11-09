@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import MapIcon from "../../assets/icon/map.png";
 import './archive.css';
 import { archiveContent, archiveContentEn, archive2Content, archive2ContentEn } from '../../contents';
 import SeqContainer from '../seq_container/seq_container';
@@ -50,6 +52,11 @@ function Archive(props: ArchiveProps) {
     }
   }
 
+  let para2 = 
+    <div className="small">
+      {content.para2}
+    </div>
+
   let title;
   if (props.version === 2) {
     if (props.lang === "en" && isMobile.any()) {
@@ -74,7 +81,7 @@ function Archive(props: ArchiveProps) {
         </div>
     }
   } else { // version 3, demo
-    if (props.lang === "en" && isMobile.any()) {
+    if (isMobile.any()) {
       title =
         <div>
           <div className="before-title-en-mobile">
@@ -83,10 +90,21 @@ function Archive(props: ArchiveProps) {
           <div className="title-en-mobile">
             {content.title}
           </div>
-          <div className="info-en-mobile">
-            {content.info}
-          </div>
+          <Button className="btn">
+		        <img src={MapIcon} className="btn-map-image"/>
+		        {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
+          </Button>
         </div>
+      para2 = 
+          <div>
+            <div className="info-en-mobile">
+              <div>{content.mobDate}</div>
+              <div>{content.mobInfo}</div>
+            </div>
+            <div className="info-en-mobile">
+              {content.mobtime}
+            </div>
+          </div>
     } else {
       let rightLineTransform;
       if (props.act === 2) {
@@ -129,9 +147,7 @@ function Archive(props: ArchiveProps) {
         <div className="para">
           {content.para1}
         </div>
-        <div className="small">
-          {content.para2}
-        </div>
+        {para2}
       </div>
     </section>
   );

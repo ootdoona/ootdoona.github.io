@@ -213,7 +213,7 @@ and (max-device-width : 480px) {
     z-index: 500;
   }
   #flyoutMenu {
-    width: 65vw;
+    width: 80vw;
     height: 100vh;
     background-color: white;
     position: fixed;
@@ -226,7 +226,7 @@ and (max-device-width : 480px) {
   }
   
   #flyoutMenu.hide {
-    transform: translate3d(-67.63vw, 0, 0);
+    transform: translate3d(-82.63vw, 0, 0);
   }
   
   #flyoutMenu.show {
@@ -245,7 +245,7 @@ and (max-device-width : 480px) {
   }
 
   .menu-list-button {
-    width: 65vw;
+    width: 80vw;
     height: 51px;
     padding-left: 10px;
     padding-top: 12px;
@@ -253,7 +253,7 @@ and (max-device-width : 480px) {
     font-size: 16px;
   }
   .menu-list-button-top{
-    width: 65vw;
+    width: 80vw;
     height: 51px;
     padding-left: 10px;
     padding-top: 12px;
@@ -262,20 +262,19 @@ and (max-device-width : 480px) {
     font-size: 16px;
   }
   .menu-list-sub {
-    width: 65vw;
+    width: 80vw;
     height: 51px;
     padding-left: 40px;
     padding-top: 14px;
     font-size: 16px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
   }
   .btn-close-image {
     float: right;
     margin-right: 10px;
     width: 28px;
     height: 28px;
-  }
-  .menu-list-title {
-    float: left;
   }
   .menu-list-date {
     float: right;
