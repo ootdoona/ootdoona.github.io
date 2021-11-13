@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-bootstrap';
 import MapIcon from "../../assets/icon/map.png";
 import './archive.css';
-import { archiveContent, archiveContentEn, archive2Content, archive2ContentEn } from '../../contents';
+import { archiveContent, archiveContentEn, archive2Content, archive2ContentEn, personalInfo } from '../../contents';
 import SeqContainer from '../seq_container/seq_container';
 
 interface ArchiveProps {
@@ -82,6 +82,7 @@ function Archive(props: ArchiveProps) {
     }
   } else { // version 3, demo
     if (isMobile.any()) {
+      const locationLink = props.act === 1 ? personalInfo.locationV1 : personalInfo.locationV2;
       title =
         <div>
           <div className="before-title-en-mobile">
@@ -91,8 +92,8 @@ function Archive(props: ArchiveProps) {
             {content.title}
           </div>
           <Button className="btn">
-		        <img src={MapIcon} className="btn-map-image"/>
-		        {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
+		        {/* <img src={MapIcon} className="btn-map-image"/> */}
+		        <img src={MapIcon} className="btn-map-image" onClick={() => window.open(locationLink, "_blank")}/>
           </Button>
         </div>
       para2 = 
@@ -108,7 +109,7 @@ function Archive(props: ArchiveProps) {
     } else {
       let rightLineTransform;
       if (props.act === 2) {
-        rightLineTransform = props.lang === "ko" ? "translate3d(360px, 26px, 0)" : "translate3d(360px, 26px, 0)";
+        rightLineTransform = props.lang === "ko" ? "translate3d(360px, 26px, 0)" : "translate3d(395px, 26px, 0)";
       } else { // act 1
         rightLineTransform = props.lang === "ko" ? "translate3d(410px, 26px, 0)" : "translate3d(550px, 26px, 0)";
       }

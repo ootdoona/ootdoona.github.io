@@ -69,8 +69,8 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
 
   public render() {
     const langToSwitch = this.props.lang === "ko" ? language.en : language.ko;
-    const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
     const content = this.props.lang === "ko" ? title : titleEn;
+    const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
 
     let subComponent;
     let langButton;
@@ -115,6 +115,31 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
               <a href={pathToRoute} className={"language " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
               <a href={pathToRoute} className="language">/</a>
               <a href={pathToRoute} className={"language " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
+            </div>
+        } else if (this.props.version === 3) {
+          subComponent = 
+            <div className="nav-button">
+              <a className={this.props.nav === "now" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} href={this.props.lang === "ko" ? "/#/" : "/#/en"}>
+                Now
+              </a>
+              <div>/</div>
+              <a className={this.props.nav === "previous" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} href={this.props.lang === "ko" ? "/#/previous" : "/#/en/previous"}>
+                Previous
+              </a>
+            </div>
+          let pathToRouteEn, pathToRouteKo;
+          if (this.props.nav === "now") {
+            pathToRouteEn = "/#/en";
+            pathToRouteKo = "/#/";
+          } else {
+            pathToRouteEn = "/#/en/previous";
+            pathToRouteKo = "/#/previous";
+          }
+          langButton = 
+            <div className="language">
+              <a href={pathToRouteEn} className={"language " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+              <a className="language">/</a>
+              <a href={pathToRouteKo} className={"language " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
             </div>
         } else {
           subComponent = 
@@ -187,7 +212,51 @@ class Menu extends React.Component<MenuProps, MenuState> {
             <div className='menu-list-title'>{content.title3}</div>
           </div>
         </div>
-    } else { // act 3 and demo
+    } else if (this.props.version === 3) {
+      subMenu = 
+        <div>
+          <a href={this.props.lang === "ko" ? "/" : "/#/en"}>
+            <div className='menu-list-button bold'>
+              Now
+            </div>
+          </a>
+          <a href={this.props.lang === "ko" ? "/#/previous" : "/#/en/previous"}>
+            <div className='menu-list-button bold'>
+              Previous
+            </div>
+          </a>
+        </div>
+        const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
+        langButton = 
+          <div className="language-mobile">
+            <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+            <a className="language-mobile">/</a>
+            <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
+          </div>
+    } else if (this.props.version === 3) {
+      subMenu = 
+        <div>
+          <a href={this.props.lang === "ko" ? "/#/" : "/#/en"}>
+            <div className='menu-list-button bold'>
+              Now
+            </div>
+          </a>
+          <a href={this.props.lang === "ko" ? "/#/previous" : "/#/en/previous"}>
+            <div className='menu-list-button bold'>
+              Previous
+            </div>
+          </a>
+        </div>
+        let pathToRouteEn, pathToRouteKo;
+        pathToRouteEn = "/#/en";
+        pathToRouteKo = "/#/";
+        langButton = 
+          <div className="language-mobile">
+            <a href={pathToRouteEn} className={"language-mobile " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+            <a className="language-mobile">/</a>
+            <a href={pathToRouteKo} className={"language-mobile " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
+          </div>
+    } else { // demo
       subMenu = 
         <div>
           <a href={this.props.lang === "ko" ? "/#/devko1" : "/#/deven1"}>
@@ -195,14 +264,14 @@ class Menu extends React.Component<MenuProps, MenuState> {
               Now
             </div>
           </a>
-          <div className='menu-list-sub'>- {content.title3}</div>
+          {/* <div className='menu-list-sub'>- {content.title3}</div> */}
           <a href={this.props.lang === "ko" ? "/#/devko2" : "/#/deven2"}>
-            <div className='menu-list-button-top bold'>
+            <div className='menu-list-button bold'>
               Previous
             </div>
           </a>
-          <div className='menu-list-sub'>- {content.title1}</div>
-          <div className='menu-list-sub'>- {content.title2}</div>
+          {/* <div className='menu-list-sub'>- {content.title1}</div>
+          <div className='menu-list-sub'>- {content.title2}</div> */}
         </div>
         const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
         langButton = 

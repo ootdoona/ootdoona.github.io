@@ -35,9 +35,10 @@ export const personalInfo = {
     phone: "+82 10 6441 9257",
     web: "https://damikim.net",
     insta: "https://www.instagram.com/damikim___/",
-    // location: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6",
+    locationV1: "https://goo.gl/maps/Zojqd8K7DdD6JDAz6",
     // fb: "https://fb.me/e/254iUp6qK",
-    location: "https://www.google.com/maps/place/35%C2%B006'11.9%22N+129%C2%B001'37.8%22E/@35.1042786,129.020233,15.02z/data=!4m5!3m4!1s0x0:0x0!8m2!3d35.1033153!4d129.0271621",
+    locationV2: "https://www.google.com/maps/place/35%C2%B006'11.9%22N+129%C2%B001'37.8%22E/@35.1042786,129.020233,15.02z/data=!4m5!3m4!1s0x0:0x0!8m2!3d35.1033153!4d129.0271621",
+    location: "https://goo.gl/maps/jcNXLiTR1zETxrug7",
     fb: "https://fb.me/e/1jd789JNX",
     instaId: "@damikim___"
 }
@@ -66,15 +67,15 @@ export const liveV2ContentEn = {
 }
 export const liveV3Content = {
     title: "ACT III. 선 1",
-    para1: "퍼포머는 거리의 한 구역을 차지한다. 몸을 가꾸는 움직임을 하면서 그의 사적 자아를 내보인다. 움직임은 특정 누군가를 만나러 가기 전 집에서 그가 가졌던 시간에서 비롯되었다. 행인들은 그를 마주치게 된다.",
-    para2: "20분",
-    para3: "17일 당일 우천 예보로 현장 퍼포먼스는 9월 9일에 발생하였음."
+    para1: "외부로부터 고립된 공간에 두 사람이 존재한다. 바닥에 그려진 선 위에 마주선다. 참여자가 움직이고 예술가는 그의 움직임을 따라한다. 두 사람이 물리적, 정신적으로 가까워지는 동시에 후자의 몸에 전자의 정체성이 반영된다. 이 만남은 한 참여자와 단 한 번만이 유효하다.",
+    para2: "1시간 지속적, 종이 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문)",
+    para3: "2021. 11. 13"
 }
 export const liveV3ContentEn = {
     title: "ACT III. Line 1",
-    para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
-    para2: "20min",
-    para3: "The on-site performance took place on September 9th due to a rain forecast for the 17th."
+    para1: "In an isolated space, two people exist. They stand face to face on the line drawn on the floor. A participant moves, and the artist mimics their movements. The two become closer physically and mentally while the former’s identity is reflected on the latter’s body. This meeting is valid for one participant one time.",
+    para2: "1 hour durational, Masking tape (line, 8m), A4 paper (instruction)",
+    para3: "2021. 11. 13"
 }
 export const overview = {
   title1: liveContent.title,
@@ -82,7 +83,7 @@ export const overview = {
   title2: liveV2Content.title,
   date2: '2021.08.14',
   title3: 'ACT III. 선 1',
-  date3: '2021.11'
+  date3: '2021.11.13'
 }
 export const overviewEn = {
   title1: liveContentEn.title,
@@ -90,7 +91,7 @@ export const overviewEn = {
   title2: liveV2ContentEn.title,
   date2: '2021.08.14',
   title3: 'ACT III. Line 1',
-  date3: '2021.11'
+  date3: '2021.11.13'
 }
 
 export const teamInfo = {
@@ -98,20 +99,24 @@ export const teamInfo = {
     "space": {"name": "이수진 오수진 박진희 안예슬", "role": "퍼포먼스 공간 제작", "instaId": "", "instaLink": ""},
     "design": {"name": "이민경", "role": "웹 디자인 & 전시 그래픽", "instaId": "", "instaLink": ""},
     "development": {"name": "정은아", "role": "웹 프로그래밍", "instaId": "", "instaLink": ""},
-    "transmission": {"name": "이승준", "role": "송출/통신", "instaId": "", "instaLink": ""},
-    "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역", "instaId": "", "instaLink": ""},
+    "transmission": {"name": "이승준", "role": "송출/통신 (자문)", "instaId": "", "instaLink": ""},
+    "translation": {"name": "키리 베르메트 Kyrie Vermette", "role": "번역 (자문)", "instaId": "", "instaLink": ""},
     "costume": {"name": "클로이 딕킨슨 Chloë Dickinson", "role": "의상 제작", "instaId": "", "instaLink": ""},
-    "video": {"name": "안예슬", "role": "영상", "instaId": "", "instaLink": ""},
+    "video": {"name": "안예슬", "role": "카메라", "instaId": "", "instaLink": ""},
+    "video2": {"name": "카타리나 바이스호이플 Katharina Weishäupl", "role": "카메라", "instaId": "", "instaLink": ""},
+    "reception": {"name": "김제원", "role": "안내", "instaId": "", "instaLink": ""},
 }
 export const teamInfoEn = {
     "sound": {"name": "Do Hyung Kim", "role": "Music", "instaId": "@do_tomasi", "instaLink": "https://www.instagram.com/do_tomasi/"},
     "space": {"name": "Sujin Lee  Sujin Oh  Jinhee Park  Ye-seul Ahn", "role": "Performance Space Production", "instaId": "", "instaLink": ""},
     "design": {"name": "Min Kyung Lee", "role": "Web Design & Exhibition Graphics", "instaId": "", "instaLink": ""},
     "development": {"name": "Eunah Jung", "role": "Web Coding", "instaId": "", "instaLink": ""},
-    "transmission": {"name": "Seung Joon Lee", "role": "Transmission", "instaId": "", "instaLink": ""},
-    "translation": {"name": "Kyrie Vermette", "role": "Translation", "instaId": "", "instaLink": ""},
+    "transmission": {"name": "Seung Joon Lee", "role": "Transmission (Advice)", "instaId": "", "instaLink": ""},
+    "translation": {"name": "Kyrie Vermette", "role": "Translation (Advice)", "instaId": "", "instaLink": ""},
     "costume": {"name": "Chloë Dickinson", "role": "Costume", "instaId": "", "instaLink": ""},
-    "video": {"name": "Ye-seul Ahn", "role": "Video", "instaId": "", "instaLink": ""},
+    "video": {"name": "Ye-seul Ahn", "role": "Camera", "instaId": "", "instaLink": ""},
+    "video2": {"name": "Katharina Weishäupl", "role": "Camera", "instaId": "", "instaLink": ""},
+    "reception": {"name": "Jeawon Kim", "role": "Reception", "instaId": "", "instaLink": ""},
 }
 
 export const notification = {
@@ -130,6 +135,10 @@ export const partnerInfo = {
 }
 export const partnerInfoEn = {
   "name": "Geumcheon Foundation for Arts and Culture"
+}
+export const partnerInfoV3 = {
+  "name": "호랑가시나무창작소",
+  "nameEn": "Horanggasy Creative Studio"
 }
 
 export const archiveContent = {
@@ -161,7 +170,7 @@ export const archive2Content = {
 }
 export const archive2ContentEn = {
     title: "ACT II. Self",
-    info: "2021.09.17 보수동 거리, Busan",
+    info: "2021.09.17 Bosudong Street, Busan",
     para1: "A performer occupies an area in the street. Through the grooming movements, they present their personal self. These movements originated from their time at home before going out to meet someone in particular. Passers-by encounter them.",
     para2: "The on-site performance took place on September 9th due to a rain forecast for the 17th.",
     mobDate: "2021.09.17",

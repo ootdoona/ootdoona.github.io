@@ -1,6 +1,6 @@
 import React from 'react';
 import './misc.css';
-import { notification, notificationEn, teamInfo, teamInfoEn, partnerInfo, partnerInfoEn } from '../../contents';
+import { notification, notificationEn, teamInfo, teamInfoEn, partnerInfo, partnerInfoEn, partnerInfoV3 } from '../../contents';
 
 interface MiscProps {
   lang: string;
@@ -121,7 +121,7 @@ function Misc(props: MiscProps) {
           <div className="line">-</div>
           <div className="team-info">
             <div className="title">
-              {props.lang === "ko" ? "도움" : "도움eng"}
+              {props.lang === "ko" ? "팀원" : "Team"}
             </div>
             <div className="section-team-member">
               <div className="team-member">
@@ -151,7 +151,7 @@ function Misc(props: MiscProps) {
           <div className="line">-</div>
           <div className="team-info">
             <div className="title">
-              {props.lang === "ko" ? "도움" : "도움eng"}
+              {props.lang === "ko" ? "팀원" : "Team"}
             </div>
             <div className="section-team-member">
               <div className="team-member">
@@ -169,14 +169,26 @@ function Misc(props: MiscProps) {
           <div className="line">-</div>
           <div className="team-info">
             <div className="title">
-              {props.lang === "ko" ? "도움" : "도움eng"}
+              {props.lang === "ko" ? "팀원" : "Team"}
             </div>
             <div className="section-team-member">
               <div className="team-member">
-                <b>{teamInfoContent.video.role}</b>  {teamInfoContent.video.name}
+                <b>{teamInfoContent.video2.role}</b> {teamInfoContent.video2.name}
+              </div>
+              <div className="team-member">
+                <b>{teamInfoContent.reception.role}</b> {teamInfoContent.reception.name}
               </div>
             </div>
           </div>
+				  <div className="line">-</div>
+				  <div className="partner-info">
+				  	<div className="title">
+				  	  {props.lang === "ko" ? "파트너" : "Partner"}
+				  	</div>
+				  	<div className="name">
+				  	  {props.lang === "ko" ? partnerInfoV3.name : partnerInfoV3.nameEn}
+				  	</div>
+				  </div>
         </div>
       </section>
     );

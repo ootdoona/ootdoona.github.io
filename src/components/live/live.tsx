@@ -12,6 +12,27 @@ import SpinnerIcon from "../../assets/icon/spinner.gif";
 import moment from 'moment';
 import 'moment-timezone';
 
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
 interface LiveProps {
   lang: string;
   version: number;
@@ -62,6 +83,9 @@ export default class Live extends Component<LiveProps, LiveState> {
     let curLivelinkURL: string[];
     if (this.props.version === -1) {
       curTimeline = Act3TimelineTest;
+      curLivelinkURL = Act3LivelinkURL;
+    } else if (this.props.version === 3) {
+      curTimeline = Act3Timeline;
       curLivelinkURL = Act3LivelinkURL;
     } else if (this.props.version === 2) {
       curTimeline = Act2Timeline;
@@ -317,8 +341,8 @@ export default class Live extends Component<LiveProps, LiveState> {
 		        <img src={FbIcon} className="btn-fb-image" onClick={()=> window.open(personalInfo.fb, "_blank")}/>
           </Button> */}
           <Button className="btn">
-		        <img src={MapIcon} className="btn-map-image"/>
-		        {/* <img src={MapIcon} className="btn-map-image" onClick={() => window.open(personalInfo.location, "_blank")}/> */}
+		        {/* <img src={MapIcon} className="btn-map-image"/> */}
+		        <img src={MapIcon} className="btn-map-image" onClick={() => window.open("https://goo.gl/maps/GKyjStqXGjhNSgSj6", "_blank")}/>
           </Button>
           {liveStream}
           <div className="line">-</div>

@@ -1,9 +1,10 @@
 import React from 'react';
 import './intro.css';
 import { introContent, introContentEn, personalInfo, teamInfo, teamInfoEn, } from '../../contents';
-import posterLandscape from "../../assets/landscape/landscape_final_web.gif";
+// import posterLandscape from "../../assets/landscape/landscape_final_web.gif";
 import posterPortrait from "../../assets/portrait/poster_portrait_loop.gif";
-import posterLandscapeV2 from "../../assets/landscape/landscape_act2.gif";
+// import posterLandscapeV2 from "../../assets/landscape/landscape_act2.gif";
+import posterLandscapeV3 from "../../assets/landscape/landscape_act3.gif";
 
 interface IntroProps {
   lang: string;
@@ -33,30 +34,30 @@ var isMobile = {
 
 function Intro(props: IntroProps) {
 	// const poster = isMobile.any() ? posterPortrait : posterLandscape;
-	const poster = isMobile.any() ? posterPortrait : posterLandscapeV2;
+	const poster = isMobile.any() ? posterPortrait : posterLandscapeV3;
 	const content = props.lang === "ko" ? introContent : introContentEn;
 
   let team;
 	const teamInfoContent = props.lang === "ko" ? teamInfo : teamInfoEn;
-  if (props.version === -1) {
+  if (props.version === -1 || props.version === 3) {
     team = 
       <div className="advice-info">
         <div className="line" style={{fontSize: '14px'}}>+</div>
         <div className="title">
-          {props.lang === "ko" ? "도움" : "도움"}
+          {props.lang === "ko" ? "팀원" : "Team"}
         </div>
         <div className="section-team-member">
           <div className="team-member">
-            <b>{teamInfoContent.transmission.role}</b>  {teamInfoContent.transmission.name}
+            <b>{teamInfoContent.design.role}</b> {teamInfoContent.design.name}
           </div>
           <div className="team-member">
-            <b>{teamInfoContent.translation.role}</b>  {teamInfoContent.translation.name}
+            <b>{teamInfoContent.development.role}</b> {teamInfoContent.development.name}
           </div>
           <div className="team-member">
-            <b>{teamInfoContent.design.role}</b>  {teamInfoContent.design.name}
+            <b>{teamInfoContent.transmission.role}</b> {teamInfoContent.transmission.name}
           </div>
           <div className="team-member">
-            <b>{teamInfoContent.development.role}</b>  {teamInfoContent.development.name}
+            <b>{teamInfoContent.translation.role}</b> {teamInfoContent.translation.name}
           </div>
         </div>
       </div>

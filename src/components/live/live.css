@@ -210,4 +210,10 @@ and (max-device-width : 480px) {
   .section-live .small {
     line-height: 1.7;
   }
+  .section-live .info-mobile {
+    margin-top: 20px;
+    /* font-size: 16px; */
+    font-size: 12px;
+    text-align: left;
+  }
 }
