@@ -210,17 +210,29 @@ export default class Live extends Component<LiveProps, LiveState> {
     let smallPara;
     let liveStream;
     let timeLeft = this.state.timeLeft;
-    if (this.props.version === -1) { // demo version
+    if (this.props.version === 3) { // act 3
       content = this.props.lang === "ko" ? liveV3Content : liveV3ContentEn;
       title =
         <div>
           <div className="before-title">Now / </div>
           <div className="title">{content.title}</div>
         </div>
-      smallPara = 
-        <div className="small">
-          {content.para2}
-        </div>
+      if (isMobile.any()) {
+        smallPara = 
+          <div className="small">
+            <div className="info-mobile">
+              <div>{content.para3}</div>
+            </div>
+            <div className="info-mobile">
+              {content.para2}
+            </div>
+          </div>
+      } else {
+        smallPara = 
+          <div className="small">
+            {content.para2}
+          </div>
+      }
       if (this.state.showOn && this.state.liveLink === "") {
         liveStream = 
           <div className="livestream facebook-responsive">
@@ -246,7 +258,61 @@ export default class Live extends Component<LiveProps, LiveState> {
       } else {
         liveStream =
           <div className="livestream facebook-responsive">
-            <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+            <iframe src={this.state.liveLink} width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+            {/* <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe> */}
+          </div>
+      }
+    } else if (this.props.version === -1) { // demo version
+      content = this.props.lang === "ko" ? liveV3Content : liveV3ContentEn;
+      title =
+        <div>
+          <div className="before-title">Now / </div>
+          <div className="title">{content.title}</div>
+        </div>
+      if (isMobile.any()) {
+        smallPara = 
+          <div className="small">
+            <div className="info-mobile">
+              <div>{content.para3}</div>
+            </div>
+            <div className="info-mobile">
+              {content.para2}
+            </div>
+          </div>
+      } else {
+        smallPara = 
+          <div className="small">
+            {content.para2}
+          </div>
+      }
+      if (this.state.showOn && this.state.liveLink === "") {
+        liveStream = 
+          <div className="livestream facebook-responsive">
+            <div className="spinner-container">
+            <img src={SpinnerIcon} className="spinner" />
+            </div>
+          </div>
+      } else if (!this.state.showOn) {
+        liveStream = 
+            <div className="livestream facebook-responsive">
+              <div className="countdown">
+                <div className="unit">
+                  <div className="days">DAYS</div>
+                  <div className="hours">HOURS</div>
+                  <div className="minutes">MINUTES</div>
+                  <div className="seconds">SECONDS</div>
+                </div>
+                <div className="numbers">
+                  {zeropad(timeLeft.days)}:{zeropad(timeLeft.hours)}:{zeropad(timeLeft.minutes)}:{zeropad(timeLeft.seconds)}
+                </div>
+              </div>
+            </div>
+      } else {
+        liveStream =
+          <div className="livestream facebook-responsive">
+            <iframe src={this.state.liveLink} width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe>
+            {/* <iframe src="https://player.vimeo.com/video/645657839?h=4043b14a2b&title=0&byline=0&portrait=0" width="640" height="360" frameBorder="0" allow="autoplay; fullscreen; picture-in-picture"></iframe> */}
+            {/* <iframe src={this.state.liveLink} width="1280" height="720" style={{border: "none", overflow:"hidden"}} scrolling="no" frameBorder={0} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe> */}
           </div>
       }
     } else if (this.props.version === 0) { // act 1
