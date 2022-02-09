@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ootdoona.github.io/static/css/main.f182492e.chunk.css",
-    "main.js": "/ootdoona.github.io/static/js/main.998b72fb.chunk.js",
-    "main.js.map": "/ootdoona.github.io/static/js/main.998b72fb.chunk.js.map",
+    "main.css": "/ootdoona.github.io/static/css/main.86edb472.chunk.css",
+    "main.js": "/ootdoona.github.io/static/js/main.ee0ac3ee.chunk.js",
+    "main.js.map": "/ootdoona.github.io/static/js/main.ee0ac3ee.chunk.js.map",
     "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.901d3c74.js",
     "runtime-main.js.map": "/ootdoona.github.io/static/js/runtime-main.901d3c74.js.map",
     "static/css/2.fabbef47.chunk.css": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.4e9df853.chunk.js.map": "/ootdoona.github.io/static/js/3.4e9df853.chunk.js.map",
     "index.html": "/ootdoona.github.io/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.f182492e.chunk.css.map": "/ootdoona.github.io/static/css/main.f182492e.chunk.css.map",
+    "static/css/main.86edb472.chunk.css.map": "/ootdoona.github.io/static/css/main.86edb472.chunk.css.map",
     "static/js/2.6646e82a.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.6646e82a.chunk.js.LICENSE.txt",
     "static/media/0.jpg": "/ootdoona.github.io/static/media/0.2013d872.jpg",
     "static/media/0_0.jpg": "/ootdoona.github.io/static/media/0_0.983913b7.jpg",
@@ -57,11 +57,11 @@
     "static/media/7.jpg": "/ootdoona.github.io/static/media/7.6ee1e0f4.jpg",
     "static/media/8.jpg": "/ootdoona.github.io/static/media/8.d781e4b9.jpg",
     "static/media/9.jpg": "/ootdoona.github.io/static/media/9.f81109c3.jpg",
-    "static/media/landscape_act3.ab1093f6.gif": "/ootdoona.github.io/static/media/landscape_act3.ab1093f6.gif",
+    "static/media/archive_landscape_once.d9436ea3.gif": "/ootdoona.github.io/static/media/archive_landscape_once.d9436ea3.gif",
+    "static/media/archive_portrait_once.7ac77477.gif": "/ootdoona.github.io/static/media/archive_portrait_once.7ac77477.gif",
     "static/media/left.cea2240e.png": "/ootdoona.github.io/static/media/left.cea2240e.png",
     "static/media/map.caefc4c0.png": "/ootdoona.github.io/static/media/map.caefc4c0.png",
     "static/media/perform_space.jpg": "/ootdoona.github.io/static/media/perform_space.ebb444a7.jpg",
-    "static/media/poster_portrait_loop.19d50eeb.gif": "/ootdoona.github.io/static/media/poster_portrait_loop.19d50eeb.gif",
     "static/media/right.ecefd95e.png": "/ootdoona.github.io/static/media/right.ecefd95e.png",
     "static/media/spinner.281f312f.gif": "/ootdoona.github.io/static/media/spinner.281f312f.gif"
   },
@@ -69,7 +69,7 @@
     "static/js/runtime-main.901d3c74.js",
     "static/css/2.fabbef47.chunk.css",
     "static/js/2.6646e82a.chunk.js",
-    "static/css/main.f182492e.chunk.css",
-    "static/js/main.998b72fb.chunk.js"
+    "static/css/main.86edb472.chunk.css",
+    "static/js/main.ee0ac3ee.chunk.js"
   ]
 }
