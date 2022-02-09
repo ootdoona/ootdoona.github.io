@@ -83,6 +83,16 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         <a href={pathToRoute} className="language">
           <img src={LangIcon} className="btn-lang-image"/>
         </a>
+    } else if (this.props.version === -1) {
+      subComponent = 
+        <div className="nav-button">
+        </div>
+      langButton = 
+        <div className="language">
+          <a href={pathToRoute} className={"language " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+          <a href={pathToRoute} className="language">/</a>
+          <a href={pathToRoute} className={"language " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
+        </div>
     } else {
       if (isMobile.any()) {
         subComponent = <div></div>;
@@ -102,13 +112,6 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         if (this.props.version === -1) {
           subComponent = 
             <div className="nav-button">
-              <a className={this.props.nav === "now" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} href={this.props.lang === "ko" ? "/#/devko1" : "/#/deven1"}>
-                Now
-              </a>
-              <div>/</div>
-              <a className={this.props.nav === "previous" ? "nav-button-bold" : "nav-button"} style={{cursor: 'pointer'}} href={this.props.lang === "ko" ? "/#/devko2" : "/#/deven2"}>
-                Previous
-              </a>
             </div>
           langButton = 
             <div className="language">
@@ -257,29 +260,14 @@ class Menu extends React.Component<MenuProps, MenuState> {
             <a href={pathToRouteKo} className={"language-mobile " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
           </div>
     } else { // demo
-      subMenu = 
-        <div>
-          <a href={this.props.lang === "ko" ? "/#/devko1" : "/#/deven1"}>
-            <div className='menu-list-button bold'>
-              Now
-            </div>
-          </a>
-          {/* <div className='menu-list-sub'>- {content.title3}</div> */}
-          <a href={this.props.lang === "ko" ? "/#/devko2" : "/#/deven2"}>
-            <div className='menu-list-button bold'>
-              Previous
-            </div>
-          </a>
-          {/* <div className='menu-list-sub'>- {content.title1}</div>
-          <div className='menu-list-sub'>- {content.title2}</div> */}
+      subMenu = <div></div>
+      const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
+      langButton = 
+        <div className="language-mobile">
+          <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
+          <a href={pathToRoute} className="language-mobile">/</a>
+          <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
         </div>
-        const pathToRoute = this.props.lang === "ko" ? "/#/en" : "/";
-        langButton = 
-          <div className="language-mobile">
-            <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
-            <a href={pathToRoute} className="language-mobile">/</a>
-            <a href={pathToRoute} className={"language-mobile " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>
-          </div>
     }
 
     return (

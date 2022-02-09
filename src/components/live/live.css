@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   background-color: #242526;
   overflow-y: scroll;
 }
@@ -21,6 +21,7 @@
   font-weight: bold;
   text-align: left;
   color: white;
+  margin-left: 15px;
 }
 .section-live .before-title {
   display: flex;
@@ -97,6 +98,24 @@
 .livestream .spinner-container .spinner {
   transform: translateY(+19vw);
 }
+.livestream .text-en {
+  transform: translateX(+26.5vw) translateY(+16vw);
+  width: auto;
+  display: inline-block;
+  width: 80vw;
+  font-size: 1.45vw;
+  background-color: black;
+  color: white;
+}
+.livestream .text-ko {
+  transform: translateX(+23.5vw) translateY(+16vw);
+  width: auto;
+  display: inline-block;
+  width: 80vw;
+  font-size: 1.45vw;
+  background-color: black;
+  color: white;
+}
 .livestream .countdown {
   width: 80vw;
   height: 47vw;
@@ -128,7 +147,7 @@
   transform: translateX(+22vw) translateY(+16vw);
   width: auto;
   display: inline-block;
-  font-size: 6.4vw;
+  font-size: 6.5vw;
   color: white;
 }
 .facebook-responsive {
@@ -149,14 +168,16 @@
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
   .section-live {
-    padding-bottom: 0px;
+    padding-bottom: 30px;
   }
   .section-live .wrapper {
     color: #f1f2f3;
     width: 95vw;
   }
   .section-live .title {
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 0;
   }
   .section-live .para {
     font-size: 16px;
@@ -169,6 +190,24 @@ and (max-device-width : 480px) {
   .section-live .livestream {
   	width: 100vw;
     margin-left: -2.5vw;
+  }
+  .livestream .text-en {
+    transform: translateX(+24vw) translateY(+16vw);
+    width: auto;
+    display: inline-block;
+    width: 80vw;
+    font-size: 10px;
+    background-color: black;
+    color: white;
+  }
+  .livestream .text-ko {
+    transform: translateX(+20vw) translateY(+16vw);
+    width: auto;
+    display: inline-block;
+    width: 80vw;
+    font-size: 10px;
+    background-color: black;
+    color: white;
   }
   .livestream .spinner-container {
     width: 100vw;
@@ -183,12 +222,29 @@ and (max-device-width : 480px) {
     width: 100vw;
     height: 56vw;
   }
+  .livestream .countdown .unit .days{
+    display: inline-block;
+    transform: translateX(+31vw) translateY(+17vw);
+  }
+  .livestream .countdown .unit .hours{
+    display: inline-block;
+    transform: translateX(+36vw) translateY(+17vw);
+  }
+  .livestream .countdown .unit .minutes{
+    display: inline-block;
+    transform: translateX(+40vw) translateY(+17vw);
+  }
+  .livestream .countdown .unit .seconds{
+    display: inline-block;
+    transform: translateX(+42vw) translateY(+17vw);
+  }
   .livestream .countdown .unit {
-    font-size: 2.5vw;
+    font-size: 7px;
   }
   .livestream .countdown .numbers {
-    font-size: 10vw;
-    transform: translateX(+21vw) translateY(+16vw);
+    font-size: 28px;
+    font-weight: 200;
+    transform: translateX(+29vw) translateY(+16vw);
   }
   .btn-insta-image {
     margin-right: -15px;
@@ -201,10 +257,10 @@ and (max-device-width : 480px) {
     width: 40px;
     height: 40px;
   }
-  .btn-map-image {
+  .btn .btn-map-image {
     margin-right: -15px;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     margin-top: 3px;
   }
   .section-live .small {

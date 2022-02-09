@@ -1,67 +1,64 @@
-.section-intro {
-	position: relative;
+.section-pause {
 	width: 100%;
-	margin-top: 50px;
-	margin-bottom: 20px;
 	text-align: center;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  background-color: #242526;
+  height: 100vh;
 }
-.section-intro .wrapper {
+.section-pause .wrapper {
 	color: #f1f2f3;
 	width: 80vw;
 }
-.section-intro .poster-image {
+.section-pause .poster-image {
 	width: 80vw;
 }
-.section-intro .title {
+.section-pause .title {
   font-size: 15px;
   font-weight: bold;
   margin-top: 15px;
   text-align: left;
   color: black;
 }
-.section-intro .para {
+.section-pause .para {
   font-size: 18px;
-  margin-left: 15px;
-  margin-right: 15px;
   color: black;
   line-height: 1.7;
   text-align: left;
 }
-.section-intro .line { 
+.section-pause .line { 
   margin-top: 20px;
   color: black;
 }
-.section-intro .artist-info {
+.section-pause .artist-info {
   font-size: 15px;
   line-height: 1.5;
   color: black;
   text-align: left;
 }
-.section-intro .artist-info .bold {
+.section-pause .artist-info .bold {
   font-weight: bold;
 }
 a, a:visited, a:hover, a:active {
 	text-decoration: none;
 	color: inherit;
 }
-.section-intro .social-links {
+.section-pause .social-links {
 	margin-top: 50px;
 }
-.section-intro .advice-info {
+.section-pause .advice-info {
   font-size: 12px;
   line-height: 1.5;
   color: black;
   text-align: left;
 }
-.section-intro .advice-info .title {
+.section-pause .advice-info .title {
   font-size: 12px;
   font-weight: bold;
 }
-.section-intro .advice-info .section-team-member {
+.section-pause .advice-info .section-team-member {
   font-size: 12px;
 }
 #resume {
@@ -79,41 +76,41 @@ a, a:visited, a:hover, a:active {
 }
 
 @media screen and (max-width:1380px) {
-	.section-intro {
+	.section-pause {
 		/* margin-top: 80px; */
 	}
-	.section-intro .wrapper {
+	.section-pause .wrapper {
 		min-width: 480px;
 	}
-	.section-intro .title {
+	.section-pause .title {
 		/* font-size: 25px; */
 	}
-	.section-intro .para {
+	.section-pause .para {
     font-size: 16px;
 		/* margin-top: 30px; */
 		/* font-size: 20px; */
 	}
 }
 @media screen and (max-width: 980px) {
-	.section-intro {
+	.section-pause {
 		/* margin-top: 60px; */
 	}
 }
 @media screen and (max-width:768px) {
-	.section-intro {
+	.section-pause {
 		/* margin-top: 80px; */
 		/* padding: 5vh 20px; */
 	}
-	.section-intro .inner {
+	.section-pause .inner {
 		display: block;
 	}
-	.section-intro .wrapper {
+	.section-pause .wrapper {
 		min-width: auto;
 	}
-	.section-intro .title {
+	.section-pause .title {
 		/* margin-top: 30px; */
 	}
-	.section-intro .social-links {
+	.section-pause .social-links {
 		width: fit-content;
 		margin: 0 auto;
 	}
@@ -128,37 +125,35 @@ a, a:visited, a:hover, a:active {
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
-  .section-intro .wrapper {
+  .section-pause .wrapper {
     color: #f1f2f3;
     width: 95vw;
   }
-  .section-intro .title {
+  .section-pause .title {
     font-size: 16px;
   }
-  .section-intro .para {
+  .section-pause .para {
     font-size: 16px;
-    margin-left: 0;
-    margin-right: 0;
   }
-  .section-intro .line { 
+  .section-pause .line { 
     font-size: 27px;
     text-align: left;
     margin-top: 10px;
   }
-  .section-intro .artist-info {
+  .section-pause .artist-info {
     font-size: 16px;
   }
-  .section-intro .advice-info {
+  .section-pause .advice-info {
     font-size: 15px;
   }
-  .section-intro .advice-info .title {
+  .section-pause .advice-info .title {
     font-size: 15px;
     font-weight: bold;
   }
-  .section-intro .advice-info .section-team-member {
+  .section-pause .advice-info .section-team-member {
     font-size: 15px;
   }
-  .section-intro .poster-image {
+  .section-pause .poster-image {
   	width: 100vw;
     margin-left: -2.5vw;
   }

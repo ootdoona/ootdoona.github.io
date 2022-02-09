@@ -192,7 +192,6 @@ function Misc(props: MiscProps) {
         </div>
       </section>
     );
-
   } else { // original act 1 misc
     return (
       <section className="section-misc" style={{backgroundColor: bgColor, color: fontColor}}>

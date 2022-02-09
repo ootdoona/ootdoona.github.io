@@ -39,7 +39,9 @@ function Intro(props: IntroProps) {
 
   let team;
 	const teamInfoContent = props.lang === "ko" ? teamInfo : teamInfoEn;
-  if (props.version === -1 || props.version === 3) {
+  if (props.version === -1) {
+
+  } else if (props.version === 3) {
     team = 
       <div className="advice-info">
         <div className="line" style={{fontSize: '14px'}}>+</div>
@@ -62,31 +64,54 @@ function Intro(props: IntroProps) {
         </div>
       </div>
   }
-	return (
+  let mainContent;
+  if (props.version === -1) {
+    mainContent = 
+      <div>
+				<div className="line"></div>
+				<div className="para">
+					{content.para1}
+				</div>
+				<div className="line"></div>
+				<div className="para">
+					{content.para2}
+				</div>
+      </div>
+  } else {
+    mainContent = 
+      <div>
+				<div className="title">
+					{content.title}
+				</div>
+				<div className="line">-</div>
+				<div className="para">
+					{content.para1}
+				</div>
+				<div className="line">-</div>
+				<div className="para">
+					{content.para2}
+				</div>
+				<div className="line">-</div>
+      </div>
+  }
+  let artistInfo;
+  if (props.version != -1) {
+    artistInfo =
+			<div className="artist-info">
+				<div className="bold">{personalInfo.nameKo}  {personalInfo.nameEn}</div>
+				<div>{personalInfo.email}</div>
+				<div>{personalInfo.phone}</div>
+				<div onClick={()=> window.open(personalInfo.insta, "_blank")} style={{cursor: 'pointer'}}>{personalInfo.instaId}</div>
+			</div>
+  }
+  return (
 		<section className="section-intro">
 				<div className="wrapper">
 					<div className="poster">
 						<img src={poster} alt="poster" className="poster-image"/>
 					</div>
-					<div className="title">
-						{content.title}
-					</div>
-					<div className="line">-</div>
-					<div className="para">
-						{content.para1}
-					</div>
-					<div className="line">-</div>
-					<div className="para">
-						{content.para2}
-					</div>
-					<div className="line">-</div>
-
-					<div className="artist-info">
-						<div className="bold">{personalInfo.nameKo}  {personalInfo.nameEn}</div>
-						<div>{personalInfo.email}</div>
-						<div>{personalInfo.phone}</div>
-						<div onClick={()=> window.open(personalInfo.insta, "_blank")} style={{cursor: 'pointer'}}>{personalInfo.instaId}</div>
-					</div>
+          {mainContent}
+          {artistInfo}
           {team}
 				</div>
 		</section>

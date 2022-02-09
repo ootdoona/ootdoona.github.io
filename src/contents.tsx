@@ -77,6 +77,14 @@ export const liveV3ContentEn = {
     para2: "1 hour durational, Masking tape (line, 8m), A4 paper (instruction)",
     para3: "2021. 11. 13"
 }
+export const liveV4Content = {
+    title: "라이브 공간",
+    para1: "마지막 라이브는 2021년 11월 13일에 종료되었습니다.",
+}
+export const liveV4ContentEn = {
+    title: "LIVE SPACE",
+    para1: "The last live ended at November 13th, 2021",
+}
 export const overview = {
   title1: liveContent.title,
   date1: '2021.03.27',
@@ -176,4 +184,107 @@ export const archive2ContentEn = {
     mobDate: "2021.09.17",
     mobInfo: "The on-site performance took place on September 9th due to a rain forecast for the 17th.",
     mobtime: "20min"
+}
+export const archiveAllContent = {
+  title: "기록",
+  subtitle1: "ACT I 거울 앞에서",
+  subtitle2: "ACT II 자아",
+  subtitle3: "ACT III 선 1",
+}
+export const archiveAllAct = [0,0,0, 1,1, 2,2,2];
+export const archiveAllContentEn = {
+  title: "ARCHIVE",
+  subtitle1: "ACT I In front of the mirror",
+  subtitle2: "ACT II Self",
+  subtitle3: "ACT III Line 1",
+}
+export const archiveAllText = [
+  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 지역 공간",
+  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 1회차 영상 스틸",
+  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 2회차 영상 스틸",
+  "자아, 2019; 2021 재창작, 20분; 영상 스틸",
+  "자아, 2019; 2021 재창작, 20분; 영상 스틸",
+  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 지역 공간",
+  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 영상 스틸",
+  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 영상 스틸"
+]
+export const archiveAllTextEn = [
+  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; local space",
+  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; video still from the 1st session",
+  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; video still from the 2nd session",
+  "Self, 2019; 2021 re-created, 20min; video still",
+  "Self, 2019; 2021 re-created, 20min; video still",
+  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); local space",
+  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); video still",
+  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); video still"
+]
+export const teamInfoAll = {
+  "sound": {"name": "김도형", "role": "음악", "etc": ""},
+  "space": {"name": "이수진", "role": "무대 제작", "etc": ""},
+  "help": {"name": "오수진 박진희", "role": "무대 보조", "etc": ""},
+  "camera": {"name": "안예슬", "role": "카메라", "etc": ""},
+  "partner": {"name": "금천문화재단", "role": "파트너", "etc": ""},
+  "costume": {"name": "클로이 딕킨슨", "role": "의상 제작", "etc": "Chloë Dickinson"},
+  "help3": {"name": "김제원", "role": "무대 보조", "etc": ""},
+  "camera3": {"name": "카타리나 바이스호이플", "role": "카메라", "etc": "Katharina Weishäupl"},
+  "partner3": {"name": "호랑가시나무창작소", "role": "파트너", "etc": ""},
+  "design": {"name": "이민경", "role": "디자인 & 그래픽", "etc": ""},
+  "dev": {"name": "정은아", "role": "프로그래밍", "etc": ""},
+  "transmission": {"name": "이승준", "role": "송출/통신 (자문)", "etc": ""},
+  "translation": {"name": "키리 베르메트", "role": "번역 (자문)", "etc": "Kyrie Vermette"},
+}
+export const teamInfoAllEn = {
+  "sound": {"name": "Do Hyung Kim", "role": "Music", "etc": ""},
+  "space": {"name": "Sujin Lee", "role": "Stage Production", "etc": ""},
+  "help": {"name": "Sujin Oh", "role": "Stage Assistants", "etc": "Jinhee Park"},
+  "camera": {"name": "Ye-seul Ahn", "role": "Camera", "etc": ""},
+  "partner": {"name": "Geumcheon Foundation", "role": "Partner", "etc": "for Arts and Culture"},
+  "costume": {"name": "Chloë Dickinson", "role": "Costume", "etc": ""},
+  "help3": {"name": "Jeawon Kim", "role": "Stage Assistant", "etc": ""},
+  "camera3": {"name": "Katharina Weishäupl", "role": "Camera", "etc": ""},
+  "partner3": {"name": "Horanggasy Creative Studio", "role": "Partner", "etc": ""},
+  "design": {"name": "Min Kyung Lee", "role": "Design & Graphics", "etc": ""},
+  "dev": {"name": "Eunah Jung", "role": "Developer", "etc": ""},
+  "transmission": {"name": "Seung Joon Lee", "role": "Transmission (Advice)", "etc": ""},
+  "translation": {"name": "Kyrie Vermette", "role": "Translation (Advice)", "etc": ""},
+}
+export const introInfoKo = {
+  "title1": "거울앞에서",
+  "date1": "2021.03.27",
+  "time1": "KST 19:00 / 21:00",
+  "title2": "자아",
+  "date2": "2021.09.17",
+  "time2": "KST 20:30",
+  "title3": "선 1",
+  "date3": "2021.11.13",
+  "time3": "KST 19:00",
+  "artist": "김다미",
+  "insta": "@damikim___",
+  "instalink": "https://www.instagram.com/damikim___/",
+  "email": "dami7060@gmail.com",
+  "phone": "+82 10 6441 9257"
+}
+export const introInfoEn = {
+  "title1": "In front of the mirror",
+  "date1": "2021.03.27",
+  "time1": "CET 11:00 / 13:00",
+  "title2": "Self",
+  "date2": "2021.09.17",
+  "time2": "CEST 13:30",
+  "title3": "Line 1",
+  "date3": "2021.11.13",
+  "time3": "CET 11:00",
+  "artist": "Dami Kim",
+  "insta": "@damikim___",
+  "instalink": "https://www.instagram.com/damikim___/",
+  "email": "dami7060@gmail.com",
+  "phone": "+82 10 6441 9257"
+}
+export const footNoteKo = {
+  "note": "본 전시는 김다미가 제작, 주관하였습니다.",
+  "cc": "© 2021 김다미"
+}
+export const footNoteEn = {
+  "note": "This show is produced and organized by Dami Kim.",
+  "cc": "© 2021 Dami Kim"
 }
