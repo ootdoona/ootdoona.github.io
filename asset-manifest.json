@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ootdoona.github.io/static/css/main.540434b2.chunk.css",
+    "main.css": "/ootdoona.github.io/static/css/main.196620f9.chunk.css",
     "main.js": "/ootdoona.github.io/static/js/main.0a632c73.chunk.js",
     "main.js.map": "/ootdoona.github.io/static/js/main.0a632c73.chunk.js.map",
     "runtime-main.js": "/ootdoona.github.io/static/js/runtime-main.901d3c74.js",
@@ -12,7 +12,7 @@
     "static/js/3.4e9df853.chunk.js.map": "/ootdoona.github.io/static/js/3.4e9df853.chunk.js.map",
     "index.html": "/ootdoona.github.io/index.html",
     "static/css/2.fabbef47.chunk.css.map": "/ootdoona.github.io/static/css/2.fabbef47.chunk.css.map",
-    "static/css/main.540434b2.chunk.css.map": "/ootdoona.github.io/static/css/main.540434b2.chunk.css.map",
+    "static/css/main.196620f9.chunk.css.map": "/ootdoona.github.io/static/css/main.196620f9.chunk.css.map",
     "static/js/2.6646e82a.chunk.js.LICENSE.txt": "/ootdoona.github.io/static/js/2.6646e82a.chunk.js.LICENSE.txt",
     "static/media/0.jpg": "/ootdoona.github.io/static/media/0.2013d872.jpg",
     "static/media/0_0.jpg": "/ootdoona.github.io/static/media/0_0.983913b7.jpg",
@@ -69,7 +69,7 @@
     "static/js/runtime-main.901d3c74.js",
     "static/css/2.fabbef47.chunk.css",
     "static/js/2.6646e82a.chunk.js",
-    "static/css/main.540434b2.chunk.css",
+    "static/css/main.196620f9.chunk.css",
     "static/js/main.0a632c73.chunk.js"
   ]
 }
