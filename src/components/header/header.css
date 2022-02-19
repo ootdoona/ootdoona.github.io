@@ -19,7 +19,7 @@ header .wrapper {
   transform: translateX(-50%);
 }
 header .title-text {
-  font-size: 18px;
+  font-size: 17px;
   margin-left: 15px;
   float: left;
   display: flex;
@@ -69,7 +69,7 @@ header .nav-button-bold {
   font-weight: bold;
 }
 header .language {
-	font-size: 16px;
+	font-size: 15px;
 	float: right;
 	height: 100%;
 	display: flex;
@@ -103,8 +103,8 @@ header .language a, a:visited, a:hover, a:active {
 	}
 	header .title-text {
 		/* margin-left: 20px; */
-		font-size: 16px;
-    font-weight: 600;
+		/* font-size: 16px; */
+    /* font-weight: 600; */
 		/* padding: 24px 0; */
 	}
 }
@@ -113,8 +113,8 @@ header .language a, a:visited, a:hover, a:active {
 		/* height: 60px */
 	}
 	header .title-text {
-		font-size: 16px;
-    font-weight: 600;
+		/* font-size: 16px; */
+    /* font-weight: 600; */
 	}
 }
 @media screen and (max-width: 768px) {
@@ -123,8 +123,8 @@ header .language a, a:visited, a:hover, a:active {
 		/* height: 80px; */
 	}
 	header .title-text {
-		font-size: 16px;
-    font-weight: 600;
+		/* font-size: 16px;
+    font-weight: 600; */
 	}
 	header .icon {
 		display: block;

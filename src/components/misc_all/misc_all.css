@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   padding-bottom: 30px;
-	font-size: 18px;
+	font-size: 17px;
 }
 .section-misc-all .wrapper {
   position: relative;
@@ -29,7 +29,7 @@ a, a:visited, a:hover, a:active {
   margin-left: 15px;
   display: table;
   align-items: center;
-  border-right: 1px solid black;
+  border-right: 1px solid darkgray;
 }
 .section-misc-all .col {
   display: table-cell;
@@ -37,7 +37,7 @@ a, a:visited, a:hover, a:active {
   width: 23.5%;
   margin-right: 1%;
   margin-left: 0.3%;
-  border-left: 1px solid black;
+  border-left: 1px solid darkgray;
   padding-bottom: 10px;
   padding-top: 10px;
 }
@@ -48,6 +48,7 @@ a, a:visited, a:hover, a:active {
 }
 .section-misc-all .left {
   margin-right: auto;
+  padding-right: 7px;
 }
 .section-misc-all .left-odd {
   display: inline-flex;
@@ -63,6 +64,7 @@ a, a:visited, a:hover, a:active {
   margin-top: 60px;
   margin-left: 15px;
   margin-right: 15px;
+  font-size: 17px;
 }
 .section-misc-all #foot-note {
   margin-right: auto;
@@ -109,8 +111,8 @@ and (max-device-width : 480px) {
     width: 100vw;
     margin-right: 1%;
     margin-left: 0.3%;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
     padding-bottom: 5px;
     padding-top: 3px;
     margin-bottom: 15px;
@@ -134,10 +136,11 @@ and (max-device-width : 480px) {
   }
   .section-misc-all .footnote {
     display: inline;
-    font-size: 15px;
+    font-size: 13px;
   }
   .section-misc-all #note {
     /* display: inline; */
+    font-size: 13px;
     margin-bottom: 30px;
   }
   .section-misc-all #cc {

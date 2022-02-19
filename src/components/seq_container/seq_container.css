@@ -59,7 +59,7 @@ and (max-device-width : 480px) {
   }
   .btn-left {
     position: absolute;
-    top: 48%;
+    top: 45%;
     left: -2px;
     width: 2%;
     background-color: transparent !important;
@@ -70,7 +70,7 @@ and (max-device-width : 480px) {
   }
   .btn-right {
     position: absolute;
-    top: 48%;
+    top: 45%;
     right: -2px;
     width: 2%;
     background-color: transparent !important;

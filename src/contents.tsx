@@ -83,7 +83,7 @@ export const liveV4Content = {
 }
 export const liveV4ContentEn = {
     title: "LIVE SPACE",
-    para1: "The last live ended at November 13th, 2021",
+    para1: "The last live ended on November 13th, 2021",
 }
 export const overview = {
   title1: liveContent.title,
@@ -200,23 +200,23 @@ export const archiveAllContentEn = {
 }
 export const archiveAllText = [
   "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 지역 공간",
-  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 1회차 영상 스틸",
-  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 2회차 영상 스틸",
-  "자아, 2019; 2021 재창작, 20분; 영상 스틸",
-  "자아, 2019; 2021 재창작, 20분; 영상 스틸",
+  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 1회차 퍼포먼스 영상 스틸",
+  "거울앞에서, 2018; 2021 재연 2회, 25분, 투명판 2x1ms, 조명; 2회차 퍼포먼스 영상 스틸",
+  "자아, 2019; 2021 재창작, 20분; 퍼포먼스 영상 스틸",
+  "자아, 2019; 2021 재창작, 20분; 퍼포먼스 영상 스틸",
   "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 지역 공간",
-  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 영상 스틸",
-  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 영상 스틸"
+  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 퍼포먼스 영상 스틸",
+  "선 1, 2019; 2021 재연, 1시간 지속적, 마스킹테이프 (선, 8m), 일반 A4 용지 (지시문); 퍼포먼스 영상 스틸"
 ]
 export const archiveAllTextEn = [
   "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; local space",
-  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; video still from the 1st session",
-  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; video still from the 2nd session",
-  "Self, 2019; 2021 re-created, 20min; video still",
-  "Self, 2019; 2021 re-created, 20min; video still",
+  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; performance video still from the 1st session",
+  "In front of the mirror, 2018; 2021 2 sessions re-enacted, 25min, transparent panel 2x1ms, lightings; performance video still from the 2nd session",
+  "Self, 2019; 2021 re-created, 20min; performance video still",
+  "Self, 2019; 2021 re-created, 20min; performance video still",
   "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); local space",
-  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); video still",
-  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); video still"
+  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); performance video still",
+  "Line 1, 2019; 2021 re-enacted, 1 hour durational, masking tape (line, 8m), A4 paper (instruction); performance video still"
 ]
 export const teamInfoAll = {
   "sound": {"name": "김도형", "role": "음악", "etc": ""},
@@ -242,7 +242,7 @@ export const teamInfoAllEn = {
   "costume": {"name": "Chloë Dickinson", "role": "Costume", "etc": ""},
   "help3": {"name": "Jeawon Kim", "role": "Stage Assistant", "etc": ""},
   "camera3": {"name": "Katharina Weishäupl", "role": "Camera", "etc": ""},
-  "partner3": {"name": "Horanggasy Creative Studio", "role": "Partner", "etc": ""},
+  "partner3": {"name": "Horanggasy Creative", "role": "Partner", "etc": "Studio"},
   "design": {"name": "Min Kyung Lee", "role": "Design & Graphics", "etc": ""},
   "dev": {"name": "Eunah Jung", "role": "Developer", "etc": ""},
   "transmission": {"name": "Seung Joon Lee", "role": "Transmission (Advice)", "etc": ""},

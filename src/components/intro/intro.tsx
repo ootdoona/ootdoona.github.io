@@ -1,10 +1,8 @@
 import React from 'react';
 import './intro.css';
 import { introContent, introContentEn, personalInfo, teamInfo, teamInfoEn, } from '../../contents';
-// import posterLandscape from "../../assets/landscape/landscape_final_web.gif";
-import posterPortrait from "../../assets/portrait/poster_portrait_loop.gif";
-// import posterLandscapeV2 from "../../assets/landscape/landscape_act2.gif";
-import posterLandscapeV3 from "../../assets/landscape/landscape_act3.gif";
+import posterPortrait from "../../assets/portrait/archive_portrait_once.gif";
+import posterLandscape from "../../assets/landscape/archive_landscape_once.gif";
 
 interface IntroProps {
   lang: string;
@@ -33,8 +31,7 @@ var isMobile = {
 };
 
 function Intro(props: IntroProps) {
-	// const poster = isMobile.any() ? posterPortrait : posterLandscape;
-	const poster = isMobile.any() ? posterPortrait : posterLandscapeV3;
+	const poster = isMobile.any() ? posterPortrait : posterLandscape;
 	const content = props.lang === "ko" ? introContent : introContentEn;
 
   let team;
@@ -69,11 +66,11 @@ function Intro(props: IntroProps) {
     mainContent = 
       <div>
 				<div className="line"></div>
-				<div className="para">
+				<div className={props.lang === "ko" ? "para" : "para-en"}>
 					{content.para1}
 				</div>
 				<div className="line"></div>
-				<div className="para">
+				<div className={props.lang === "ko" ? "para" : "para-en"}>
 					{content.para2}
 				</div>
       </div>

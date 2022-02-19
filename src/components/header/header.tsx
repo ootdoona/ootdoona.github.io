@@ -88,7 +88,7 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         <div className="nav-button">
         </div>
       langButton = 
-        <div className="language">
+        <div className="language" style={{marginRight: isMobile.any() ? '4px':'15px'}}>
           <a href={pathToRoute} className={"language " + (this.props.lang === "en" ? "bold" : "")}>EN</a>
           <a href={pathToRoute} className="language">/</a>
           <a href={pathToRoute} className={"language " + (this.props.lang === "ko" ? "bold" : "")}>KO</a>

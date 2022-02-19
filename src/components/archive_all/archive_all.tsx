@@ -121,16 +121,16 @@ export class ArchiveAll extends React.Component<ArchiveAllProps, ArchiveAllState
     return (
       <section className="section-archive-all" style={{backgroundColor: bgColor, color: fontColor}}>
         <div className='wrapper' style={{backgroundColor: bgColor}}>
+          {title}
           <div className='img-wrapper'>
-            {title}
             <img ref={this.setImg} src={img} 
                 className="sliderimg"
                 onClick={this.onClickImage}
-                onContextMenu={(e)=> e.preventDefault()}/>
+                onContextMenu={(e)=> e.preventDefault()}></img>
             {leftButton}
             {rightButton}
-            <div className={isMobile.any() ? 'text-below-mobile' : 'text-below'}>{text[this.state.index]}</div>
           </div>
+          <div className={isMobile.any() ? 'text-below-mobile' : 'text-below'}>{text[this.state.index]}</div>
         </div>
       </section>
     );
