@@ -126,16 +126,16 @@ export default class Live extends Component<LiveProps, LiveState> {
           });
         });
     }
-    if (nextShow === curLivelinkURL.length) {
-      showOn = true;
-      fetch(curLivelinkURL[nextShow - 1], {cache: "no-store"})
-        .then(res => res.text())
-        .then((res: string) => {
-          this.setState({
-            liveLink: res
-          });
-        });
-    }
+    // if (nextShow === curLivelinkURL.length) {
+    //   showOn = true;
+    //   fetch(curLivelinkURL[nextShow - 1], {cache: "no-store"})
+    //     .then(res => res.text())
+    //     .then((res: string) => {
+    //       this.setState({
+    //         liveLink: res
+    //       });
+    //     });
+    // }
 
     this.setState({
     	nextShow,

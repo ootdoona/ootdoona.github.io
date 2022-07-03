@@ -59,6 +59,11 @@ export class ArchiveAll extends React.Component<ArchiveAllProps, ArchiveAllState
     this.setState({
       imagePaths
     });
+    for (let i = 0; i < imagePaths.length; i++) {
+      let img: string = require(`../../assets/archive/${imagePaths[i]}`).default;
+      let imgContainer = new Image();
+      imgContainer.src = img;
+    }
   }
 
   public render() {
